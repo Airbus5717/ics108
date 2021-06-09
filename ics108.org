@@ -272,21 +272,54 @@ String str = "bruh why String is capital";
   (-2^63 to (2^63) - 1)
 
 -----
-** Display Current Time in GMT
+*** Display Current Time in GMT
 #+BEGIN_SRC java
 long time = System.currentTimeMillis();
 // == current GMT time in milliseconds
 #+END_SRC
 
 -----
-** Conversion rules
+*** Conversion rules
 1. if one of the operands is double then final value is Double
 1. otherwise if one is float then the final value is float.
 1. otherwise, if one of the operands is long then both are long.
 1. finally they are int if one of them is int
 
-** Type casting
+   -----
+*** Type casting
 + implicit casting i.e.
   #+BEGIN_SRC java
   double d = 3; // (type widening)
   #+END_SRC
++ Explicit casting i.e.
+  #+BEGIN_SRC java
+  int i = (int) 3.0; // (type narrowing)
+  int j = (int) 3.9; // (fraction part is truncated)
+  // i = 3; j = 3;
+  #+END_SRC
+
+another example
+#+BEGIN_SRC java
+int sum = 0;
+sum += 4.5; // now sum is 4
+#+END_SRC
+
+-----
+** Common Errors and pitfalls
+**** Common Errors
+1. Undeclared Variables and unused variables
+   i.e. using Variables that do not exist.
+
+1. Interger overflow
+   using numbers over the max/min range
+
+1. Round-off Errors
+   when dealing with alot of float numbers
+
+1. Unintended Integer division
+    i.e. division over zero
+
+1. Redundant Input objects
+    i.e. getting wrong input
+    for example: getting a string instead of an int.
+-----
