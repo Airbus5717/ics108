@@ -48,7 +48,7 @@ ran with Java Virtual Machine (JVM)
 
     #+END_SRC
 + Blocks: a group of components of a program
-
+-----
 ** Programming Style and documentation
 + Appropriate Comments
 + Naming Convertions
@@ -197,7 +197,7 @@ final int MAX_VALUE = 100;
     + (*) multiply
     + (/) divide
     + (%) remainder i.e. 5 % 2 == 1
-
+-----
 *** useful operations
 #+BEGIN_SRC java
 i = i + 1; 
@@ -291,7 +291,7 @@ long time = System.currentTimeMillis();
 1. otherwise, if one of the operands is long then both are long.
 1. finally they are int if one of them is int
 
-   -----
+-----
 *** Type casting
 + implicit casting i.e.
   #+BEGIN_SRC java
@@ -376,7 +376,7 @@ if (x > 0) {
 }
 
 // the code will check at each statement
-// also adding a semicolon at the if or else
+// also adding a semicolon at if or else is an error
 // and it is a logic error
 #+END_SRC
 
@@ -432,3 +432,64 @@ Leap year example
 
 #+BEGIN_SRC java
 int year = 2021; // use input or get the year number
+
+if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+    System.out.println("Year is leap");
+}
+#+END_SRC
+-----
+** Switch statement
+alternative to if statements equating with specific value.
+
+#+BEGIN_SRC java
+
+int x = 1;
+
+switch (x) {
+    case 1:
+        // code if x == 1
+        break;
+    case 2:
+        // code if x == 2
+        break;
+    default:
+        // insert if value doesnt match the cases
+        break;
+}
+
+#+END_SRC
+-----
+-----
+** Conditional operators: Ternary
+(boolean) ? (if-true) : (else);
+#+BEGIN_SRC java
+boolean x = true;
+
+int b = x ? 1 : 0; // now b is 1 cuz x is true
+
+int c = !x ? 1 : 0; // c is 0
+
+#+END_SRC
+-----
+
+** Operator order (precedence)
+1. var++, var--
+1. +, -, and ++var, --var.
+1. (type) cast
+1. ! (Not)
+1. *, /, %
+1. +, -
+1. <, <=, >, >=
+1. ==, !=
+1. ^ (Exclusive or)
+1. &&
+1. ||
+1. =, +=, -=, *=, /=, %=
+-----
+
+** Debugging
+#+BEGIN_QUOTE
+NOTE: use a debugger when facing problems
+#+END_QUOTE
+
+-----
