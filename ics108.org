@@ -200,15 +200,21 @@ final int MAX_VALUE = 100;
 
 *** useful operations
 #+BEGIN_SRC java
-i = i + 1; i += 1; i++; ++i; // are the same
+i = i + 1; 
+i += 1;
+i++;
+++i;
+ // these 4 statements are the same
 
 ++i; // adds then uses the value
 i++; // uses the value then adds
+--i;
+i--;
 // but if it is a statement by it self then
 // it wouldn't matter much
 
-// other operators support this
-// such as * , - , / , %
+// other operators's support
+i += 1; i -= 1; i *= 1; i /= 1; i %= 1; 
 
 #+END_SRC
 -----
@@ -384,3 +390,45 @@ if (x > 0) {
 | ^          | exclusive or | logical exclusive   |
 | \vert\vert | or           | logical disjunction |
 |------------+--------------+---------------------|
+
+ examples:
+#+BEGIN_SRC java
+int x = 1;
+if (x != 1) {
+    // wont execute
+}
+
+int y = 0;
+if (x == 1 && y == 0) {
+    // will execute
+}
+
+
+// '^' operator
+// if both are true or false then it will evaluate as
+// false otherwise if one is false and the other isnt
+// it will evaluate as true
+
+//   false    true
+if (x != 1 ^ y == 0) {
+    // will execute
+}
+
+bool a = false;
+
+if (!a)
+    // will be true and execute
+
+bool b = true;
+
+if ( a || b ) {
+    // will execute (true)
+}
+
+#+END_SRC
+
+-----
+Leap year example
+
+#+BEGIN_SRC java
+int year = 2021; // use input or get the year number
