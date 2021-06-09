@@ -1,0 +1,21 @@
+#+TITLE: ICS108 NOTES
+#+OPTIONS: num:nil
+#+LaTeX_HEADER: \usepackage{minted}
+
+
+#+BEGIN_QUOTE
+THIS IS NOT AN ALTERNATIVE TO THE BOOK
+#+END_QUOTE
+
+-----
+* Chapter 1
+
+** Simple Java Program
+#+NAME: Java simple Program
+#+BEGIN_SRC java
+class App {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Java!");
+    }
+}
+#+END_SRC
