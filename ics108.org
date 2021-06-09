@@ -1,6 +1,6 @@
 #+TITLE: ICS108 NOTES
-#+OPTIONS: num:nil
 #+LaTeX_HEADER: \usepackage{minted}
+
 
 
 #+BEGIN_QUOTE
@@ -8,14 +8,285 @@ THIS IS NOT AN ALTERNATIVE TO THE BOOK
 #+END_QUOTE
 
 -----
-* Chapter 1
+* Chapter 1: Introduction to Java
 
 ** Simple Java Program
+
 #+NAME: Java simple Program
 #+BEGIN_SRC java
 class App {
     public static void main(String[] args) {
         System.out.println("Welcome to Java!");
     }
+
+#+END_SRC
+
+#+BEGIN_QUOTE
+Java source files are compiled by Java compiler to bytecode (.class files) then
+ran with Java Virtual Machine (JVM)
+#+END_QUOTE
+
++ Class name = App
++ Main method = public static void main (arguments)
+
+  { code in method }
++ Statements = i.e. print statement
+  - each statment in java must end with a semicolon (;)
++ Reserved keywords
+    - class
+    - public
+    - static
+    - void
+    - etc.
++ Comments
+  - single line and multiline comments
+    #+BEGIN_SRC java
+    // single line comment
+    /* multi line
+     comment */
+
+
+    #+END_SRC
++ Blocks: a group of components of a program
+
+** Programming Style and documentation
++ Appropriate Comments
++ Naming Convertions
++ Proper Identation and spacing lines
++ Block styles
+
+** Programming Errors
++ Syntax Errors
+  + Detected by the compiler (i.e. missing semicolon)
++ Runtime Errors
+  + Causes the program to abort (i.e. divition by zero)
++ Logic Errors
+  + Produces incorrect results (i.e. incorrect logic)
+
+-----
+* Chapter 2 : Elementry Programming
+
+** Program example:
+#+NAME: Compute Circle Area
+#+BEGIN_SRC java
+public class App {
+    public static void main(String[] args) {
+        double radius;
+        double area;
+
+        // assign a radius
+        radius = 20;
+
+        // Compute Area
+        area = Math.pow(radius, 2) * 3.14159;
+        // NOTE: Math pow function returns a double
+
+        // Display result
+        System.out.println("The Area: " + area + " for radius: " + radius);
+    }
 }
 #+END_SRC
+-----
+** Reading Input
+Reading Input can be done by creating a Scanner Object
+which can be imported from `java.util.Scanner;`
+#+NAME: Input Scanner example
+#+BEGIN_SRC java
+
+// import module.class
+import java.util.Scanner;
+
+class App {
+    public static void main(String[] args ) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a double value: ");
+        double d = input.nextDouble();
+
+        // to get int: use 'input.nextInt();'
+        // float: use input.nextFloat();
+        // etc
+
+        input.close();
+        /*
+          good practice is to
+          close scanners and files
+           */
+        // Display output
+        System.out.println("the double value is " + d);
+    }
+}
+#+END_SRC
+-----
+** Imports
++ Implicit import (import java.util.*;)
++ Explicit import (import java.util.Scanner;)
+No Performance difference
+-----
+
+** Identifiers
++ sequence of chars are from letters, digits, underscores(_) and dollar signs($).
++ An identifier must start with a letter, an underscore or a dollar sign,
+  #+BEGIN_CENTER
+  IT CANNOT START WITH A DIGIT.
+  #+END_CENTER
++ An identifier cannot be a reserved word or default types such as (true, false etc.).
++ An identifier can be of any length.
+-----
+** Variables
+*** declare variables
+  #+BEGIN_SRC java
+  int x = 1; // variable example
+
+  // other variables
+  double y = 12.0;
+  char b = 's';
+  String u = "Bruh";
+
+  #+END_SRC
+  
+  'int' is a type,
+
+  'x' is an identifier,
+
+  '1' is an int value,
+
+  ';' is for statement termination,
+
+  '=' is for assignment
+-----
+*** Constant variables
+
+  #+BEGIN_SRC java
+  final int SIZE = 3;
+  // final keyword is written before datatype
+  // to indicate that the variable is immutable
+  #+END_SRC
+
+-----
+** Naming Conventions
+choose meaningful names
+*** Variable and method names
+use lowercase and capitalize each word after the first word
+
+#+BEGIN_SRC java
+int computeArea(int area, int radius) {
+    int computedResult = area * radius; // example
+    return computedResult;
+}
+#+END_SRC
+-----
+*** Class names
+Capitalize first letter of each word in the name
+for example
+#+BEGIN_SRC java
+class ComputeArea {  }
+#+END_SRC
+-----
+*** Constant names
+Capitalize all letters
+
+for example
+#+BEGIN_SRC java
+final int MAX_VALUE = 100;
+#+END_SRC
+
+-----
+** Operators
+    + (+) add
+    + (-) substract
+    + (*) multiply
+    + (/) divide
+    + (%) remainder i.e. 5 % 2 == 1
+
+*** useful operations
+#+BEGIN_SRC java
+i = i + 1; i += 1; i++; ++i; // are the same
+
+++i; // adds then uses the value
+i++; // uses the value then adds
+// but if it is a statement by it self then
+// it wouldn't matter much
+
+// other operators support this
+// such as * , - , / , %
+
+#+END_SRC
+-----
+** Data types
+*** Integers
+are numbers without decimal values and range between
+-2^31 to (2^31) - 1
+
+example:
+#+BEGIN_SRC java
+final int MAX_INT =  2147483647;
+final int MIN_INT = -2147483648;
+
+// example
+int x = 100;
+#+END_SRC
+*** Floats and Double
+are numbers with decimal points
+by default Java will make any decimal point double unless added an F after it i.e.
+letter D can be used for classifing as double.
+
+#+BEGIN_SRC java
+float x = 10.0f; // f is written to indicate that the variable is float
+double y = 10.0;
+// also correct
+double y2 = 10.0d;
+#+END_SRC
+
+#+BEGIN_QUOTE
+NOTE: floating points are not accurate always during calculations and it is recommeneded to use double for more accuracy
+#+END_QUOTE
+
+-----
+*** Scientific Notation
+Floating point literals can be specified in scientific notations using (e, E).
+
+#+BEGIN_QUOTE
+: NOTE: use double for more accuracy
+#+END_QUOTE
+
+for example
+#+BEGIN_SRC java
+double sciX = 10.2e20;
+#+END_SRC
+
+-----
+*** Chars and Strings
+are used to store text, char are for one character and strings are used for multiple characters
+
+#+BEGIN_SRC java
+char b = 'a';
+String str = "bruh why String is capital";
+// NOTE: String data type first letter is capital
+#+END_SRC
+
+-----
+*** other types
+
++ byte: similar to int but smaller range (-128 to 127)
++ long: similar to int but bigger range
+  (-2^63 to (2^63) - 1)
+
+-----
+** Display Current Time in GMT
+#+BEGIN_SRC java
+long time = System.currentTimeMillis();
+// == current GMT time in milliseconds
+#+END_SRC
+
+-----
+** Conversion rules
+1. if one of the operands is double then final value is Double
+1. otherwise if one is float then the final value is float.
+1. otherwise, if one of the operands is long then both are long.
+1. finally they are int if one of them is int
+
+** Type casting
++ implicit casting i.e.
+  #+BEGIN_SRC java
+  double d = 3; // (type widening)
+  #+END_SRC
