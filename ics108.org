@@ -323,3 +323,64 @@ sum += 4.5; // now sum is 4
     i.e. getting wrong input
     for example: getting a string instead of an int.
 -----
+* Chapter 3: Selections
+** More Data types
+*** boolean type
+bool values are true or false
+#+BEGIN_SRC java
+boolean type = true;
+type = false; // changed to false
+#+END_SRC
+
+*** boolean (comparasion operators)
+>, <, <=, >=, etc.
+i.e.
+#+BEGIN_SRC java
+bool x = 3 > 2; // true
+bool y = 4 < x; // false
+
+#+END_SRC
+-----
+** If else statements
+*** if
+checks for true boolean then excutes code in the block
+*** else
+if the 'if' condition is false then else block executes
+
+#+BEGIN_SRC java
+
+int x = 1;
+
+if (x > 0) {
+    // if x is positive then this code block executes
+    // NOTE: in this example the code here executes.
+} else {
+    // if x is negative the code here executes.
+}
+
+
+// also this is possible
+
+if (x > 0) {
+    // if x is positive
+} else if (x < 0) {
+    // if x is negative
+} else {
+    // if x is not positive nor negative
+}
+
+// the code will check at each statement
+// also adding a semicolon at the if or else
+// and it is a logic error
+#+END_SRC
+
+-----
+** Logical operators
+
+| operator   | name         | description         |
+|------------+--------------+---------------------|
+| !          | not          | logical negation    |
+| &&         | and          | logical conjunction |
+| ^          | exclusive or | logical exclusive   |
+| \vert\vert | or           | logical disjunction |
+|------------+--------------+---------------------|
