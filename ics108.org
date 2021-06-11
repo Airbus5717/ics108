@@ -1,5 +1,6 @@
 #+TITLE: ICS108 NOTES
 #+DESCRIPTION: Notes on Java OOP Ics108 course
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+LaTeX_HEADER: \usepackage{minted}
 
 
@@ -265,8 +266,6 @@ char b = 'a';
 String str = "bruh why String is capital";
 // NOTE: String data type first letter is capital
 #+END_SRC
-
-#+RESULTS:
 
 -----
 *** other types
