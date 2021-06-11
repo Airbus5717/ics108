@@ -482,7 +482,7 @@ int c = !x ? 1 : 0; // c is 0
 9. ^ (Exclusive or)
 10. &&
 11. ||
-12. \equal\equal, +\equal, -\equal, *\equal, /=, %=
+12. \equal=, +\equal, -\equal, *\equal, /=, %=
 -----
 
 ** Debugging
