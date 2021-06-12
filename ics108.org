@@ -118,8 +118,8 @@ class App {
 #+END_SRC
 -----
 ** Imports
-+ Implicit import (import java.util.*;)
-+ Explicit import (import java.util.Scanner;)
++ Implicit import =import java.util.*;=
++ Explicit import =import java.util.Scanner;=
 No Performance difference
 -----
 
@@ -341,7 +341,7 @@ type = false; // changed to false
 #+END_SRC
 
 *** boolean (comparasion operators)
->, <, <=, >=, etc.
+=>=, =<=, =<==, =>==, etc.
 i.e.
 #+BEGIN_SRC java
 boolean x = 3 > 2; // true
@@ -385,13 +385,13 @@ if (x > 0) {
 -----
 ** Logical operators
 
-| operator   | name         | description         |
-|------------+--------------+---------------------|
-| !          | not          | logical negation    |
-| &&         | and          | logical conjunction |
-| ^          | exclusive or | logical exclusive   |
-| \vert\vert | or           | logical disjunction |
-|------------+--------------+---------------------|
+| operator     | name         | description         |
+|--------------+--------------+---------------------|
+| =!=          | not          | logical negation    |
+| =&&=         | and          | logical conjunction |
+| =^=          | exclusive or | logical exclusive   |
+| =\vert\vert= | or           | logical disjunction |
+|--------------+--------------+---------------------|
 
  examples:
 #+BEGIN_SRC java
@@ -474,24 +474,24 @@ int c = !x ? 1 : 0; // c is 0
 -----
 
 ** Operator order (precedence)
-1. var++, var--
-2. +, -, and ++var, --var.
-3. (type) cast
-4. ! (Not)
-5. *, /, %
-6. +, -
-7. <, <=, >, >=
-8. \equal\equal , !\equal
-9. ^ (Exclusive or)
-10. &&
-11. ||
-12. \equal=, +\equal, -\equal, *\equal, /=, %=
+1. =var++=, =var--=
+2. =+=, =-=, and =++var=, =--var=.
+3. =(type)= cast
+4. =!= (Not)
+5. =*=, =/=, =%=
+6. =+=, =-=
+7. =<=, =<==, =>=, =>==
+8. ==== , =!==
+9. =^= (Exclusive or)
+10. =&&=
+11. =||=
+12. ====, =+==, =-==, =*==, =/==, =%==
 -----
 
 ** Debugging
 
 #+BEGIN_VERSE
-NOTE: use a debugger when facing problems
+=NOTE: use a debugger when facing problems=
 #+END_VERSE
 
 -----
@@ -499,43 +499,45 @@ NOTE: use a debugger when facing problems
 * Chapter 4: Math functions, Chars and Strings
 ** Math Class
 *** Constants
-+ PI
++ =PI=
 
-+ E
++ =E=
 -----
 
 *** Methods
 **** Trigonometric Methods
 return double always
-+ sin(double a)
++ =sin(double a);=
 
-+ cos(double a)
++ =cos(double a);=
 
-+ tan(double a)
++ =tan(double a);=
 
-+ acos(double a)
++ =acos(double a);=
 
-+ asin(double a)
++ =asin(double a);=
 
-+ atan(double a)
++ =atan(double a);=
 
-+ toRadians(double a) // converts to radians
++ =toRadians(double a);= // converts to radians
+
++ =toDegrees(double a);=
 
 -----
 **** Rounding Methods
-+ ceil(double x)
++ =ceil(double x)=
   x is rounded up to nearest int then returned as double
 
-+ floor(double x)
++ =floor(double x)=
   x is rounded down to nearest int then returned as double
 
-+ rint(double x)
++ =rint(double x)=
   x is returned to the nearest int, if x is equally close to both then the even one is returned as double
 
-+ round(float x)
++ =round(float x)=
   returns (int)Math.floor(x + 0.5);
 
-+ round(double x)
++ =round(double x)=
   returns (long)Math.floor(x + 0.5);
 #+BEGIN_CENTER
 NOTE: check examples in slides for Chapter4 page:(8)
@@ -546,10 +548,10 @@ NOTE: check examples in slides for Chapter4 page:(8)
 
 -----
 **** min, max, abs, and Random Methods
-+ max(a, b) and min(a, b)
++ =max(a, b)= and =min(a, b)=
   return max or min of the 2 arguments
-+ abs(a) returns the absolute value
-+ random() returns a random double (from 0.0 to 1.0)
++ =abs(a)= returns the absolute value
++ =random()= returns a random double (from 0.0 to 1.0)
 -----
 ** Characters
 *** Special Chars
@@ -578,14 +580,14 @@ else if (ch >= '0' && ch <= '9')
 #+END_SRC
 -----
 *** Character Methods
-+ isLetter()
-+ isDigit()
-+ isWhitespace()
-+ isUpperCase()
-+ isLowerCase()
-+ toUpperCase()
-+ toLowerCase()
-+ toString()
++ =isLetter()=
++ =isDigit()=
++ =isWhitespace()=
++ =isUpperCase()=
++ =isLowerCase()=
++ =toUpperCase()=
++ =toLowerCase()=
++ =toString()=
 -----
 ** Strings
 *** String Length
@@ -618,54 +620,54 @@ String s4 = s1 + s2;
 *** String Methods list
 | Method                | Description                                                                                                                   | return type  |
 |-----------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------|
-| charAt()              | Returns the character at the specified index (position)                                                                       | char         |
-| codePointAt()         | Returns the Unicode of the character at the specified index                                                                   | int          |
-| codePointBefore()     | Returns the Unicode of the character before the specified index                                                               | int          |
-| codePointCount()      | Returns the Unicode in the specified text range of this String                                                                | int          |
-| compareTo()           | Compares two strings lexicographically                                                                                        | int          |
-| compareToIgnoreCase() | Compares two strings lexicographically, ignoring case differences                                                             | int          |
-| concat()              | Appends a string to the end of another string                                                                                 | String       |
-| contains()            | Checks whether a string contains a sequence of characters                                                                     | boolean      |
-| contentEquals()       | Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer          | boolean      |
-| copyValueOf()         | Returns a String that represents the characters of the character array                                                        | String       |
-| endsWith()            | Checks whether a string ends with the specified character(s)                                                                  | boolean      |
-| equals()              | Compares two strings. Returns true if the strings are equal, and false if not                                                 | boolean      |
-| equalsIgnoreCase()    | Compares two strings, ignoring case considerations                                                                            | boolean      |
-| format()              | Returns a formatted string using the specified locale, format string, and arguments                                           | String       |
-| getBytes()            | Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array                | byte[]       |
-| getChars()            | Copies characters from a string to an array of chars                                                                          | void         |
-| hashCode()            | Returns the hash code of a string                                                                                             | int          |
-| indexOf()             | Returns the position of the first found occurrence of specified characters in a string                                        | int          |
-| intern()              | Returns the canonical representation for the string object                                                                    | String       |
-| isEmpty()             | Checks whether a string is empty or not                                                                                       | boolean      |
-| lastIndexOf()         | Returns the position of the last found occurrence of specified characters in a string                                         | int          |
-| length()              | Returns the length of a specified string                                                                                      | int          |
-| matches()             | Searches a string for a match against a regular expression, and returns the matches                                           | boolean      |
-| offsetByCodePoints()  | Returns the index within this String that is offset from the given index by codePointOffset code points                       | int          |
-| regionMatches()       | Tests if two string regions are equal                                                                                         | boolean      |
-| replace()             | Searches a string for a specified value, and returns a new string where the specified values are replaced                     | String       |
-| replaceFirst()        | Replaces the first occurrence of a substring that matches the given regular expression with the given replacement             | String       |
-| replaceAll()          | Replaces each substring of this string that matches the given regular expression with the given replacement                   | String       |
-| split()               | Splits a string into an array of substrings                                                                                   | String[]     |
-| startsWith()          | Checks whether a string starts with specified characters                                                                      | boolean      |
-| subSequence()         | Returns a new character sequence that is a subsequence of this sequence                                                       | CharSequence |
-| substring()           | Extracts the characters from a string, beginning at a specified start position, and through the specified number of character | String       |
-| toCharArray()         | Converts this string to a new character array                                                                                 | char[]       |
-| toLowerCase()         | Converts a string to lower case letters                                                                                       | String       |
-| toString()            | Returns the value of a String object                                                                                          | String       |
-| toUpperCase()         | Converts a string to upper case letters                                                                                       | String       |
-| trim()                | Removes whitespace from both ends of a string                                                                                 | String       |
-| valueOf()             | Returns the string representation of the specified value                                                                      | String       |
+| =charAt()=             | Returns the character at the specified index (position)                                                                       | char         |
+| =codePointAt()=        | Returns the Unicode of the character at the specified index                                                                   | int          |
+| =codePointBefore()=    | Returns the Unicode of the character before the specified index                                                               | int          |
+| =codePointCount()=     | Returns the Unicode in the specified text range of this String                                                                | int          |
+| =compareTo()=          | Compares two strings lexicographically                                                                                        | int          |
+| =compareToIgnoreCase()= | Compares two strings lexicographically, ignoring case differences                                                             | int          |
+| =concat()=             | Appends a string to the end of another string                                                                                 | String       |
+| =contains()=           | Checks whether a string contains a sequence of characters                                                                     | boolean      |
+| =contentEquals()=      | Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer          | boolean      |
+| =copyValueOf()=        | Returns a String that represents the characters of the character array                                                        | String       |
+| =endsWith()=           | Checks whether a string ends with the specified character(s)                                                                  | boolean      |
+| =equals()=             | Compares two strings. Returns true if the strings are equal, and false if not                                                 | boolean      |
+| =equalsIgnoreCase()=   | Compares two strings, ignoring case considerations                                                                            | boolean      |
+| =format()=             | Returns a formatted string using the specified locale, format string, and arguments                                           | String       |
+| =getBytes()=           | Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array                | byte[]       |
+| =getChars()=           | Copies characters from a string to an array of chars                                                                          | void         |
+| =hashCode()=           | Returns the hash code of a string                                                                                             | int          |
+| =indexOf()=            | Returns the position of the first found occurrence of specified characters in a string                                        | int          |
+| =intern()=             | Returns the canonical representation for the string object                                                                    | String       |
+| =isEmpty()=            | Checks whether a string is empty or not                                                                                       | boolean      |
+| =lastIndexOf()=        | Returns the position of the last found occurrence of specified characters in a string                                         | int          |
+| =length()=             | Returns the length of a specified string                                                                                      | int          |
+| =matches()=            | Searches a string for a match against a regular expression, and returns the matches                                           | boolean      |
+| =offsetByCodePoints()= | Returns the index within this String that is offset from the given index by codePointOffset code points                       | int          |
+| =regionMatches()=      | Tests if two string regions are equal                                                                                         | boolean      |
+| =replace()=            | Searches a string for a specified value, and returns a new string where the specified values are replaced                     | String       |
+| =replaceFirst()=       | Replaces the first occurrence of a substring that matches the given regular expression with the given replacement             | String       |
+| =replaceAll()=         | Replaces each substring of this string that matches the given regular expression with the given replacement                   | String       |
+| =split()=              | Splits a string into an array of substrings                                                                                   | String[]     |
+| =startsWith()=         | Checks whether a string starts with specified characters                                                                      | boolean      |
+| =subSequence()=        | Returns a new character sequence that is a subsequence of this sequence                                                       | CharSequence |
+| =substring()=          | Extracts the characters from a string, beginning at a specified start position, and through the specified number of character | String       |
+| =toCharArray()=        | Converts this string to a new character array                                                                                 | char[]       |
+| =toLowerCase()=        | Converts a string to lower case letters                                                                                       | String       |
+| =toString()=           | Returns the value of a String object                                                                                          | String       |
+| =toUpperCase()=        | Converts a string to upper case letters                                                                                       | String       |
+| =trim()=               | Removes whitespace from both ends of a string                                                                                 | String       |
+| =valueOf()=            | Returns the string representation of the specified value                                                                      | String       |
 |-----------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------|
 -----
 *** Obtaining substrings
-+ substring(int from, int to); =// to not included=
-+ indexOf(char ch); =gets index of char in string=
-+ substring(int from) =gets string from index till end of str=
++ =substring(int from, int to); // to not included=
++ =indexOf(char ch); gets index of char in string=
++ =substring(int from) gets string from index till end of str=
 -----
 *** Converting between Strings and Numbers
-+ Integer.parseInt(String s); =converts string to int=
-+ Double.parseDouble(String s); =converts str to double=
++ =Integer.parseInt(String s); converts string to int=
++ =Double.parseDouble(String s); converts str to double=
 -----
 ** Formatting output
 use the printf statement
