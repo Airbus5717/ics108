@@ -61,7 +61,7 @@ ran with Java Virtual Machine (JVM)
 + Logic Errors
   + Produces incorrect results (i.e. incorrect logic)
 -----
-* Chapter 2 : Elementry Programming
+* Chapter 2: Elementry Programming
 ** Program example:
 #+NAME: Compute Circle Area
 #+BEGIN_SRC java
@@ -344,8 +344,8 @@ type = false; // changed to false
 >, <, <=, >=, etc.
 i.e.
 #+BEGIN_SRC java
-bool x = 3 > 2; // true
-bool y = 4 < x; // false
+boolean x = 3 > 2; // true
+boolean y = 4 < 3; // false
 
 #+END_SRC
 -----
