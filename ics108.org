@@ -461,7 +461,6 @@ switch (x) {
 
 #+END_SRC
 -----
------
 ** Conditional operators: Ternary
 (boolean) ? (if-true) : (else);
 #+BEGIN_SRC java
@@ -503,6 +502,7 @@ NOTE: use a debugger when facing problems
 + PI
 
 + E
+-----
 
 *** Methods
 **** Trigonometric Methods
@@ -521,6 +521,7 @@ return double always
 
 + toRadians(double a) // converts to radians
 
+-----
 **** Rounding Methods
 + ceil(double x)
   x is rounded up to nearest int then returned as double
@@ -539,14 +540,17 @@ return double always
 #+BEGIN_CENTER
 NOTE: check examples in slides for Chapter4 page:(8)
 #+END_CENTER
+-----
 **** Exponent Methods
 ***** TODO Methods
 
+-----
 **** min, max, abs, and Random Methods
 + max(a, b) and min(a, b)
   return max or min of the 2 arguments
 + abs(a) returns the absolute value
 + random() returns a random double (from 0.0 to 1.0)
+-----
 ** Characters
 *** Special Chars
 + =\b= Backspace
@@ -556,6 +560,7 @@ NOTE: check examples in slides for Chapter4 page:(8)
 + =\r= carriage return
 + =\\= Backslash = \
 + ="= or =\"= Double Quote
+-----
 *** Casting between char and ints
 #+BEGIN_SRC java
 int i = 'a'; // same as int i = (int)'a';
@@ -571,6 +576,7 @@ else if (ch >= 'a' && ch <= 'z')
 else if (ch >= '0' && ch <= '9')
     // number character
 #+END_SRC
+-----
 *** Character Methods
 + isLetter()
 + isDigit()
@@ -580,6 +586,7 @@ else if (ch >= '0' && ch <= '9')
 + toUpperCase()
 + toLowerCase()
 + toString()
+-----
 ** Strings
 *** String Length
 #+BEGIN_SRC java
@@ -587,16 +594,19 @@ String message = "welcome to java";
 int length = message.length(); // String length
 #+END_SRC
 Strings are arrays of characters that start at 0
+-----
 *** specific char from string
 #+BEGIN_SRC java
 message.charAt(0); // is 'W'
 #+END_SRC
+-----
 *** Converting strings
 #+BEGIN_SRC java
 "Welcome".toLowerCase(); // returns "welcome"
 "Welcome".toUpperCase(); // returns "WELCOME"
 "Welcome  ".trim(); // returns "Welcome"
 #+END_SRC
+-----
 *** String concatenation
 #+BEGIN_SRC java
 String s3 = s1.concat(s2);
@@ -604,19 +614,23 @@ String s3 = s1.concat(s2);
 String s4 = s1 + s2;
 // s3 == s4 will return true
 #+END_SRC
+-----
 *** String Comparation Methods
 + compareTo();
 + compareToIgnoreCase();
 + contentEquals();
 + equals();
 + equalsIgnoreCase();
+-----
 *** Obtaining substrings
 + substring(int from, int to); =// to not included=
 + indexOf(char ch); =gets index of char in string=
 + substring(int from) =gets string from index till end of str=
+-----
 *** Converting between Strings and Numbers
 + Integer.parseInt(String s); =converts string to int=
 + Double.parseDouble(String s); =converts str to double=
+-----
 ** Formatting output
 use the printf statement
 + =%b= for boolean value
@@ -633,3 +647,4 @@ String greet = "World!";
 System.out.printf("Hello, %s", greet);
 
 #+END_SRC
+-----
