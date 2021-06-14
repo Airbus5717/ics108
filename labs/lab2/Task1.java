@@ -8,6 +8,7 @@ public class Task1 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the first 12 digits of an ISBN-13 as a string: ");
         String number = input.next();
+        input.close();
         if (number.length() != 12) {
             System.out.println(number + " is an invalid input");
             System.exit(1);

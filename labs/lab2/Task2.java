@@ -7,6 +7,7 @@ public class Task2 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter milliseconds: ");
         long millis = input.nextLong();
+        input.close();
         System.out.println(convertMillis(millis));
     }
 

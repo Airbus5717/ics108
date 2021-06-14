@@ -13,7 +13,7 @@ public class App {
         String strInput = input.next().toUpperCase();
         char letter = strInput.charAt(0);
         char sign = ' '; double grade = 0.0; boolean unknown = false;
-
+        input.close();
         if (strInput.length() > 1)
             sign = strInput.charAt(1);
         if (sign == '+' && letter != 'A') {
