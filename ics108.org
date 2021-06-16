@@ -50,7 +50,7 @@ ran with Java Virtual Machine (JVM)
 -----
 ** Programming Style and documentation
 + Appropriate Comments
-+ Naming Convertions
++ Naming Conventions
 + Proper Identation and spacing lines
 + Block styles
 ** Programming Errors
@@ -686,3 +686,67 @@ System.out.printf("Hello, %s", greet);
 
 #+END_SRC
 -----
+* Chapter 5: Loops
+    + While loop
+      #+BEGIN_SRC java
+      // count digits
+      int number = 1000;
+      int numdup = 1000;
+      int count = 0;
+      while (numdup > 0) {
+            numdup /= 10;
+            count++;
+      }
+      System.out.println(count);
+      #+END_SRC
+    + do while: runs the code in the loop before checking for condition.
+      #+BEGIN_SRC java
+      int i = 0;
+      do
+      {
+        System.out.println(i);
+        i++
+      } while (i < 10); // <- semicolon is here only 
+      #+END_SRC
+    + for loop
+      #+BEGIN_SRC java
+      //   init ;  condition; update
+      for (int i = 0; i < 10; i++) {
+        System.out.println("i is " + i);
+      }
+      #+END_SRC
+      #+BEGIN_SRC java
+
+      for(char ch: "bruh".toCharArray()) {
+        System.out.println(ch);
+      }
+      #+END_SRC
+
+* Chapter 6: Methods (functions)
+contains of
++ type of method (=public static void=)
+if the method returns a specific type then =void= should be replaced with the type
++ Method name (any name for usage)
++ Method parameters (between parentheses)
++ Method collection of statements (code in {})
+example:
+#+BEGIN_SRC java
+public static int addOne(int number) {
+    return number + 1;
+}
+#+END_SRC
++ parameters are variables in the method
++ variables initialized in the methods are destroyed after the method is executed
+* Chapter 7: Arrays
+use arrays to store multiple values to a single variable.
+declare array with type int
++ =datatype[] arrayName = new datatype[arraySize];=
+#+BEGIN_SRC java
+// 
+int[] myArray = new int[10]; // initialize an array
+myArray[0] = 0;
+myArray[1] = 1;
+// etc.
+// or another way
+int[] myArray2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+#+END_SRC

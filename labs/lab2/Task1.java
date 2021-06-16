@@ -1,5 +1,3 @@
-package com.airbus5717.lab2;
-
 import java.util.Scanner;
 
 public class Task1 {
@@ -15,8 +13,11 @@ public class Task1 {
         }
         int sum = 0;
         for (int i = 0; i < number.length(); i++) {
-            if (i % 2 != 0) sum += (number.charAt(i) - '0') * 3;
-            else sum += number.charAt(i) - '0';
+            if (i % 2 != 0) {
+                sum += (number.charAt(i) - '0') * 3;
+            } else {
+                sum += number.charAt(i) - '0';
+            }
         }
         sum = 10 - sum % 10;
         System.out.println("The ISBN-13 number is " + number + (sum != 10 ? sum : 0));

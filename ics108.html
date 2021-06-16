@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
 <head>
-  <!-- 2021-06-12 Sat 22:00 -->
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ICS108 NOTES</title>
-  <meta name="author" content="Airbus5717" />
-  <meta name="description" content="Notes on Java OOP Ics108 course" />
-  <meta name="generator" content="Org Mode" />
-  <style type="text/css">
-    <!--/*
-    -->
-  <![CDATA[/*><!--*/
+<!-- 2021-06-15 Tue 23:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ICS108 NOTES</title>
+<meta name="author" content="Airbus5717" />
+<meta name="description" content="Notes on Java OOP Ics108 course" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -195,1510 +193,1585 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
   /*]]>*/-->
-  </style>
-  <link rel="stylesheet" type="text/css"
-    href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script type="text/javascript"
-    src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-  <script type="text/javascript"
-    src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
-  <script type="text/javascript">
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
-      function CodeHighlightOn(elem, id) {
-        var target = document.getElementById(id);
-        if (null != target) {
-          elem.classList.add("code-highlighted");
-          target.classList.add("code-highlighted");
-        }
-      }
-    function CodeHighlightOff(elem, id) {
-      var target = document.getElementById(id);
-      if (null != target) {
-        elem.classList.remove("code-highlighted");
-        target.classList.remove("code-highlighted");
-      }
-    }
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
     /*]]>*///-->
-  </script>
+// @license-end
+</script>
 </head>
-
 <body>
-  <div id="content">
-    <h1 class="title">ICS108 NOTES</h1>
-    <div id="table-of-contents">
-      <h2>Table of Contents</h2>
-      <div id="text-table-of-contents">
-        <ul>
-          <li><a href="#org1eab15e">1. Chapter 1: Introduction to Java</a>
-            <ul>
-              <li><a href="#org3f90efa">1.1. Simple Java Program</a></li>
-              <li><a href="#org453883b">1.2. Programming Style and documentation</a></li>
-              <li><a href="#org26eb8ee">1.3. Programming Errors</a></li>
-            </ul>
-          </li>
-          <li><a href="#orga81abca">2. Chapter 2: Elementry Programming</a>
-            <ul>
-              <li><a href="#org446e4c4">2.1. Program example:</a></li>
-              <li><a href="#orgd7dddd3">2.2. Reading Input</a></li>
-              <li><a href="#orga647ff9">2.3. Imports</a></li>
-              <li><a href="#orgd0dd906">2.4. Identifiers</a></li>
-              <li><a href="#orgba7da66">2.5. Variables</a>
-                <ul>
-                  <li><a href="#orgd43d83e">2.5.1. declare variables</a></li>
-                  <li><a href="#orgdf5b0e6">2.5.2. Constant variables</a></li>
-                </ul>
-              </li>
-              <li><a href="#org588c67e">2.6. Naming Conventions</a>
-                <ul>
-                  <li><a href="#org9a3dee4">2.6.1. Variable and method names</a></li>
-                  <li><a href="#orgbc0bfc7">2.6.2. Class names</a></li>
-                  <li><a href="#orgff0fba9">2.6.3. Constant names</a></li>
-                </ul>
-              </li>
-              <li><a href="#orgd7b6234">2.7. Operators</a>
-                <ul>
-                  <li><a href="#orgb6ef1d9">2.7.1. useful operations</a></li>
-                </ul>
-              </li>
-              <li><a href="#org92317f8">2.8. Data types</a>
-                <ul>
-                  <li><a href="#org2e77ca7">2.8.1. Integers</a></li>
-                  <li><a href="#org553cc62">2.8.2. Floats and Double</a></li>
-                  <li><a href="#orgb6b9d4b">2.8.3. Scientific Notation</a></li>
-                  <li><a href="#orge0a8adf">2.8.4. Chars and Strings</a></li>
-                  <li><a href="#orge8bee90">2.8.5. other types</a></li>
-                  <li><a href="#org7cc2d30">2.8.6. Display Current Time in GMT</a></li>
-                  <li><a href="#org426daa2">2.8.7. Conversion rules</a></li>
-                  <li><a href="#org436993f">2.8.8. Type casting</a></li>
-                </ul>
-              </li>
-              <li><a href="#org59098e9">2.9. Common Errors and pitfalls</a></li>
-            </ul>
-          </li>
-          <li><a href="#orgdc9898a">3. Chapter 3: Selections</a>
-            <ul>
-              <li><a href="#orgf2a9629">3.1. More Data types</a>
-                <ul>
-                  <li><a href="#orgff056ce">3.1.1. boolean type</a></li>
-                  <li><a href="#org22c617d">3.1.2. boolean (comparasion operators)</a></li>
-                </ul>
-              </li>
-              <li><a href="#org5accb26">3.2. If else statements</a>
-                <ul>
-                  <li><a href="#org6d37ba2">3.2.1. if</a></li>
-                  <li><a href="#orga652b8b">3.2.2. else</a></li>
-                </ul>
-              </li>
-              <li><a href="#org5eeeee2">3.3. Logical operators</a></li>
-              <li><a href="#orge3fb4c2">3.4. Switch statement</a></li>
-              <li><a href="#org90e5de4">3.5. Conditional operators: Ternary</a></li>
-              <li><a href="#org5d6c343">3.6. Operator order (precedence)</a></li>
-              <li><a href="#orgce44ef0">3.7. Debugging</a></li>
-            </ul>
-          </li>
-          <li><a href="#orga0023dc">4. Chapter 4: Math functions, Chars and Strings</a>
-            <ul>
-              <li><a href="#org3cfb91c">4.1. Math Class</a>
-                <ul>
-                  <li><a href="#orgae97ad1">4.1.1. Constants</a></li>
-                  <li><a href="#org75e35f1">4.1.2. Methods</a></li>
-                </ul>
-              </li>
-              <li><a href="#org14fc1ea">4.2. Characters</a>
-                <ul>
-                  <li><a href="#orgb99e89f">4.2.1. Special Chars</a></li>
-                  <li><a href="#org1687fe0">4.2.2. Casting between char and ints</a></li>
-                  <li><a href="#org69fa26e">4.2.3. Character Methods</a></li>
-                </ul>
-              </li>
-              <li><a href="#orge0cadc2">4.3. Strings</a>
-                <ul>
-                  <li><a href="#org795138c">4.3.1. String Length</a></li>
-                  <li><a href="#org891fa08">4.3.2. specific char from string</a></li>
-                  <li><a href="#orgef6dd33">4.3.3. Converting strings</a></li>
-                  <li><a href="#org095617c">4.3.4. String concatenation</a></li>
-                  <li><a href="#org30d1992">4.3.5. String Methods list</a></li>
-                  <li><a href="#orgcba6bfa">4.3.6. Obtaining substrings</a></li>
-                  <li><a href="#orgc0f4dda">4.3.7. Converting between Strings and Numbers</a></li>
-                </ul>
-              </li>
-              <li><a href="#orgae137d3">4.4. Formatting output</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <blockquote>
-      <p>
-        THIS IS NOT AN ALTERNATIVE TO THE BOOK
-      </p>
-    </blockquote>
+<div id="content">
+<h1 class="title">ICS108 NOTES</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge6867e7">1. Chapter 1: Introduction to Java</a>
+<ul>
+<li><a href="#org47816be">1.1. Simple Java Program</a></li>
+<li><a href="#org1155c6c">1.2. Programming Style and documentation</a></li>
+<li><a href="#org282b3bf">1.3. Programming Errors</a></li>
+</ul>
+</li>
+<li><a href="#org7dfccd9">2. Chapter 2: Elementry Programming</a>
+<ul>
+<li><a href="#orgc1e9338">2.1. Program example:</a></li>
+<li><a href="#orgc4347c9">2.2. Reading Input</a></li>
+<li><a href="#orgd8db988">2.3. Imports</a></li>
+<li><a href="#org7a57f42">2.4. Identifiers</a></li>
+<li><a href="#org4484543">2.5. Variables</a>
+<ul>
+<li><a href="#org38a663d">2.5.1. declare variables</a></li>
+<li><a href="#orgcfff273">2.5.2. Constant variables</a></li>
+</ul>
+</li>
+<li><a href="#orgee6004b">2.6. Naming Conventions</a>
+<ul>
+<li><a href="#org952a8df">2.6.1. Variable and method names</a></li>
+<li><a href="#org224ac6c">2.6.2. Class names</a></li>
+<li><a href="#orgef8306a">2.6.3. Constant names</a></li>
+</ul>
+</li>
+<li><a href="#orge5065b1">2.7. Operators</a>
+<ul>
+<li><a href="#org4349ff4">2.7.1. useful operations</a></li>
+</ul>
+</li>
+<li><a href="#org963239f">2.8. Data types</a>
+<ul>
+<li><a href="#orgf545cba">2.8.1. Integers</a></li>
+<li><a href="#org8de2ab7">2.8.2. Floats and Double</a></li>
+<li><a href="#org5526d4c">2.8.3. Scientific Notation</a></li>
+<li><a href="#org9b0f592">2.8.4. Chars and Strings</a></li>
+<li><a href="#org9681460">2.8.5. other types</a></li>
+<li><a href="#orgfc4bfcc">2.8.6. Display Current Time in GMT</a></li>
+<li><a href="#org6cbb31e">2.8.7. Conversion rules</a></li>
+<li><a href="#org915bf78">2.8.8. Type casting</a></li>
+</ul>
+</li>
+<li><a href="#org9ccbb96">2.9. Common Errors and pitfalls</a></li>
+</ul>
+</li>
+<li><a href="#org8832175">3. Chapter 3: Selections</a>
+<ul>
+<li><a href="#org4e14d7a">3.1. More Data types</a>
+<ul>
+<li><a href="#orgfb72bfc">3.1.1. boolean type</a></li>
+<li><a href="#orge38932e">3.1.2. boolean (comparasion operators)</a></li>
+</ul>
+</li>
+<li><a href="#org38f67be">3.2. If else statements</a>
+<ul>
+<li><a href="#orge8a5bdb">3.2.1. if</a></li>
+<li><a href="#orgeef2a6f">3.2.2. else</a></li>
+</ul>
+</li>
+<li><a href="#org8464b0b">3.3. Logical operators</a></li>
+<li><a href="#org5c7898e">3.4. Switch statement</a></li>
+<li><a href="#org9eb9d38">3.5. Conditional operators: Ternary</a></li>
+<li><a href="#org22b351f">3.6. Operator order (precedence)</a></li>
+<li><a href="#orgadc9a31">3.7. Debugging</a></li>
+</ul>
+</li>
+<li><a href="#orgc9388a0">4. Chapter 4: Math functions, Chars and Strings</a>
+<ul>
+<li><a href="#orgf2773b3">4.1. Math Class</a>
+<ul>
+<li><a href="#org02ec41d">4.1.1. Constants</a></li>
+<li><a href="#org9f6a488">4.1.2. Methods</a></li>
+</ul>
+</li>
+<li><a href="#orgd71a71e">4.2. Characters</a>
+<ul>
+<li><a href="#org47c65d7">4.2.1. Special Chars</a></li>
+<li><a href="#org17a3cfe">4.2.2. Casting between char and ints</a></li>
+<li><a href="#org6a941ea">4.2.3. Character Methods</a></li>
+</ul>
+</li>
+<li><a href="#org0829ad0">4.3. Strings</a>
+<ul>
+<li><a href="#orge2c9174">4.3.1. String Length</a></li>
+<li><a href="#org2037aa9">4.3.2. specific char from string</a></li>
+<li><a href="#org8725410">4.3.3. Converting strings</a></li>
+<li><a href="#org828e765">4.3.4. String concatenation</a></li>
+<li><a href="#orgea12d7c">4.3.5. String Methods list</a></li>
+<li><a href="#org03e27ed">4.3.6. Obtaining substrings</a></li>
+<li><a href="#org80a1790">4.3.7. Converting between Strings and Numbers</a></li>
+</ul>
+</li>
+<li><a href="#org23920fb">4.4. Formatting output</a></li>
+</ul>
+</li>
+<li><a href="#org21f6fa7">5. Chapter 5: Loops</a></li>
+<li><a href="#org7d7f256">6. Chapter 6: Methods (functions)</a></li>
+<li><a href="#org0480878">7. Chapter 7: Arrays</a></li>
+</ul>
+</div>
+</div>
+<blockquote>
+<p>
+THIS IS NOT AN ALTERNATIVE TO THE BOOK
+</p>
+</blockquote>
 
-    <hr />
-    <div id="outline-container-org1eab15e" class="outline-2">
-      <h2 id="org1eab15e"><span class="section-number-2">1</span> Chapter 1: Introduction to Java</h2>
-      <div class="outline-text-2" id="text-1">
-      </div>
-      <div id="outline-container-org3f90efa" class="outline-3">
-        <h3 id="org3f90efa"><span class="section-number-3">1.1</span> Simple Java Program</h3>
-        <div class="outline-text-3" id="text-1-1">
-          <div class="org-src-container">
-            <pre class="src src-java" id="orgfa251fa"><span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">App</span> <span style="color: #51afef;">{</span>
-    <span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">main</span><span style="color: #c678dd;">(</span><span style="color: #ECBE7B;">String</span><span style="color: #98be65;">[]</span> <span style="color: #dcaeea;">args</span><span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
-        System.out.println<span style="color: #98be65;">(</span><span style="color: #98be65;">"Welcome to Java!"</span><span style="color: #98be65;">)</span>;
+<hr />
+<div id="outline-container-orge6867e7" class="outline-2">
+<h2 id="orge6867e7"><span class="section-number-2">1</span> Chapter 1: Introduction to Java</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org47816be" class="outline-3">
+<h3 id="org47816be"><span class="section-number-3">1.1</span> Simple Java Program</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+<pre class="src src-java" id="orgb75347c"><span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">App</span> <span style="color: #51afef;">{</span>
+    <span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">main</span><span style="color: #c678dd;">(</span><span style="color: #ECBE7B;">String</span><span style="color: #99bb66;">[]</span> <span style="color: #dcaeea;">args</span><span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
+        System.out.println<span style="color: #99bb66;">(</span><span style="color: #99bb66;">"Welcome to Java!"</span><span style="color: #99bb66;">)</span>;
     <span style="color: #c678dd;">}</span>
 <span style="color: #51afef;">}</span>
 </pre>
-          </div>
+</div>
 
-          <blockquote>
-            <p>
-              Java source files are compiled by Java compiler to bytecode (.class files) then
-              ran with Java Virtual Machine (JVM)
-            </p>
-          </blockquote>
+<blockquote>
+<p>
+Java source files are compiled by Java compiler to bytecode (.class files) then
+ran with Java Virtual Machine (JVM)
+</p>
+</blockquote>
 
-          <ul class="org-ul">
-            <li>Class name = App</li>
-            <li>
-              <p>
-                Main method = public static void main (arguments)
-              </p>
+<ul class="org-ul">
+<li>Class name = App</li>
+<li><p>
+Main method = public static void main (arguments)
+</p>
 
-              <p>
-                { code in method }
-              </p>
-            </li>
-            <li>Statements = i.e. print statement
-              <ul class="org-ul">
-                <li>each statment in java must end with a semicolon (;)</li>
-              </ul>
-            </li>
-            <li>Reserved keywords
-              <ul class="org-ul">
-                <li>class</li>
-                <li>public</li>
-                <li>static</li>
-                <li>void</li>
-                <li>etc.</li>
-              </ul>
-            </li>
-            <li>Comments
-              <ul class="org-ul">
-                <li>
-                  <p>
-                    single line and multiline comments
-                  </p>
-                  <div class="org-src-container">
-                    <pre class="src src-java">    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">single line comment</span>
-    <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">multi line</span>
-<span style="color: #5B6268;">     comment */</span>
+<p>
+{ code in method }
+</p></li>
+<li>Statements = i.e. print statement
+<ul class="org-ul">
+<li>each statment in java must end with a semicolon (;)</li>
+</ul></li>
+<li>Reserved keywords
+<ul class="org-ul">
+<li>class</li>
+<li>public</li>
+<li>static</li>
+<li>void</li>
+<li>etc.</li>
+</ul></li>
+<li>Comments
+<ul class="org-ul">
+<li><p>
+single line and multiline comments
+</p>
+<div class="org-src-container">
+<pre class="src src-java">    <span style="color: #525252;">// </span><span style="color: #525252;">single line comment</span>
+    <span style="color: #525252;">/* </span><span style="color: #525252;">multi line</span>
+<span style="color: #525252;">     comment */</span>
 
 </pre>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li>Blocks: a group of components of a program</li>
-          </ul>
-          <hr />
-        </div>
-      </div>
-      <div id="outline-container-org453883b" class="outline-3">
-        <h3 id="org453883b"><span class="section-number-3">1.2</span> Programming Style and documentation</h3>
-        <div class="outline-text-3" id="text-1-2">
-          <ul class="org-ul">
-            <li>Appropriate Comments</li>
-            <li>Naming Convertions</li>
-            <li>Proper Identation and spacing lines</li>
-            <li>Block styles</li>
-          </ul>
-        </div>
-      </div>
-      <div id="outline-container-org26eb8ee" class="outline-3">
-        <h3 id="org26eb8ee"><span class="section-number-3">1.3</span> Programming Errors</h3>
-        <div class="outline-text-3" id="text-1-3">
-          <ul class="org-ul">
-            <li>Syntax Errors
-              <ul class="org-ul">
-                <li>Detected by the compiler (i.e. missing semicolon)</li>
-              </ul>
-            </li>
-            <li>Runtime Errors
-              <ul class="org-ul">
-                <li>Causes the program to abort (i.e. divition by zero)</li>
-              </ul>
-            </li>
-            <li>Logic Errors
-              <ul class="org-ul">
-                <li>Produces incorrect results (i.e. incorrect logic)</li>
-              </ul>
-            </li>
-          </ul>
-          <hr />
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-orga81abca" class="outline-2">
-      <h2 id="orga81abca"><span class="section-number-2">2</span> Chapter 2: Elementry Programming</h2>
-      <div class="outline-text-2" id="text-2">
-      </div>
-      <div id="outline-container-org446e4c4" class="outline-3">
-        <h3 id="org446e4c4"><span class="section-number-3">2.1</span> Program example:</h3>
-        <div class="outline-text-3" id="text-2-1">
-          <div class="org-src-container">
-            <pre class="src src-java" id="org27578b6"><span style="color: #51afef;">public</span> <span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">App</span> <span style="color: #51afef;">{</span>
-    <span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">main</span><span style="color: #c678dd;">(</span><span style="color: #ECBE7B;">String</span><span style="color: #98be65;">[]</span> <span style="color: #dcaeea;">args</span><span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
+</div></li>
+</ul></li>
+<li>Blocks: a group of components of a program</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-org1155c6c" class="outline-3">
+<h3 id="org1155c6c"><span class="section-number-3">1.2</span> Programming Style and documentation</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Appropriate Comments</li>
+<li>Naming Conventions</li>
+<li>Proper Identation and spacing lines</li>
+<li>Block styles</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org282b3bf" class="outline-3">
+<h3 id="org282b3bf"><span class="section-number-3">1.3</span> Programming Errors</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Syntax Errors
+<ul class="org-ul">
+<li>Detected by the compiler (i.e. missing semicolon)</li>
+</ul></li>
+<li>Runtime Errors
+<ul class="org-ul">
+<li>Causes the program to abort (i.e. divition by zero)</li>
+</ul></li>
+<li>Logic Errors
+<ul class="org-ul">
+<li>Produces incorrect results (i.e. incorrect logic)</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org7dfccd9" class="outline-2">
+<h2 id="org7dfccd9"><span class="section-number-2">2</span> Chapter 2: Elementry Programming</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc1e9338" class="outline-3">
+<h3 id="orgc1e9338"><span class="section-number-3">2.1</span> Program example:</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-java" id="org972443e"><span style="color: #51afef;">public</span> <span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">App</span> <span style="color: #51afef;">{</span>
+    <span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">main</span><span style="color: #c678dd;">(</span><span style="color: #ECBE7B;">String</span><span style="color: #99bb66;">[]</span> <span style="color: #dcaeea;">args</span><span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
         <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">radius</span>;
         <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">area</span>;
 
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">assign a radius</span>
-        radius = <span style="color: #da8548; font-weight: bold;">20</span>;
+        <span style="color: #525252;">// </span><span style="color: #525252;">assign a radius</span>
+        radius = <span style="color: #dd8844; font-weight: bold;">20</span>;
 
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">Compute Area</span>
-        area = Math.pow<span style="color: #98be65;">(</span>radius, <span style="color: #da8548; font-weight: bold;">2</span><span style="color: #98be65;">)</span> * <span style="color: #a9a1e1;">Math</span>.PI;
-        <span style="color: #5B6268;">// </span><span style="color: #98be65; font-weight: bold;">NOTE:</span><span style="color: #5B6268;"> Math pow function returns a double</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">Compute Area</span>
+        area = Math.pow<span style="color: #99bb66;">(</span>radius, <span style="color: #dd8844; font-weight: bold;">2</span><span style="color: #99bb66;">)</span> * <span style="color: #a9a1e1;">Math</span>.PI;
+        <span style="color: #525252;">// </span><span style="color: #99bb66; font-weight: bold;">NOTE:</span><span style="color: #525252;"> Math pow function returns a double</span>
 
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">Display result</span>
-        System.out.println<span style="color: #98be65;">(</span><span style="color: #98be65;">"The Area: "</span> + area + <span style="color: #98be65;">" for radius: "</span> + radius<span style="color: #98be65;">)</span>;
+        <span style="color: #525252;">// </span><span style="color: #525252;">Display result</span>
+        System.out.println<span style="color: #99bb66;">(</span><span style="color: #99bb66;">"The Area: "</span> + area + <span style="color: #99bb66;">" for radius: "</span> + radius<span style="color: #99bb66;">)</span>;
     <span style="color: #c678dd;">}</span>
 <span style="color: #51afef;">}</span>
 </pre>
-          </div>
-          <hr />
-        </div>
-      </div>
-      <div id="outline-container-orgd7dddd3" class="outline-3">
-        <h3 id="orgd7dddd3"><span class="section-number-3">2.2</span> Reading Input</h3>
-        <div class="outline-text-3" id="text-2-2">
-          <p>
-            Reading Input can be done by creating a Scanner Object
-            which can be imported from `java.util.Scanner;`
-          </p>
-          <div class="org-src-container">
-            <pre class="src src-java" id="orgd700f04">
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">import module.class</span>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgc4347c9" class="outline-3">
+<h3 id="orgc4347c9"><span class="section-number-3">2.2</span> Reading Input</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Reading Input can be done by creating a Scanner Object
+which can be imported from `java.util.Scanner;`
+</p>
+<div class="org-src-container">
+<pre class="src src-java" id="org9b96372">
+<span style="color: #525252;">// </span><span style="color: #525252;">import module.class</span>
 <span style="color: #51afef;">import</span> <span style="color: #a9a1e1;">java</span>.<span style="color: #a9a1e1;">util</span>.<span style="color: #ECBE7B;">Scanner</span>;
 
 <span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">App</span> <span style="color: #51afef;">{</span>
-    <span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">main</span><span style="color: #c678dd;">(</span><span style="color: #ECBE7B;">String</span><span style="color: #98be65;">[]</span> <span style="color: #dcaeea;">args</span> <span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
-        <span style="color: #ECBE7B;">Scanner</span> <span style="color: #dcaeea;">input</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">Scanner</span><span style="color: #98be65;">(</span>System.in<span style="color: #98be65;">)</span>;
-        System.out.print<span style="color: #98be65;">(</span><span style="color: #98be65;">"Enter a double value: "</span><span style="color: #98be65;">)</span>;
-        <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">d</span> = input.nextDouble<span style="color: #98be65;">()</span>;
+    <span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">main</span><span style="color: #c678dd;">(</span><span style="color: #ECBE7B;">String</span><span style="color: #99bb66;">[]</span> <span style="color: #dcaeea;">args</span> <span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
+        <span style="color: #ECBE7B;">Scanner</span> <span style="color: #dcaeea;">input</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">Scanner</span><span style="color: #99bb66;">(</span>System.in<span style="color: #99bb66;">)</span>;
+        System.out.print<span style="color: #99bb66;">(</span><span style="color: #99bb66;">"Enter a double value: "</span><span style="color: #99bb66;">)</span>;
+        <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">d</span> = input.nextDouble<span style="color: #99bb66;">()</span>;
 
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">to get int: use 'input.nextInt();'</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">float: use input.nextFloat();</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">for String: use input.next(); or input.nextLine();</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">for Char use String input then</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">get the first char (code below)</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">String.s = input.nextLine();</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">char ch = s.charAt(0);</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">to get int: use 'input.nextInt();'</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">float: use input.nextFloat();</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">for String: use input.next(); or input.nextLine();</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">for Char use String input then</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">get the first char (code below)</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">String.s = input.nextLine();</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">char ch = s.charAt(0);</span>
 
-        input.close<span style="color: #98be65;">()</span>;
-        <span style="color: #5B6268;">/*</span>
-<span style="color: #5B6268;">          good practice is to</span>
-<span style="color: #5B6268;">          close scanners and files</span>
-<span style="color: #5B6268;">           */</span>
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">Display output</span>
-        System.out.println<span style="color: #98be65;">(</span><span style="color: #98be65;">"the double value is "</span> + d<span style="color: #98be65;">)</span>;
+        input.close<span style="color: #99bb66;">()</span>;
+        <span style="color: #525252;">/*</span>
+<span style="color: #525252;">          good practice is to</span>
+<span style="color: #525252;">          close scanners and files</span>
+<span style="color: #525252;">           */</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">Display output</span>
+        System.out.println<span style="color: #99bb66;">(</span><span style="color: #99bb66;">"the double value is "</span> + d<span style="color: #99bb66;">)</span>;
     <span style="color: #c678dd;">}</span>
 <span style="color: #51afef;">}</span>
 </pre>
-          </div>
-          <hr />
-        </div>
-      </div>
-      <div id="outline-container-orga647ff9" class="outline-3">
-        <h3 id="orga647ff9"><span class="section-number-3">2.3</span> Imports</h3>
-        <div class="outline-text-3" id="text-2-3">
-          <ul class="org-ul">
-            <li>Implicit import <code>import java.util.*;</code></li>
-            <li>Explicit import <code>import java.util.Scanner;</code></li>
-          </ul>
-          <p>
-            No Performance difference
-          </p>
-          <hr />
-        </div>
-      </div>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgd8db988" class="outline-3">
+<h3 id="orgd8db988"><span class="section-number-3">2.3</span> Imports</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Implicit import <code>import java.util.*;</code></li>
+<li>Explicit import <code>import java.util.Scanner;</code></li>
+</ul>
+<p>
+No Performance difference
+</p>
+<hr />
+</div>
+</div>
 
-      <div id="outline-container-orgd0dd906" class="outline-3">
-        <h3 id="orgd0dd906"><span class="section-number-3">2.4</span> Identifiers</h3>
-        <div class="outline-text-3" id="text-2-4">
-          <ul class="org-ul">
-            <li>sequence of chars are from letters, digits, underscores(_) and dollar signs($).</li>
-            <li>
-              <p>
-                An identifier must start with a letter, an underscore or a dollar sign,
-              </p>
-              <div class="org-center">
-                <p>
-                  IT CANNOT START WITH A DIGIT.
-                </p>
-              </div>
-            </li>
-            <li>An identifier cannot be a reserved word or default types such as (true, false etc.).</li>
-            <li>An identifier can be of any length.</li>
-          </ul>
-          <hr />
-        </div>
-      </div>
-      <div id="outline-container-orgba7da66" class="outline-3">
-        <h3 id="orgba7da66"><span class="section-number-3">2.5</span> Variables</h3>
-        <div class="outline-text-3" id="text-2-5">
-        </div>
-        <div id="outline-container-orgd43d83e" class="outline-4">
-          <h4 id="orgd43d83e"><span class="section-number-4">2.5.1</span> declare variables</h4>
-          <div class="outline-text-4" id="text-2-5-1">
-            <div class="org-src-container">
-              <pre class="src src-java">  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">1</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">variable example</span>
+<div id="outline-container-org7a57f42" class="outline-3">
+<h3 id="org7a57f42"><span class="section-number-3">2.4</span> Identifiers</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>sequence of chars are from letters, digits, underscores(_) and dollar signs($).</li>
+<li><p>
+An identifier must start with a letter, an underscore or a dollar sign,
+</p>
+<div class="org-center">
+<p>
+IT CANNOT START WITH A DIGIT.
+</p>
+</div></li>
+<li>An identifier cannot be a reserved word or default types such as (true, false etc.).</li>
+<li>An identifier can be of any length.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-org4484543" class="outline-3">
+<h3 id="org4484543"><span class="section-number-3">2.5</span> Variables</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-org38a663d" class="outline-4">
+<h4 id="org38a663d"><span class="section-number-4">2.5.1</span> declare variables</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<div class="org-src-container">
+<pre class="src src-java">  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">1</span>; <span style="color: #525252;">// </span><span style="color: #525252;">variable example</span>
 
-  <span style="color: #5B6268;">// </span><span style="color: #5B6268;">other variables</span>
-  <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">y</span> = <span style="color: #da8548; font-weight: bold;">12.0</span>;
-  <span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">b</span> = <span style="color: #98be65;">'s'</span>;
-  <span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">u</span> = <span style="color: #98be65;">"Bruh"</span>;
+  <span style="color: #525252;">// </span><span style="color: #525252;">other variables</span>
+  <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">y</span> = <span style="color: #dd8844; font-weight: bold;">12.0</span>;
+  <span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">b</span> = <span style="color: #99bb66;">'s'</span>;
+  <span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">u</span> = <span style="color: #99bb66;">"Bruh"</span>;
 
 </pre>
-            </div>
+</div>
 
-            <p>
-              &rsquo;int&rsquo; is a type,
-            </p>
+<p>
+&rsquo;int&rsquo; is a type,
+</p>
 
-            <p>
-              &rsquo;x&rsquo; is an identifier,
-            </p>
+<p>
+&rsquo;x&rsquo; is an identifier,
+</p>
 
-            <p>
-              &rsquo;1&rsquo; is an int value,
-            </p>
+<p>
+&rsquo;1&rsquo; is an int value,
+</p>
 
-            <p>
-              &rsquo;;&rsquo; is for statement termination,
-            </p>
+<p>
+&rsquo;;&rsquo; is for statement termination,
+</p>
 
-            <p>
-              &rsquo;=&rsquo; is for assignment
-            </p>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgdf5b0e6" class="outline-4">
-          <h4 id="orgdf5b0e6"><span class="section-number-4">2.5.2</span> Constant variables</h4>
-          <div class="outline-text-4" id="text-2-5-2">
-            <div class="org-src-container">
-              <pre class="src src-java">  <span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">SIZE</span> = <span style="color: #da8548; font-weight: bold;">3</span>;
-  <span style="color: #5B6268;">// </span><span style="color: #5B6268;">final keyword is written before datatype</span>
-  <span style="color: #5B6268;">// </span><span style="color: #5B6268;">to indicate that the variable is immutable</span>
+<p>
+&rsquo;=&rsquo; is for assignment
+</p>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgcfff273" class="outline-4">
+<h4 id="orgcfff273"><span class="section-number-4">2.5.2</span> Constant variables</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<div class="org-src-container">
+<pre class="src src-java">  <span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">SIZE</span> = <span style="color: #dd8844; font-weight: bold;">3</span>;
+  <span style="color: #525252;">// </span><span style="color: #525252;">final keyword is written before datatype</span>
+  <span style="color: #525252;">// </span><span style="color: #525252;">to indicate that the variable is immutable</span>
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-org588c67e" class="outline-3">
-        <h3 id="org588c67e"><span class="section-number-3">2.6</span> Naming Conventions</h3>
-        <div class="outline-text-3" id="text-2-6">
-          <p>
-            choose meaningful names
-          </p>
-        </div>
-        <div id="outline-container-org9a3dee4" class="outline-4">
-          <h4 id="org9a3dee4"><span class="section-number-4">2.6.1</span> Variable and method names</h4>
-          <div class="outline-text-4" id="text-2-6-1">
-            <p>
-              use lowercase and capitalize each word after the first word
-            </p>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-orgee6004b" class="outline-3">
+<h3 id="orgee6004b"><span class="section-number-3">2.6</span> Naming Conventions</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+choose meaningful names
+</p>
+</div>
+<div id="outline-container-org952a8df" class="outline-4">
+<h4 id="org952a8df"><span class="section-number-4">2.6.1</span> Variable and method names</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+use lowercase and capitalize each word after the first word
+</p>
 
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">computeArea</span><span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">area</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">radius</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">computedResult</span> = area * radius; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">example</span>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">computeArea</span><span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">area</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">radius</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">computedResult</span> = area * radius; <span style="color: #525252;">// </span><span style="color: #525252;">example</span>
     <span style="color: #51afef;">return</span> computedResult;
 <span style="color: #51afef;">}</span>
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgbc0bfc7" class="outline-4">
-          <h4 id="orgbc0bfc7"><span class="section-number-4">2.6.2</span> Class names</h4>
-          <div class="outline-text-4" id="text-2-6-2">
-            <p>
-              Capitalize first letter of each word in the name
-              for example
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">ComputeArea</span> <span style="color: #51afef;">{</span>  <span style="color: #51afef;">}</span>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org224ac6c" class="outline-4">
+<h4 id="org224ac6c"><span class="section-number-4">2.6.2</span> Class names</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<p>
+Capitalize first letter of each word in the name
+for example
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">class</span> <span style="color: #ECBE7B;">ComputeArea</span> <span style="color: #51afef;">{</span>  <span style="color: #51afef;">}</span>
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgff0fba9" class="outline-4">
-          <h4 id="orgff0fba9"><span class="section-number-4">2.6.3</span> Constant names</h4>
-          <div class="outline-text-4" id="text-2-6-3">
-            <p>
-              Capitalize all letters
-            </p>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgef8306a" class="outline-4">
+<h4 id="orgef8306a"><span class="section-number-4">2.6.3</span> Constant names</h4>
+<div class="outline-text-4" id="text-2-6-3">
+<p>
+Capitalize all letters
+</p>
 
-            <p>
-              for example
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">MAX_VALUE</span> = <span style="color: #da8548; font-weight: bold;">100</span>;
+<p>
+for example
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">MAX_VALUE</span> = <span style="color: #dd8844; font-weight: bold;">100</span>;
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-orgd7b6234" class="outline-3">
-        <h3 id="orgd7b6234"><span class="section-number-3">2.7</span> Operators</h3>
-        <div class="outline-text-3" id="text-2-7">
-          <ul class="org-ul">
-            <li>(+) add</li>
-            <li>(-) substract</li>
-            <li>(*) multiply</li>
-            <li>(/) divide</li>
-            <li>(%) remainder i.e. 5 % 2 == 1</li>
-          </ul>
-          <hr />
-        </div>
-        <div id="outline-container-orgb6ef1d9" class="outline-4">
-          <h4 id="orgb6ef1d9"><span class="section-number-4">2.7.1</span> useful operations</h4>
-          <div class="outline-text-4" id="text-2-7-1">
-            <div class="org-src-container">
-              <pre class="src src-java">i = i + <span style="color: #da8548; font-weight: bold;">1</span>; 
-i += <span style="color: #da8548; font-weight: bold;">1</span>;
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-orge5065b1" class="outline-3">
+<h3 id="orge5065b1"><span class="section-number-3">2.7</span> Operators</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>(+) add</li>
+<li>(-) substract</li>
+<li>(*) multiply</li>
+<li>(/) divide</li>
+<li>(%) remainder i.e. 5 % 2 == 1</li>
+</ul>
+<hr />
+</div>
+<div id="outline-container-org4349ff4" class="outline-4">
+<h4 id="org4349ff4"><span class="section-number-4">2.7.1</span> useful operations</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<div class="org-src-container">
+<pre class="src src-java">i = i + <span style="color: #dd8844; font-weight: bold;">1</span>; 
+i += <span style="color: #dd8844; font-weight: bold;">1</span>;
 i++;
 ++i;
- <span style="color: #5B6268;">// </span><span style="color: #5B6268;">these 4 statements are the same</span>
+ <span style="color: #525252;">// </span><span style="color: #525252;">these 4 statements are the same</span>
 
-++i; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">adds then uses the value</span>
-i++; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">uses the value then adds</span>
+++i; <span style="color: #525252;">// </span><span style="color: #525252;">adds then uses the value</span>
+i++; <span style="color: #525252;">// </span><span style="color: #525252;">uses the value then adds</span>
 --i;
 i--;
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">but if it is a statement by it self then</span>
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">it wouldn't matter much</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">but if it is a statement by it self then</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">it wouldn't matter much</span>
 
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">other operators's support</span>
-i += <span style="color: #da8548; font-weight: bold;">1</span>; i -= <span style="color: #da8548; font-weight: bold;">1</span>; i *= <span style="color: #da8548; font-weight: bold;">1</span>; i /= <span style="color: #da8548; font-weight: bold;">1</span>; i %= <span style="color: #da8548; font-weight: bold;">1</span>; 
+<span style="color: #525252;">// </span><span style="color: #525252;">other operators's support</span>
+i += <span style="color: #dd8844; font-weight: bold;">1</span>; i -= <span style="color: #dd8844; font-weight: bold;">1</span>; i *= <span style="color: #dd8844; font-weight: bold;">1</span>; i /= <span style="color: #dd8844; font-weight: bold;">1</span>; i %= <span style="color: #dd8844; font-weight: bold;">1</span>; 
 
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-org92317f8" class="outline-3">
-        <h3 id="org92317f8"><span class="section-number-3">2.8</span> Data types</h3>
-        <div class="outline-text-3" id="text-2-8">
-        </div>
-        <div id="outline-container-org2e77ca7" class="outline-4">
-          <h4 id="org2e77ca7"><span class="section-number-4">2.8.1</span> Integers</h4>
-          <div class="outline-text-4" id="text-2-8-1">
-            <p>
-              are numbers without decimal values and range between
-              -2<sup>31</sup> to (2<sup>31</sup>) - 1
-            </p>
+</div>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org963239f" class="outline-3">
+<h3 id="org963239f"><span class="section-number-3">2.8</span> Data types</h3>
+<div class="outline-text-3" id="text-2-8">
+</div>
+<div id="outline-container-orgf545cba" class="outline-4">
+<h4 id="orgf545cba"><span class="section-number-4">2.8.1</span> Integers</h4>
+<div class="outline-text-4" id="text-2-8-1">
+<p>
+are numbers without decimal values and range between
+-2<sup>31</sup> to (2<sup>31</sup>) - 1
+</p>
 
-            <p>
-              example:
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">MAX_INT</span> =  <span style="color: #da8548; font-weight: bold;">2147483647</span>;
-<span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">MIN_INT</span> = -<span style="color: #da8548; font-weight: bold;">2147483648</span>;
+<p>
+example:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">MAX_INT</span> =  <span style="color: #dd8844; font-weight: bold;">2147483647</span>;
+<span style="color: #51afef;">final</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">MIN_INT</span> = -<span style="color: #dd8844; font-weight: bold;">2147483648</span>;
 
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">example</span>
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">100</span>;
+<span style="color: #525252;">// </span><span style="color: #525252;">example</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">100</span>;
 </pre>
-            </div>
-          </div>
-        </div>
-        <div id="outline-container-org553cc62" class="outline-4">
-          <h4 id="org553cc62"><span class="section-number-4">2.8.2</span> Floats and Double</h4>
-          <div class="outline-text-4" id="text-2-8-2">
-            <p>
-              are numbers with decimal points
-              by default Java will make any decimal point double unless added an F after it i.e.
-              letter D can be used for classifing as double.
-            </p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8de2ab7" class="outline-4">
+<h4 id="org8de2ab7"><span class="section-number-4">2.8.2</span> Floats and Double</h4>
+<div class="outline-text-4" id="text-2-8-2">
+<p>
+are numbers with decimal points
+by default Java will make any decimal point double unless added an F after it i.e.
+letter D can be used for classifing as double.
+</p>
 
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">float</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">10</span>.0f; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">f is written to indicate that the variable is float</span>
-<span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">y</span> = <span style="color: #da8548; font-weight: bold;">10.0</span>;
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">also correct</span>
-<span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">y2</span> = <span style="color: #da8548; font-weight: bold;">10</span>.0d;
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">float</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">10</span>.0f; <span style="color: #525252;">// </span><span style="color: #525252;">f is written to indicate that the variable is float</span>
+<span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">y</span> = <span style="color: #dd8844; font-weight: bold;">10.0</span>;
+<span style="color: #525252;">// </span><span style="color: #525252;">also correct</span>
+<span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">y2</span> = <span style="color: #dd8844; font-weight: bold;">10</span>.0d;
 </pre>
-            </div>
+</div>
 
-            <blockquote>
-              <p>
-                NOTE: floating points are not accurate always during calculations and it is recommeneded to use double
-                for more accuracy
-              </p>
-            </blockquote>
+<blockquote>
+<p>
+NOTE: floating points are not accurate always during calculations and it is recommeneded to use double for more accuracy
+</p>
+</blockquote>
 
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgb6b9d4b" class="outline-4">
-          <h4 id="orgb6b9d4b"><span class="section-number-4">2.8.3</span> Scientific Notation</h4>
-          <div class="outline-text-4" id="text-2-8-3">
-            <p>
-              Floating point literals can be specified in scientific notations using (e, E).
-            </p>
+<hr />
+</div>
+</div>
+<div id="outline-container-org5526d4c" class="outline-4">
+<h4 id="org5526d4c"><span class="section-number-4">2.8.3</span> Scientific Notation</h4>
+<div class="outline-text-4" id="text-2-8-3">
+<p>
+Floating point literals can be specified in scientific notations using (e, E).
+</p>
 
-            <blockquote>
-              <pre class="example">
+<blockquote>
+<pre class="example">
 NOTE: use double for more accuracy
 </pre>
-            </blockquote>
+</blockquote>
 
-            <p>
-              for example
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">sciX</span> = <span style="color: #da8548; font-weight: bold;">10</span>.2e20;
+<p>
+for example
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">sciX</span> = <span style="color: #dd8844; font-weight: bold;">10</span>.2e20;
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orge0a8adf" class="outline-4">
-          <h4 id="orge0a8adf"><span class="section-number-4">2.8.4</span> Chars and Strings</h4>
-          <div class="outline-text-4" id="text-2-8-4">
-            <p>
-              are used to store text, char are for one character and strings are used for multiple characters
-            </p>
+<hr />
+</div>
+</div>
+<div id="outline-container-org9b0f592" class="outline-4">
+<h4 id="org9b0f592"><span class="section-number-4">2.8.4</span> Chars and Strings</h4>
+<div class="outline-text-4" id="text-2-8-4">
+<p>
+are used to store text, char are for one character and strings are used for multiple characters
+</p>
 
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">b</span> = <span style="color: #98be65;">'a'</span>;
-<span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">str</span> = <span style="color: #98be65;">"bruh why String is capital"</span>;
-<span style="color: #5B6268;">// </span><span style="color: #98be65; font-weight: bold;">NOTE:</span><span style="color: #5B6268;"> String data type first letter is capital</span>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">b</span> = <span style="color: #99bb66;">'a'</span>;
+<span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">str</span> = <span style="color: #99bb66;">"bruh why String is capital"</span>;
+<span style="color: #525252;">// </span><span style="color: #99bb66; font-weight: bold;">NOTE:</span><span style="color: #525252;"> String data type first letter is capital</span>
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orge8bee90" class="outline-4">
-          <h4 id="orge8bee90"><span class="section-number-4">2.8.5</span> other types</h4>
-          <div class="outline-text-4" id="text-2-8-5">
-            <ul class="org-ul">
-              <li>byte: similar to int but smaller range (-128 to 127)</li>
-              <li>long: similar to int but bigger range
-                (-2<sup>63</sup> to (2<sup>63</sup>) - 1)</li>
-            </ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-org9681460" class="outline-4">
+<h4 id="org9681460"><span class="section-number-4">2.8.5</span> other types</h4>
+<div class="outline-text-4" id="text-2-8-5">
+<ul class="org-ul">
+<li>byte: similar to int but smaller range (-128 to 127)</li>
+<li>long: similar to int but bigger range
+(-2<sup>63</sup> to (2<sup>63</sup>) - 1)</li>
+</ul>
 
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org7cc2d30" class="outline-4">
-          <h4 id="org7cc2d30"><span class="section-number-4">2.8.6</span> Display Current Time in GMT</h4>
-          <div class="outline-text-4" id="text-2-8-6">
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">long</span> <span style="color: #dcaeea;">time</span> = System.currentTimeMillis<span style="color: #51afef;">()</span>;
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">== current GMT time in milliseconds</span>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgfc4bfcc" class="outline-4">
+<h4 id="orgfc4bfcc"><span class="section-number-4">2.8.6</span> Display Current Time in GMT</h4>
+<div class="outline-text-4" id="text-2-8-6">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">long</span> <span style="color: #dcaeea;">time</span> = System.currentTimeMillis<span style="color: #51afef;">()</span>;
+<span style="color: #525252;">// </span><span style="color: #525252;">== current GMT time in milliseconds</span>
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org426daa2" class="outline-4">
-          <h4 id="org426daa2"><span class="section-number-4">2.8.7</span> Conversion rules</h4>
-          <div class="outline-text-4" id="text-2-8-7">
-            <ol class="org-ol">
-              <li>if one of the operands is double then final value is Double</li>
-              <li>otherwise if one is float then the final value is float.</li>
-              <li>otherwise, if one of the operands is long then both are long.</li>
-              <li>finally they are int if one of them is int</li>
-            </ol>
+<hr />
+</div>
+</div>
+<div id="outline-container-org6cbb31e" class="outline-4">
+<h4 id="org6cbb31e"><span class="section-number-4">2.8.7</span> Conversion rules</h4>
+<div class="outline-text-4" id="text-2-8-7">
+<ol class="org-ol">
+<li>if one of the operands is double then final value is Double</li>
+<li>otherwise if one is float then the final value is float.</li>
+<li>otherwise, if one of the operands is long then both are long.</li>
+<li>finally they are int if one of them is int</li>
+</ol>
 
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org436993f" class="outline-4">
-          <h4 id="org436993f"><span class="section-number-4">2.8.8</span> Type casting</h4>
-          <div class="outline-text-4" id="text-2-8-8">
-            <ul class="org-ul">
-              <li>
-                <p>
-                  implicit casting i.e.
-                </p>
-                <div class="org-src-container">
-                  <pre class="src src-java">  <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">d</span> = <span style="color: #da8548; font-weight: bold;">3</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">(type widening)</span>
+<hr />
+</div>
+</div>
+<div id="outline-container-org915bf78" class="outline-4">
+<h4 id="org915bf78"><span class="section-number-4">2.8.8</span> Type casting</h4>
+<div class="outline-text-4" id="text-2-8-8">
+<ul class="org-ul">
+<li><p>
+implicit casting i.e.
+</p>
+<div class="org-src-container">
+<pre class="src src-java">  <span style="color: #ECBE7B;">double</span> <span style="color: #dcaeea;">d</span> = <span style="color: #dd8844; font-weight: bold;">3</span>; <span style="color: #525252;">// </span><span style="color: #525252;">(type widening)</span>
 </pre>
-                </div>
-              </li>
-              <li>
-                <p>
-                  Explicit casting i.e.
-                </p>
-                <div class="org-src-container">
-                  <pre class="src src-java">  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span><span style="color: #51afef;">)</span> <span style="color: #da8548; font-weight: bold;">3.0</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">(type narrowing)</span>
-  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span> = <span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span><span style="color: #51afef;">)</span> <span style="color: #da8548; font-weight: bold;">3.9</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">(fraction part is truncated)</span>
-  <span style="color: #5B6268;">// </span><span style="color: #5B6268;">i = 3; j = 3;</span>
+</div></li>
+<li><p>
+Explicit casting i.e.
+</p>
+<div class="org-src-container">
+<pre class="src src-java">  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span><span style="color: #51afef;">)</span> <span style="color: #dd8844; font-weight: bold;">3.0</span>; <span style="color: #525252;">// </span><span style="color: #525252;">(type narrowing)</span>
+  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span> = <span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span><span style="color: #51afef;">)</span> <span style="color: #dd8844; font-weight: bold;">3.9</span>; <span style="color: #525252;">// </span><span style="color: #525252;">(fraction part is truncated)</span>
+  <span style="color: #525252;">// </span><span style="color: #525252;">i = 3; j = 3;</span>
 </pre>
-                </div>
-              </li>
-            </ul>
+</div></li>
+</ul>
 
-            <p>
-              another example
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">sum</span> = <span style="color: #da8548; font-weight: bold;">0</span>;
-sum += <span style="color: #da8548; font-weight: bold;">4.5</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">now sum is 4</span>
+<p>
+another example
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">sum</span> = <span style="color: #dd8844; font-weight: bold;">0</span>;
+sum += <span style="color: #dd8844; font-weight: bold;">4.5</span>; <span style="color: #525252;">// </span><span style="color: #525252;">now sum is 4</span>
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-org59098e9" class="outline-3">
-        <h3 id="org59098e9"><span class="section-number-3">2.9</span> Common Errors and pitfalls</h3>
-        <div class="outline-text-3" id="text-2-9">
-        </div>
-        <ol class="org-ol">
-          <li><a id="orga687762"></a>Common Errors<br />
-            <div class="outline-text-5" id="text-2-9-0-1">
-              <ol class="org-ol">
-                <li>Undeclared Variables and unused variables
-                  i.e. using Variables that do not exist.</li>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org9ccbb96" class="outline-3">
+<h3 id="org9ccbb96"><span class="section-number-3">2.9</span> Common Errors and pitfalls</h3>
+<div class="outline-text-3" id="text-2-9">
+</div>
+<ol class="org-ol">
+<li><a id="org4fec5e1"></a>Common Errors<br />
+<div class="outline-text-5" id="text-2-9-0-1">
+<ol class="org-ol">
+<li>Undeclared Variables and unused variables
+i.e. using Variables that do not exist.</li>
 
-                <li>Interger overflow
-                  using numbers over the max/min range</li>
+<li>Interger overflow
+using numbers over the max/min range</li>
 
-                <li>Round-off Errors
-                  when dealing with alot of float numbers</li>
+<li>Round-off Errors
+when dealing with alot of float numbers</li>
 
-                <li>Unintended Integer division
-                  i.e. division over zero</li>
+<li>Unintended Integer division
+i.e. division over zero</li>
 
-                <li>Redundant Input objects
-                  i.e. getting wrong input
-                  for example: getting a string instead of an int.</li>
-              </ol>
-              <hr />
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div id="outline-container-orgdc9898a" class="outline-2">
-      <h2 id="orgdc9898a"><span class="section-number-2">3</span> Chapter 3: Selections</h2>
-      <div class="outline-text-2" id="text-3">
-      </div>
-      <div id="outline-container-orgf2a9629" class="outline-3">
-        <h3 id="orgf2a9629"><span class="section-number-3">3.1</span> More Data types</h3>
-        <div class="outline-text-3" id="text-3-1">
-        </div>
-        <div id="outline-container-orgff056ce" class="outline-4">
-          <h4 id="orgff056ce"><span class="section-number-4">3.1.1</span> boolean type</h4>
-          <div class="outline-text-4" id="text-3-1-1">
-            <p>
-              bool values are true or false
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">type</span> = <span style="color: #a9a1e1;">true</span>;
-type = <span style="color: #a9a1e1;">false</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">changed to false</span>
+<li>Redundant Input objects
+i.e. getting wrong input
+for example: getting a string instead of an int.</li>
+</ol>
+<hr />
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8832175" class="outline-2">
+<h2 id="org8832175"><span class="section-number-2">3</span> Chapter 3: Selections</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4e14d7a" class="outline-3">
+<h3 id="org4e14d7a"><span class="section-number-3">3.1</span> More Data types</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgfb72bfc" class="outline-4">
+<h4 id="orgfb72bfc"><span class="section-number-4">3.1.1</span> boolean type</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+bool values are true or false
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">type</span> = <span style="color: #a9a1e1;">true</span>;
+type = <span style="color: #a9a1e1;">false</span>; <span style="color: #525252;">// </span><span style="color: #525252;">changed to false</span>
 </pre>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 
-        <div id="outline-container-org22c617d" class="outline-4">
-          <h4 id="org22c617d"><span class="section-number-4">3.1.2</span> boolean (comparasion operators)</h4>
-          <div class="outline-text-4" id="text-3-1-2">
-            <p>
-              <code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, etc.
-              i.e.
-            </p>
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">3</span> &gt; <span style="color: #da8548; font-weight: bold;">2</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">true</span>
-<span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">y</span> = <span style="color: #da8548; font-weight: bold;">4</span> &lt; <span style="color: #da8548; font-weight: bold;">3</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">false</span>
+<div id="outline-container-orge38932e" class="outline-4">
+<h4 id="orge38932e"><span class="section-number-4">3.1.2</span> boolean (comparasion operators)</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+<code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, etc.
+i.e.
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">3</span> &gt; <span style="color: #dd8844; font-weight: bold;">2</span>; <span style="color: #525252;">// </span><span style="color: #525252;">true</span>
+<span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">y</span> = <span style="color: #dd8844; font-weight: bold;">4</span> &lt; <span style="color: #dd8844; font-weight: bold;">3</span>; <span style="color: #525252;">// </span><span style="color: #525252;">false</span>
 
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-org5accb26" class="outline-3">
-        <h3 id="org5accb26"><span class="section-number-3">3.2</span> If else statements</h3>
-        <div class="outline-text-3" id="text-3-2">
-        </div>
-        <div id="outline-container-org6d37ba2" class="outline-4">
-          <h4 id="org6d37ba2"><span class="section-number-4">3.2.1</span> if</h4>
-          <div class="outline-text-4" id="text-3-2-1">
-            <p>
-              checks for true boolean then excutes code in the block
-            </p>
-          </div>
-        </div>
-        <div id="outline-container-orga652b8b" class="outline-4">
-          <h4 id="orga652b8b"><span class="section-number-4">3.2.2</span> else</h4>
-          <div class="outline-text-4" id="text-3-2-2">
-            <p>
-              if the &rsquo;if&rsquo; condition is false then else block executes
-            </p>
+</div>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org38f67be" class="outline-3">
+<h3 id="org38f67be"><span class="section-number-3">3.2</span> If else statements</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orge8a5bdb" class="outline-4">
+<h4 id="orge8a5bdb"><span class="section-number-4">3.2.1</span> if</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+checks for true boolean then excutes code in the block
+</p>
+</div>
+</div>
+<div id="outline-container-orgeef2a6f" class="outline-4">
+<h4 id="orgeef2a6f"><span class="section-number-4">3.2.2</span> else</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+if the &rsquo;if&rsquo; condition is false then else block executes
+</p>
 
-            <div class="org-src-container">
-              <pre class="src src-java">
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">1</span>;
+<div class="org-src-container">
+<pre class="src src-java">
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">1</span>;
 
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x &gt; <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">if x is positive then this code block executes</span>
-    <span style="color: #5B6268;">// </span><span style="color: #98be65; font-weight: bold;">NOTE:</span><span style="color: #5B6268;"> in this example the code here executes.</span>
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x &gt; <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">if x is positive then this code block executes</span>
+    <span style="color: #525252;">// </span><span style="color: #99bb66; font-weight: bold;">NOTE:</span><span style="color: #525252;"> in this example the code here executes.</span>
 <span style="color: #51afef;">}</span> <span style="color: #51afef;">else</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">if x is negative the code here executes.</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">if x is negative the code here executes.</span>
 <span style="color: #51afef;">}</span>
 
 
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">also this is possible</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">also this is possible</span>
 
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x &gt; <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">if x is positive</span>
-<span style="color: #51afef;">}</span> <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x &lt; <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">if x is negative</span>
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x &gt; <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">if x is positive</span>
+<span style="color: #51afef;">}</span> <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x &lt; <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">if x is negative</span>
 <span style="color: #51afef;">}</span> <span style="color: #51afef;">else</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">if x is not positive nor negative</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">if x is not positive nor negative</span>
 <span style="color: #51afef;">}</span>
 
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">the code will check at each statement</span>
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">also adding a semicolon at if or else is an error</span>
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">and it is a logic error</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">the code will check at each statement</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">also adding a semicolon at if or else is an error</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">and it is a logic error</span>
 </pre>
-            </div>
+</div>
 
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-org5eeeee2" class="outline-3">
-        <h3 id="org5eeeee2"><span class="section-number-3">3.3</span> Logical operators</h3>
-        <div class="outline-text-3" id="text-3-3">
-          <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org8464b0b" class="outline-3">
+<h3 id="org8464b0b"><span class="section-number-3">3.3</span> Logical operators</h3>
+<div class="outline-text-3" id="text-3-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-            <colgroup>
-              <col class="org-left" />
+<colgroup>
+<col  class="org-left" />
 
-              <col class="org-left" />
+<col  class="org-left" />
 
-              <col class="org-left" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col" class="org-left">operator</th>
-                <th scope="col" class="org-left">name</th>
-                <th scope="col" class="org-left">description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="org-left"><code>!</code></td>
-                <td class="org-left">not</td>
-                <td class="org-left">logical negation</td>
-              </tr>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">operator</th>
+<th scope="col" class="org-left">name</th>
+<th scope="col" class="org-left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>!</code></td>
+<td class="org-left">not</td>
+<td class="org-left">logical negation</td>
+</tr>
 
-              <tr>
-                <td class="org-left"><code>&amp;&amp;</code></td>
-                <td class="org-left">and</td>
-                <td class="org-left">logical conjunction</td>
-              </tr>
+<tr>
+<td class="org-left"><code>&amp;&amp;</code></td>
+<td class="org-left">and</td>
+<td class="org-left">logical conjunction</td>
+</tr>
 
-              <tr>
-                <td class="org-left"><code>^</code></td>
-                <td class="org-left">exclusive or</td>
-                <td class="org-left">logical exclusive</td>
-              </tr>
+<tr>
+<td class="org-left"><code>^</code></td>
+<td class="org-left">exclusive or</td>
+<td class="org-left">logical exclusive</td>
+</tr>
 
-              <tr>
-                <td class="org-left"><code>\vert\vert</code></td>
-                <td class="org-left">or</td>
-                <td class="org-left">logical disjunction</td>
-              </tr>
-            </tbody>
-          </table>
+<tr>
+<td class="org-left"><code>\vert\vert</code></td>
+<td class="org-left">or</td>
+<td class="org-left">logical disjunction</td>
+</tr>
+</tbody>
+</table>
 
-          <p>
-            examples:
-          </p>
-          <div class="org-src-container">
-            <pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">1</span>;
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x != <span style="color: #da8548; font-weight: bold;">1</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">wont execute</span>
+<p>
+examples:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">1</span>;
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x != <span style="color: #dd8844; font-weight: bold;">1</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">wont execute</span>
 <span style="color: #51afef;">}</span>
 
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">y</span> = <span style="color: #da8548; font-weight: bold;">0</span>;
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x == <span style="color: #da8548; font-weight: bold;">1</span> &amp;&amp; y == <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">will execute</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">y</span> = <span style="color: #dd8844; font-weight: bold;">0</span>;
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x == <span style="color: #dd8844; font-weight: bold;">1</span> &amp;&amp; y == <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">will execute</span>
 <span style="color: #51afef;">}</span>
 
 
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">'^' operator</span>
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">if both are true or false then it will evaluate as</span>
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">false otherwise if one is false and the other isnt</span>
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">it will evaluate as true</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">'^' operator</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">if both are true or false then it will evaluate as</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">false otherwise if one is false and the other isnt</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">it will evaluate as true</span>
 
-<span style="color: #5B6268;">//   </span><span style="color: #5B6268;">false    true</span>
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x != <span style="color: #da8548; font-weight: bold;">1</span> ^ y == <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">will execute</span>
+<span style="color: #525252;">//   </span><span style="color: #525252;">false    true</span>
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>x != <span style="color: #dd8844; font-weight: bold;">1</span> ^ y == <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">will execute</span>
 <span style="color: #51afef;">}</span>
 
 <span style="color: #ECBE7B;">bool</span> <span style="color: #dcaeea;">a</span> = <span style="color: #a9a1e1;">false</span>;
 
 <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span><span style="color: #51afef; font-weight: bold;">!</span>a<span style="color: #51afef;">)</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">will be true and execute</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">will be true and execute</span>
 
 bool b = <span style="color: #a9a1e1;">true</span>;
 
 <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span> a || b <span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">will execute (true)</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">will execute (true)</span>
 <span style="color: #51afef;">}</span>
 
 </pre>
-          </div>
+</div>
 
-          <hr />
-          <p>
-            Leap year example
-          </p>
+<hr />
+<p>
+Leap year example
+</p>
 
-          <div class="org-src-container">
-            <pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">year</span> = <span style="color: #da8548; font-weight: bold;">2021</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">use input or get the year number</span>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">year</span> = <span style="color: #dd8844; font-weight: bold;">2021</span>; <span style="color: #525252;">// </span><span style="color: #525252;">use input or get the year number</span>
 
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span><span style="color: #c678dd;">(</span>year % <span style="color: #da8548; font-weight: bold;">4</span> == <span style="color: #da8548; font-weight: bold;">0</span> &amp;&amp; year % <span style="color: #da8548; font-weight: bold;">100</span> != <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #c678dd;">)</span> || <span style="color: #c678dd;">(</span>year % <span style="color: #da8548; font-weight: bold;">400</span> == <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    System.out.println<span style="color: #c678dd;">(</span><span style="color: #98be65;">"Year is leap"</span><span style="color: #c678dd;">)</span>;
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span><span style="color: #c678dd;">(</span>year % <span style="color: #dd8844; font-weight: bold;">4</span> == <span style="color: #dd8844; font-weight: bold;">0</span> &amp;&amp; year % <span style="color: #dd8844; font-weight: bold;">100</span> != <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #c678dd;">)</span> || <span style="color: #c678dd;">(</span>year % <span style="color: #dd8844; font-weight: bold;">400</span> == <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    System.out.println<span style="color: #c678dd;">(</span><span style="color: #99bb66;">"Year is leap"</span><span style="color: #c678dd;">)</span>;
 <span style="color: #51afef;">}</span>
 </pre>
-          </div>
-          <hr />
-        </div>
-      </div>
-      <div id="outline-container-orge3fb4c2" class="outline-3">
-        <h3 id="orge3fb4c2"><span class="section-number-3">3.4</span> Switch statement</h3>
-        <div class="outline-text-3" id="text-3-4">
-          <p>
-            alternative to if statements equating with specific value.
-          </p>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org5c7898e" class="outline-3">
+<h3 id="org5c7898e"><span class="section-number-3">3.4</span> Switch statement</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+alternative to if statements equating with specific value.
+</p>
 
-          <div class="org-src-container">
-            <pre class="src src-java">
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">1</span>;
+<div class="org-src-container">
+<pre class="src src-java">
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #dd8844; font-weight: bold;">1</span>;
 
 <span style="color: #51afef;">switch</span> <span style="color: #51afef;">(</span>x<span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
-    <span style="color: #51afef;">case</span> <span style="color: #da8548; font-weight: bold;">1</span>:
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">code if x == 1</span>
+    <span style="color: #51afef;">case</span> <span style="color: #dd8844; font-weight: bold;">1</span>:
+        <span style="color: #525252;">// </span><span style="color: #525252;">code if x == 1</span>
         <span style="color: #51afef;">break</span>;
-    <span style="color: #51afef;">case</span> <span style="color: #da8548; font-weight: bold;">2</span>:
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">code if x == 2</span>
+    <span style="color: #51afef;">case</span> <span style="color: #dd8844; font-weight: bold;">2</span>:
+        <span style="color: #525252;">// </span><span style="color: #525252;">code if x == 2</span>
         <span style="color: #51afef;">break</span>;
     <span style="color: #51afef;">default</span>:
-        <span style="color: #5B6268;">// </span><span style="color: #5B6268;">insert if value doesnt match the cases</span>
+        <span style="color: #525252;">// </span><span style="color: #525252;">insert if value doesnt match the cases</span>
         <span style="color: #51afef;">break</span>;
 <span style="color: #51afef;">}</span>
 
 </pre>
-          </div>
-          <hr />
-        </div>
-      </div>
-      <div id="outline-container-org90e5de4" class="outline-3">
-        <h3 id="org90e5de4"><span class="section-number-3">3.5</span> Conditional operators: Ternary</h3>
-        <div class="outline-text-3" id="text-3-5">
-          <p>
-            (boolean) ? (if-true) : (else);
-          </p>
-          <div class="org-src-container">
-            <pre class="src src-java"><span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">x</span> = <span style="color: #a9a1e1;">true</span>;
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org9eb9d38" class="outline-3">
+<h3 id="org9eb9d38"><span class="section-number-3">3.5</span> Conditional operators: Ternary</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+(boolean) ? (if-true) : (else);
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">boolean</span> <span style="color: #dcaeea;">x</span> = <span style="color: #a9a1e1;">true</span>;
 
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">b</span> = x ? <span style="color: #da8548; font-weight: bold;">1</span> : <span style="color: #da8548; font-weight: bold;">0</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">now b is 1 cuz x is true</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">b</span> = x ? <span style="color: #dd8844; font-weight: bold;">1</span> : <span style="color: #dd8844; font-weight: bold;">0</span>; <span style="color: #525252;">// </span><span style="color: #525252;">now b is 1 cuz x is true</span>
 
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">c</span> = <span style="color: #51afef; font-weight: bold;">!</span>x ? <span style="color: #da8548; font-weight: bold;">1</span> : <span style="color: #da8548; font-weight: bold;">0</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">c is 0</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">c</span> = <span style="color: #51afef; font-weight: bold;">!</span>x ? <span style="color: #dd8844; font-weight: bold;">1</span> : <span style="color: #dd8844; font-weight: bold;">0</span>; <span style="color: #525252;">// </span><span style="color: #525252;">c is 0</span>
 
 </pre>
-          </div>
-          <hr />
-        </div>
-      </div>
+</div>
+<hr />
+</div>
+</div>
 
-      <div id="outline-container-org5d6c343" class="outline-3">
-        <h3 id="org5d6c343"><span class="section-number-3">3.6</span> Operator order (precedence)</h3>
-        <div class="outline-text-3" id="text-3-6">
-          <ol class="org-ol">
-            <li><code>var++</code>, <code>var--</code></li>
-            <li><code>+</code>, <code>-</code>, and <code>++var</code>, <code>--var</code>.</li>
-            <li><code>(type)</code> cast</li>
-            <li><code>!</code> (Not)</li>
-            <li><code>*</code>, <code>/</code>, <code>%</code></li>
-            <li><code>+</code>, <code>-</code></li>
-            <li><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
-            <li><code>==</code> , <code>!=</code></li>
-            <li><code>^</code> (Exclusive or)</li>
-            <li><code>&amp;&amp;</code></li>
-            <li><code>||</code></li>
-            <li><code>==</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>
-            </li>
-          </ol>
-          <hr />
-        </div>
-      </div>
+<div id="outline-container-org22b351f" class="outline-3">
+<h3 id="org22b351f"><span class="section-number-3">3.6</span> Operator order (precedence)</h3>
+<div class="outline-text-3" id="text-3-6">
+<ol class="org-ol">
+<li><code>var++</code>, <code>var--</code></li>
+<li><code>+</code>, <code>-</code>, and <code>++var</code>, <code>--var</code>.</li>
+<li><code>(type)</code> cast</li>
+<li><code>!</code> (Not)</li>
+<li><code>*</code>, <code>/</code>, <code>%</code></li>
+<li><code>+</code>, <code>-</code></li>
+<li><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></li>
+<li><code>==</code> , <code>!=</code></li>
+<li><code>^</code> (Exclusive or)</li>
+<li><code>&amp;&amp;</code></li>
+<li><code>||</code></li>
+<li><code>==</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code></li>
+</ol>
+<hr />
+</div>
+</div>
 
-      <div id="outline-container-orgce44ef0" class="outline-3">
-        <h3 id="orgce44ef0"><span class="section-number-3">3.7</span> Debugging</h3>
-        <div class="outline-text-3" id="text-3-7">
-          <p class="verse">
-            <code>NOTE: use a debugger when facing problems</code><br />
-          </p>
+<div id="outline-container-orgadc9a31" class="outline-3">
+<h3 id="orgadc9a31"><span class="section-number-3">3.7</span> Debugging</h3>
+<div class="outline-text-3" id="text-3-7">
+<p class="verse">
+<code>NOTE: use a debugger when facing problems</code><br />
+</p>
 
-          <hr />
-        </div>
-      </div>
-    </div>
+<hr />
+</div>
+</div>
+</div>
 
-    <div id="outline-container-orga0023dc" class="outline-2">
-      <h2 id="orga0023dc"><span class="section-number-2">4</span> Chapter 4: Math functions, Chars and Strings</h2>
-      <div class="outline-text-2" id="text-4">
-      </div>
-      <div id="outline-container-org3cfb91c" class="outline-3">
-        <h3 id="org3cfb91c"><span class="section-number-3">4.1</span> Math Class</h3>
-        <div class="outline-text-3" id="text-4-1">
-        </div>
-        <div id="outline-container-orgae97ad1" class="outline-4">
-          <h4 id="orgae97ad1"><span class="section-number-4">4.1.1</span> Constants</h4>
-          <div class="outline-text-4" id="text-4-1-1">
-            <ul class="org-ul">
-              <li><code>PI</code></li>
+<div id="outline-container-orgc9388a0" class="outline-2">
+<h2 id="orgc9388a0"><span class="section-number-2">4</span> Chapter 4: Math functions, Chars and Strings</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgf2773b3" class="outline-3">
+<h3 id="orgf2773b3"><span class="section-number-3">4.1</span> Math Class</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org02ec41d" class="outline-4">
+<h4 id="org02ec41d"><span class="section-number-4">4.1.1</span> Constants</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li><code>PI</code></li>
 
-              <li><code>E</code></li>
-            </ul>
-            <hr />
-          </div>
-        </div>
+<li><code>E</code></li>
+</ul>
+<hr />
+</div>
+</div>
 
-        <div id="outline-container-org75e35f1" class="outline-4">
-          <h4 id="org75e35f1"><span class="section-number-4">4.1.2</span> Methods</h4>
-          <div class="outline-text-4" id="text-4-1-2">
-          </div>
-          <ol class="org-ol">
-            <li><a id="orgf0ea1e4"></a>Trigonometric Methods<br />
-              <div class="outline-text-5" id="text-4-1-2-1">
-                <p>
-                  return double always
-                </p>
-                <ul class="org-ul">
-                  <li><code>sin(double a);</code></li>
+<div id="outline-container-org9f6a488" class="outline-4">
+<h4 id="org9f6a488"><span class="section-number-4">4.1.2</span> Methods</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1639f56"></a>Trigonometric Methods<br />
+<div class="outline-text-5" id="text-4-1-2-1">
+<p>
+return double always
+</p>
+<ul class="org-ul">
+<li><code>sin(double a);</code></li>
 
-                  <li><code>cos(double a);</code></li>
+<li><code>cos(double a);</code></li>
 
-                  <li><code>tan(double a);</code></li>
+<li><code>tan(double a);</code></li>
 
-                  <li><code>acos(double a);</code></li>
+<li><code>acos(double a);</code></li>
 
-                  <li><code>asin(double a);</code></li>
+<li><code>asin(double a);</code></li>
 
-                  <li><code>atan(double a);</code></li>
+<li><code>atan(double a);</code></li>
 
-                  <li><code>toRadians(double a);</code> // converts to radians</li>
+<li><code>toRadians(double a);</code> // converts to radians</li>
 
-                  <li><code>toDegrees(double a);</code></li>
-                </ul>
+<li><code>toDegrees(double a);</code></li>
+</ul>
 
-                <hr />
-              </div>
-            </li>
-            <li><a id="org178a185"></a>Rounding Methods<br />
-              <div class="outline-text-5" id="text-4-1-2-2">
-                <ul class="org-ul">
-                  <li><code>ceil(double x)</code>
-                    x is rounded up to nearest int then returned as double</li>
+<hr />
+</div>
+</li>
+<li><a id="org5ac4f54"></a>Rounding Methods<br />
+<div class="outline-text-5" id="text-4-1-2-2">
+<ul class="org-ul">
+<li><code>ceil(double x)</code>
+x is rounded up to nearest int then returned as double</li>
 
-                  <li><code>floor(double x)</code>
-                    x is rounded down to nearest int then returned as double</li>
+<li><code>floor(double x)</code>
+x is rounded down to nearest int then returned as double</li>
 
-                  <li><code>rint(double x)</code>
-                    x is returned to the nearest int, if x is equally close to both then the even one is returned as
-                    double</li>
+<li><code>rint(double x)</code>
+x is returned to the nearest int, if x is equally close to both then the even one is returned as double</li>
 
-                  <li><code>round(float x)</code>
-                    returns (int)Math.floor(x + 0.5);</li>
+<li><code>round(float x)</code>
+returns (int)Math.floor(x + 0.5);</li>
 
-                  <li><code>round(double x)</code>
-                    returns (long)Math.floor(x + 0.5);</li>
-                </ul>
-                <div class="org-center">
-                  <p>
-                    NOTE: check examples in slides for Chapter4 page:(8)
-                  </p>
-                </div>
-                <hr />
-              </div>
-            </li>
-            <li><a id="orge98e9f6"></a>Exponent Methods<br />
-              <ol class="org-ol">
-                <li><a id="org9b8d6aa"></a><span class="todo TODO">TODO</span> Methods<br />
-                  <div class="outline-text-6" id="text-4-1-2-3-1">
-                    <hr />
-                  </div>
-                </li>
-              </ol>
-            </li>
-            <li><a id="org506fea6"></a>min, max, abs, and Random Methods<br />
-              <div class="outline-text-5" id="text-4-1-2-4">
-                <ul class="org-ul">
-                  <li><code>max(a, b)</code> and <code>min(a, b)</code>
-                    return max or min of the 2 arguments</li>
-                  <li><code>abs(a)</code> returns the absolute value</li>
-                  <li><code>random()</code> returns a random double (from 0.0 to 1.0)</li>
-                </ul>
-                <hr />
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-      <div id="outline-container-org14fc1ea" class="outline-3">
-        <h3 id="org14fc1ea"><span class="section-number-3">4.2</span> Characters</h3>
-        <div class="outline-text-3" id="text-4-2">
-        </div>
-        <div id="outline-container-orgb99e89f" class="outline-4">
-          <h4 id="orgb99e89f"><span class="section-number-4">4.2.1</span> Special Chars</h4>
-          <div class="outline-text-4" id="text-4-2-1">
-            <ul class="org-ul">
-              <li><code>\b</code> Backspace</li>
-              <li><code>\t</code> Tab</li>
-              <li><code>\n</code> linefeed</li>
-              <li><code>\f</code> formfeed</li>
-              <li><code>\r</code> carriage return</li>
-              <li><code>\\</code> Backslash = \</li>
-              <li><code>"</code> or <code>\"</code> Double Quote</li>
-            </ul>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org1687fe0" class="outline-4">
-          <h4 id="org1687fe0"><span class="section-number-4">4.2.2</span> Casting between char and ints</h4>
-          <div class="outline-text-4" id="text-4-2-2">
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #98be65;">'a'</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">same as int i = (int)'a';</span>
+<li><code>round(double x)</code>
+returns (long)Math.floor(x + 0.5);</li>
+</ul>
+<div class="org-center">
+<p>
+NOTE: check examples in slides for Chapter4 page:(8)
+</p>
+</div>
+<hr />
+</div>
+</li>
+<li><a id="org9dc7d85"></a>Exponent Methods<br />
+<ol class="org-ol">
+<li><a id="orge199904"></a><span class="todo TODO">TODO</span> Methods<br />
+<div class="outline-text-6" id="text-4-1-2-3-1">
+<hr />
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org00694a0"></a>min, max, abs, and Random Methods<br />
+<div class="outline-text-5" id="text-4-1-2-4">
+<ul class="org-ul">
+<li><code>max(a, b)</code> and <code>min(a, b)</code>
+return max or min of the 2 arguments</li>
+<li><code>abs(a)</code> returns the absolute value</li>
+<li><code>random()</code> returns a random double (from 0.0 to 1.0)</li>
+</ul>
+<hr />
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd71a71e" class="outline-3">
+<h3 id="orgd71a71e"><span class="section-number-3">4.2</span> Characters</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org47c65d7" class="outline-4">
+<h4 id="org47c65d7"><span class="section-number-4">4.2.1</span> Special Chars</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li><code>\b</code> Backspace</li>
+<li><code>\t</code> Tab</li>
+<li><code>\n</code> linefeed</li>
+<li><code>\f</code> formfeed</li>
+<li><code>\r</code> carriage return</li>
+<li><code>\\</code> Backslash = \</li>
+<li><code>"</code> or <code>\"</code> Double Quote</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-org17a3cfe" class="outline-4">
+<h4 id="org17a3cfe"><span class="section-number-4">4.2.2</span> Casting between char and ints</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #99bb66;">'a'</span>; <span style="color: #525252;">// </span><span style="color: #525252;">same as int i = (int)'a';</span>
 
-<span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">a</span> = <span style="color: #da8548; font-weight: bold;">97</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">same as char c = (char)97;</span>
+<span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">a</span> = <span style="color: #dd8844; font-weight: bold;">97</span>; <span style="color: #525252;">// </span><span style="color: #525252;">same as char c = (char)97;</span>
 
-<span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">ch</span> = <span style="color: #98be65;">'a'</span>;<span style="color: #5B6268;">// </span><span style="color: #5B6268;">choose any value</span>
+<span style="color: #ECBE7B;">char</span> <span style="color: #dcaeea;">ch</span> = <span style="color: #99bb66;">'a'</span>;<span style="color: #525252;">// </span><span style="color: #525252;">choose any value</span>
 
-<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>ch &gt;= <span style="color: #98be65;">'A'</span> &amp;&amp; ch &lt;= <span style="color: #98be65;">'Z'</span><span style="color: #51afef;">)</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">uppercase</span>
-<span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>ch &gt;= <span style="color: #98be65;">'a'</span> &amp;&amp; ch &lt;= <span style="color: #98be65;">'z'</span><span style="color: #51afef;">)</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">lowercase</span>
-<span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>ch &gt;= <span style="color: #98be65;">'0'</span> &amp;&amp; ch &lt;= <span style="color: #98be65;">'9'</span><span style="color: #51afef;">)</span>
-    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">number character</span>
+<span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>ch &gt;= <span style="color: #99bb66;">'A'</span> &amp;&amp; ch &lt;= <span style="color: #99bb66;">'Z'</span><span style="color: #51afef;">)</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">uppercase</span>
+<span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>ch &gt;= <span style="color: #99bb66;">'a'</span> &amp;&amp; ch &lt;= <span style="color: #99bb66;">'z'</span><span style="color: #51afef;">)</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">lowercase</span>
+<span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> <span style="color: #51afef;">(</span>ch &gt;= <span style="color: #99bb66;">'0'</span> &amp;&amp; ch &lt;= <span style="color: #99bb66;">'9'</span><span style="color: #51afef;">)</span>
+    <span style="color: #525252;">// </span><span style="color: #525252;">number character</span>
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org69fa26e" class="outline-4">
-          <h4 id="org69fa26e"><span class="section-number-4">4.2.3</span> Character Methods</h4>
-          <div class="outline-text-4" id="text-4-2-3">
-            <ul class="org-ul">
-              <li><code>isLetter()</code></li>
-              <li><code>isDigit()</code></li>
-              <li><code>isWhitespace()</code></li>
-              <li><code>isUpperCase()</code></li>
-              <li><code>isLowerCase()</code></li>
-              <li><code>toUpperCase()</code></li>
-              <li><code>toLowerCase()</code></li>
-              <li><code>toString()</code></li>
-            </ul>
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-orge0cadc2" class="outline-3">
-        <h3 id="orge0cadc2"><span class="section-number-3">4.3</span> Strings</h3>
-        <div class="outline-text-3" id="text-4-3">
-        </div>
-        <div id="outline-container-org795138c" class="outline-4">
-          <h4 id="org795138c"><span class="section-number-4">4.3.1</span> String Length</h4>
-          <div class="outline-text-4" id="text-4-3-1">
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">message</span> = <span style="color: #98be65;">"welcome to java"</span>;
-<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">length</span> = message.length<span style="color: #51afef;">()</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">String length</span>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org6a941ea" class="outline-4">
+<h4 id="org6a941ea"><span class="section-number-4">4.2.3</span> Character Methods</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li><code>isLetter()</code></li>
+<li><code>isDigit()</code></li>
+<li><code>isWhitespace()</code></li>
+<li><code>isUpperCase()</code></li>
+<li><code>isLowerCase()</code></li>
+<li><code>toUpperCase()</code></li>
+<li><code>toLowerCase()</code></li>
+<li><code>toString()</code></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org0829ad0" class="outline-3">
+<h3 id="org0829ad0"><span class="section-number-3">4.3</span> Strings</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orge2c9174" class="outline-4">
+<h4 id="orge2c9174"><span class="section-number-4">4.3.1</span> String Length</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">message</span> = <span style="color: #99bb66;">"welcome to java"</span>;
+<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">length</span> = message.length<span style="color: #51afef;">()</span>; <span style="color: #525252;">// </span><span style="color: #525252;">String length</span>
 </pre>
-            </div>
-            <p>
-              Strings are arrays of characters that start at 0
-            </p>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org891fa08" class="outline-4">
-          <h4 id="org891fa08"><span class="section-number-4">4.3.2</span> specific char from string</h4>
-          <div class="outline-text-4" id="text-4-3-2">
-            <div class="org-src-container">
-              <pre class="src src-java">message.charAt<span style="color: #51afef;">(</span><span style="color: #da8548; font-weight: bold;">0</span><span style="color: #51afef;">)</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">is 'W'</span>
+</div>
+<p>
+Strings are arrays of characters that start at 0
+</p>
+<hr />
+</div>
+</div>
+<div id="outline-container-org2037aa9" class="outline-4">
+<h4 id="org2037aa9"><span class="section-number-4">4.3.2</span> specific char from string</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<div class="org-src-container">
+<pre class="src src-java">message.charAt<span style="color: #51afef;">(</span><span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span>; <span style="color: #525252;">// </span><span style="color: #525252;">is 'W'</span>
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgef6dd33" class="outline-4">
-          <h4 id="orgef6dd33"><span class="section-number-4">4.3.3</span> Converting strings</h4>
-          <div class="outline-text-4" id="text-4-3-3">
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #98be65;">"Welcome"</span>.toLowerCase<span style="color: #51afef;">()</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">returns "welcome"</span>
-<span style="color: #98be65;">"Welcome"</span>.toUpperCase<span style="color: #51afef;">()</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">returns "WELCOME"</span>
-<span style="color: #98be65;">"Welcome  "</span>.trim<span style="color: #51afef;">()</span>; <span style="color: #5B6268;">// </span><span style="color: #5B6268;">returns "Welcome"</span>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org8725410" class="outline-4">
+<h4 id="org8725410"><span class="section-number-4">4.3.3</span> Converting strings</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #99bb66;">"Welcome"</span>.toLowerCase<span style="color: #51afef;">()</span>; <span style="color: #525252;">// </span><span style="color: #525252;">returns "welcome"</span>
+<span style="color: #99bb66;">"Welcome"</span>.toUpperCase<span style="color: #51afef;">()</span>; <span style="color: #525252;">// </span><span style="color: #525252;">returns "WELCOME"</span>
+<span style="color: #99bb66;">"Welcome  "</span>.trim<span style="color: #51afef;">()</span>; <span style="color: #525252;">// </span><span style="color: #525252;">returns "Welcome"</span>
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org095617c" class="outline-4">
-          <h4 id="org095617c"><span class="section-number-4">4.3.4</span> String concatenation</h4>
-          <div class="outline-text-4" id="text-4-3-4">
-            <div class="org-src-container">
-              <pre class="src src-java"><span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">s3</span> = s1.concat<span style="color: #51afef;">(</span>s2<span style="color: #51afef;">)</span>;
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">or</span>
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-org828e765" class="outline-4">
+<h4 id="org828e765"><span class="section-number-4">4.3.4</span> String concatenation</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">s3</span> = s1.concat<span style="color: #51afef;">(</span>s2<span style="color: #51afef;">)</span>;
+<span style="color: #525252;">// </span><span style="color: #525252;">or</span>
 <span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">s4</span> = s1 + s2;
-<span style="color: #5B6268;">// </span><span style="color: #5B6268;">s3 and s4 are string values are equal</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">s3 and s4 are string values are equal</span>
 </pre>
-            </div>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-org30d1992" class="outline-4">
-          <h4 id="org30d1992"><span class="section-number-4">4.3.5</span> String Methods list</h4>
-          <div class="outline-text-4" id="text-4-3-5">
-            <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+</div>
+<hr />
+</div>
+</div>
+<div id="outline-container-orgea12d7c" class="outline-4">
+<h4 id="orgea12d7c"><span class="section-number-4">4.3.5</span> String Methods list</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
-              <colgroup>
-                <col class="org-left" />
+<colgroup>
+<col  class="org-left" />
 
-                <col class="org-left" />
+<col  class="org-left" />
 
-                <col class="org-left" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col" class="org-left">Method</th>
-                  <th scope="col" class="org-left">Description</th>
-                  <th scope="col" class="org-left">return type</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="org-left"><code>charAt()</code></td>
-                  <td class="org-left">Returns the character at the specified index (position)</td>
-                  <td class="org-left">char</td>
-                </tr>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Method</th>
+<th scope="col" class="org-left">Description</th>
+<th scope="col" class="org-left">return type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>charAt()</code></td>
+<td class="org-left">Returns the character at the specified index (position)</td>
+<td class="org-left">char</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>codePointAt()</code></td>
-                  <td class="org-left">Returns the Unicode of the character at the specified index</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>codePointAt()</code></td>
+<td class="org-left">Returns the Unicode of the character at the specified index</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>codePointBefore()</code></td>
-                  <td class="org-left">Returns the Unicode of the character before the specified index</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>codePointBefore()</code></td>
+<td class="org-left">Returns the Unicode of the character before the specified index</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>codePointCount()</code></td>
-                  <td class="org-left">Returns the Unicode in the specified text range of this String</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>codePointCount()</code></td>
+<td class="org-left">Returns the Unicode in the specified text range of this String</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>compareTo()</code></td>
-                  <td class="org-left">Compares two strings lexicographically</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>compareTo()</code></td>
+<td class="org-left">Compares two strings lexicographically</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>compareToIgnoreCase()</code></td>
-                  <td class="org-left">Compares two strings lexicographically, ignoring case differences</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>compareToIgnoreCase()</code></td>
+<td class="org-left">Compares two strings lexicographically, ignoring case differences</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>concat()</code></td>
-                  <td class="org-left">Appends a string to the end of another string</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>concat()</code></td>
+<td class="org-left">Appends a string to the end of another string</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>contains()</code></td>
-                  <td class="org-left">Checks whether a string contains a sequence of characters</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>contains()</code></td>
+<td class="org-left">Checks whether a string contains a sequence of characters</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>contentEquals()</code></td>
-                  <td class="org-left">Checks whether a string contains the exact same sequence of characters of the
-                    specified CharSequence or StringBuffer</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>contentEquals()</code></td>
+<td class="org-left">Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>copyValueOf()</code></td>
-                  <td class="org-left">Returns a String that represents the characters of the character array</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>copyValueOf()</code></td>
+<td class="org-left">Returns a String that represents the characters of the character array</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>endsWith()</code></td>
-                  <td class="org-left">Checks whether a string ends with the specified character(s)</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>endsWith()</code></td>
+<td class="org-left">Checks whether a string ends with the specified character(s)</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>equals()</code></td>
-                  <td class="org-left">Compares two strings. Returns true if the strings are equal, and false if not
-                  </td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>equals()</code></td>
+<td class="org-left">Compares two strings. Returns true if the strings are equal, and false if not</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>equalsIgnoreCase()</code></td>
-                  <td class="org-left">Compares two strings, ignoring case considerations</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>equalsIgnoreCase()</code></td>
+<td class="org-left">Compares two strings, ignoring case considerations</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>format()</code></td>
-                  <td class="org-left">Returns a formatted string using the specified locale, format string, and
-                    arguments</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>format()</code></td>
+<td class="org-left">Returns a formatted string using the specified locale, format string, and arguments</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>getBytes()</code></td>
-                  <td class="org-left">Encodes this String into a sequence of bytes using the named charset, storing the
-                    result into a new byte array</td>
-                  <td class="org-left">byte[]</td>
-                </tr>
+<tr>
+<td class="org-left"><code>getBytes()</code></td>
+<td class="org-left">Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array</td>
+<td class="org-left">byte[]</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>getChars()</code></td>
-                  <td class="org-left">Copies characters from a string to an array of chars</td>
-                  <td class="org-left">void</td>
-                </tr>
+<tr>
+<td class="org-left"><code>getChars()</code></td>
+<td class="org-left">Copies characters from a string to an array of chars</td>
+<td class="org-left">void</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>hashCode()</code></td>
-                  <td class="org-left">Returns the hash code of a string</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>hashCode()</code></td>
+<td class="org-left">Returns the hash code of a string</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>indexOf()</code></td>
-                  <td class="org-left">Returns the position of the first found occurrence of specified characters in a
-                    string</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>indexOf()</code></td>
+<td class="org-left">Returns the position of the first found occurrence of specified characters in a string</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>intern()</code></td>
-                  <td class="org-left">Returns the canonical representation for the string object</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>intern()</code></td>
+<td class="org-left">Returns the canonical representation for the string object</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>isEmpty()</code></td>
-                  <td class="org-left">Checks whether a string is empty or not</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>isEmpty()</code></td>
+<td class="org-left">Checks whether a string is empty or not</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>lastIndexOf()</code></td>
-                  <td class="org-left">Returns the position of the last found occurrence of specified characters in a
-                    string</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>lastIndexOf()</code></td>
+<td class="org-left">Returns the position of the last found occurrence of specified characters in a string</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>length()</code></td>
-                  <td class="org-left">Returns the length of a specified string</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>length()</code></td>
+<td class="org-left">Returns the length of a specified string</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>matches()</code></td>
-                  <td class="org-left">Searches a string for a match against a regular expression, and returns the
-                    matches</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>matches()</code></td>
+<td class="org-left">Searches a string for a match against a regular expression, and returns the matches</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>offsetByCodePoints()</code></td>
-                  <td class="org-left">Returns the index within this String that is offset from the given index by
-                    codePointOffset code points</td>
-                  <td class="org-left">int</td>
-                </tr>
+<tr>
+<td class="org-left"><code>offsetByCodePoints()</code></td>
+<td class="org-left">Returns the index within this String that is offset from the given index by codePointOffset code points</td>
+<td class="org-left">int</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>regionMatches()</code></td>
-                  <td class="org-left">Tests if two string regions are equal</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>regionMatches()</code></td>
+<td class="org-left">Tests if two string regions are equal</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>replace()</code></td>
-                  <td class="org-left">Searches a string for a specified value, and returns a new string where the
-                    specified values are replaced</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>replace()</code></td>
+<td class="org-left">Searches a string for a specified value, and returns a new string where the specified values are replaced</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>replaceFirst()</code></td>
-                  <td class="org-left">Replaces the first occurrence of a substring that matches the given regular
-                    expression with the given replacement</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>replaceFirst()</code></td>
+<td class="org-left">Replaces the first occurrence of a substring that matches the given regular expression with the given replacement</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>replaceAll()</code></td>
-                  <td class="org-left">Replaces each substring of this string that matches the given regular expression
-                    with the given replacement</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>replaceAll()</code></td>
+<td class="org-left">Replaces each substring of this string that matches the given regular expression with the given replacement</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>split()</code></td>
-                  <td class="org-left">Splits a string into an array of substrings</td>
-                  <td class="org-left">String[]</td>
-                </tr>
+<tr>
+<td class="org-left"><code>split()</code></td>
+<td class="org-left">Splits a string into an array of substrings</td>
+<td class="org-left">String[]</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>startsWith()</code></td>
-                  <td class="org-left">Checks whether a string starts with specified characters</td>
-                  <td class="org-left">boolean</td>
-                </tr>
+<tr>
+<td class="org-left"><code>startsWith()</code></td>
+<td class="org-left">Checks whether a string starts with specified characters</td>
+<td class="org-left">boolean</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>subSequence()</code></td>
-                  <td class="org-left">Returns a new character sequence that is a subsequence of this sequence</td>
-                  <td class="org-left">CharSequence</td>
-                </tr>
+<tr>
+<td class="org-left"><code>subSequence()</code></td>
+<td class="org-left">Returns a new character sequence that is a subsequence of this sequence</td>
+<td class="org-left">CharSequence</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>substring()</code></td>
-                  <td class="org-left">Extracts the characters from a string, beginning at a specified start position,
-                    and through the specified number of character</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>substring()</code></td>
+<td class="org-left">Extracts the characters from a string, beginning at a specified start position, and through the specified number of character</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>toCharArray()</code></td>
-                  <td class="org-left">Converts this string to a new character array</td>
-                  <td class="org-left">char[]</td>
-                </tr>
+<tr>
+<td class="org-left"><code>toCharArray()</code></td>
+<td class="org-left">Converts this string to a new character array</td>
+<td class="org-left">char[]</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>toLowerCase()</code></td>
-                  <td class="org-left">Converts a string to lower case letters</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>toLowerCase()</code></td>
+<td class="org-left">Converts a string to lower case letters</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>toString()</code></td>
-                  <td class="org-left">Returns the value of a String object</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>toString()</code></td>
+<td class="org-left">Returns the value of a String object</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>toUpperCase()</code></td>
-                  <td class="org-left">Converts a string to upper case letters</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>toUpperCase()</code></td>
+<td class="org-left">Converts a string to upper case letters</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>trim()</code></td>
-                  <td class="org-left">Removes whitespace from both ends of a string</td>
-                  <td class="org-left">String</td>
-                </tr>
+<tr>
+<td class="org-left"><code>trim()</code></td>
+<td class="org-left">Removes whitespace from both ends of a string</td>
+<td class="org-left">String</td>
+</tr>
 
-                <tr>
-                  <td class="org-left"><code>valueOf()</code></td>
-                  <td class="org-left">Returns the string representation of the specified value</td>
-                  <td class="org-left">String</td>
-                </tr>
-              </tbody>
-            </table>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgcba6bfa" class="outline-4">
-          <h4 id="orgcba6bfa"><span class="section-number-4">4.3.6</span> Obtaining substrings</h4>
-          <div class="outline-text-4" id="text-4-3-6">
-            <ul class="org-ul">
-              <li><code>substring(int from, int to); // to not included</code></li>
-              <li><code>indexOf(char ch); gets index of char in string</code></li>
-              <li><code>substring(int from) gets string from index till end of str</code></li>
-            </ul>
-            <hr />
-          </div>
-        </div>
-        <div id="outline-container-orgc0f4dda" class="outline-4">
-          <h4 id="orgc0f4dda"><span class="section-number-4">4.3.7</span> Converting between Strings and Numbers</h4>
-          <div class="outline-text-4" id="text-4-3-7">
-            <ul class="org-ul">
-              <li><code>Integer.parseInt(String s); converts string to int</code></li>
-              <li><code>Double.parseDouble(String s); converts str to double</code></li>
-            </ul>
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div id="outline-container-orgae137d3" class="outline-3">
-        <h3 id="orgae137d3"><span class="section-number-3">4.4</span> Formatting output</h3>
-        <div class="outline-text-3" id="text-4-4">
-          <p>
-            use the printf statement
-          </p>
-          <ul class="org-ul">
-            <li><code>%b</code> for boolean value</li>
-            <li><code>%c</code> for char value</li>
-            <li><code>%d</code> for integer</li>
-            <li><code>%f</code> for floating point number</li>
-            <li><code>%e</code> for std scientific notation</li>
-            <li><code>%s</code> for string</li>
-          </ul>
+<tr>
+<td class="org-left"><code>valueOf()</code></td>
+<td class="org-left">Returns the string representation of the specified value</td>
+<td class="org-left">String</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+</div>
+<div id="outline-container-org03e27ed" class="outline-4">
+<h4 id="org03e27ed"><span class="section-number-4">4.3.6</span> Obtaining substrings</h4>
+<div class="outline-text-4" id="text-4-3-6">
+<ul class="org-ul">
+<li><code>substring(int from, int to); // to not included</code></li>
+<li><code>indexOf(char ch); gets index of char in string</code></li>
+<li><code>substring(int from) gets string from index till end of str</code></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="outline-container-org80a1790" class="outline-4">
+<h4 id="org80a1790"><span class="section-number-4">4.3.7</span> Converting between Strings and Numbers</h4>
+<div class="outline-text-4" id="text-4-3-7">
+<ul class="org-ul">
+<li><code>Integer.parseInt(String s); converts string to int</code></li>
+<li><code>Double.parseDouble(String s); converts str to double</code></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org23920fb" class="outline-3">
+<h3 id="org23920fb"><span class="section-number-3">4.4</span> Formatting output</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+use the printf statement
+</p>
+<ul class="org-ul">
+<li><code>%b</code> for boolean value</li>
+<li><code>%c</code> for char value</li>
+<li><code>%d</code> for integer</li>
+<li><code>%f</code> for floating point number</li>
+<li><code>%e</code> for std scientific notation</li>
+<li><code>%s</code> for string</li>
+</ul>
 
-          <div class="org-src-container">
-            <pre class="src src-java"><span style="color: #5B6268;">// </span><span style="color: #5B6268;">System.out.printf(format, items);</span>
-<span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">greet</span> = <span style="color: #98be65;">"World!"</span>;
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #525252;">// </span><span style="color: #525252;">System.out.printf(format, items);</span>
+<span style="color: #ECBE7B;">String</span> <span style="color: #dcaeea;">greet</span> = <span style="color: #99bb66;">"World!"</span>;
 
-System.out.printf<span style="color: #51afef;">(</span><span style="color: #98be65;">"Hello, %s"</span>, greet<span style="color: #51afef;">)</span>;
+System.out.printf<span style="color: #51afef;">(</span><span style="color: #99bb66;">"Hello, %s"</span>, greet<span style="color: #51afef;">)</span>;
 
 </pre>
-          </div>
-          <hr />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="postamble" class="status">
-    <p class="author">Author: Airbus5717</p>
-    <p class="date">Created: 2021-06-12 Sat 22:00</p>
-  </div>
+</div>
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org21f6fa7" class="outline-2">
+<h2 id="org21f6fa7"><span class="section-number-2">5</span> Chapter 5: Loops</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><p>
+While loop
+</p>
+<div class="org-src-container">
+<pre class="src src-java">      <span style="color: #525252;">// </span><span style="color: #525252;">count digits</span>
+      <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">number</span> = <span style="color: #dd8844; font-weight: bold;">1000</span>;
+      <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">numdup</span> = <span style="color: #dd8844; font-weight: bold;">1000</span>;
+      <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">count</span> = <span style="color: #dd8844; font-weight: bold;">0</span>;
+      <span style="color: #51afef;">while</span> <span style="color: #51afef;">(</span>numdup &gt; <span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+            numdup /= <span style="color: #dd8844; font-weight: bold;">10</span>;
+            count++;
+      <span style="color: #51afef;">}</span>
+      System.out.println<span style="color: #51afef;">(</span>count<span style="color: #51afef;">)</span>;
+</pre>
+</div></li>
+<li><p>
+do while: runs the code in the loop before checking for condition.
+</p>
+<div class="org-src-container">
+<pre class="src src-java">      <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #dd8844; font-weight: bold;">0</span>;
+      <span style="color: #51afef;">do</span>
+      <span style="color: #51afef;">{</span>
+        System.out.println<span style="color: #c678dd;">(</span>i<span style="color: #c678dd;">)</span>;
+        i++
+      <span style="color: #51afef;">}</span> <span style="color: #51afef;">while</span> <span style="color: #51afef;">(</span>i &lt; <span style="color: #dd8844; font-weight: bold;">10</span><span style="color: #51afef;">)</span>; <span style="color: #525252;">// </span><span style="color: #525252;">&lt;- semicolon is here only </span>
+</pre>
+</div></li>
+<li><p>
+for loop
+</p>
+<div class="org-src-container">
+<pre class="src src-java">      <span style="color: #525252;">//   </span><span style="color: #525252;">init ;  condition; update</span>
+      <span style="color: #51afef;">for</span> <span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span> = <span style="color: #dd8844; font-weight: bold;">0</span>; i &lt; <span style="color: #dd8844; font-weight: bold;">10</span>; i++<span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+        System.out.println<span style="color: #c678dd;">(</span><span style="color: #99bb66;">"i is "</span> + i<span style="color: #c678dd;">)</span>;
+      <span style="color: #51afef;">}</span>
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-java">
+      <span style="color: #51afef;">for</span><span style="color: #51afef;">(</span><span style="color: #ECBE7B;">char</span> <span style="color: #c678dd;">ch</span>: <span style="color: #99bb66;">"bruh"</span>.toCharArray<span style="color: #c678dd;">()</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+        System.out.println<span style="color: #c678dd;">(</span>ch<span style="color: #c678dd;">)</span>;
+      <span style="color: #51afef;">}</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d7f256" class="outline-2">
+<h2 id="org7d7f256"><span class="section-number-2">6</span> Chapter 6: Methods (functions)</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+contains of
+</p>
+<ul class="org-ul">
+<li>type of method (<code>public static void</code>)</li>
+</ul>
+<p>
+if the method returns a specific type then <code>void</code> should be replaced with the type
+</p>
+<ul class="org-ul">
+<li>Method name (any name for usage)</li>
+<li>Method parameters (between parentheses)</li>
+<li>Method collection of statements (code in {})</li>
+</ul>
+<p>
+example:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #51afef;">public</span> <span style="color: #51afef;">static</span> <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">addOne</span><span style="color: #51afef;">(</span><span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">number</span><span style="color: #51afef;">)</span> <span style="color: #51afef;">{</span>
+    <span style="color: #51afef;">return</span> number + <span style="color: #dd8844; font-weight: bold;">1</span>;
+<span style="color: #51afef;">}</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>parameters are variables in the method</li>
+<li>variables initialized in the methods are destroyed after the method is executed</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0480878" class="outline-2">
+<h2 id="org0480878"><span class="section-number-2">7</span> Chapter 7: Arrays</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+use arrays to store multiple values to a single variable.
+declare array with type int
+</p>
+<ul class="org-ul">
+<li><code>datatype[] arrayName = new datatype[arraySize];</code></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #525252;">// </span>
+<span style="color: #ECBE7B;">int</span><span style="color: #51afef;">[]</span> <span style="color: #dcaeea;">myArray</span> = <span style="color: #51afef;">new</span> <span style="color: #ECBE7B;">int</span><span style="color: #51afef;">[</span><span style="color: #dd8844; font-weight: bold;">10</span><span style="color: #51afef;">]</span>; <span style="color: #525252;">// </span><span style="color: #525252;">initialize an array</span>
+myArray<span style="color: #51afef;">[</span><span style="color: #dd8844; font-weight: bold;">0</span><span style="color: #51afef;">]</span> = <span style="color: #dd8844; font-weight: bold;">0</span>;
+myArray<span style="color: #51afef;">[</span><span style="color: #dd8844; font-weight: bold;">1</span><span style="color: #51afef;">]</span> = <span style="color: #dd8844; font-weight: bold;">1</span>;
+<span style="color: #525252;">// </span><span style="color: #525252;">etc.</span>
+<span style="color: #525252;">// </span><span style="color: #525252;">or another way</span>
+<span style="color: #ECBE7B;">int</span><span style="color: #51afef;">[]</span> <span style="color: #dcaeea;">myArray2</span> = <span style="color: #51afef;">{</span><span style="color: #dd8844; font-weight: bold;">1</span>, <span style="color: #dd8844; font-weight: bold;">2</span>, <span style="color: #dd8844; font-weight: bold;">3</span>, <span style="color: #dd8844; font-weight: bold;">4</span>, <span style="color: #dd8844; font-weight: bold;">5</span>, <span style="color: #dd8844; font-weight: bold;">6</span>, <span style="color: #dd8844; font-weight: bold;">7</span>, <span style="color: #dd8844; font-weight: bold;">8</span>, <span style="color: #dd8844; font-weight: bold;">9</span>, <span style="color: #dd8844; font-weight: bold;">10</span><span style="color: #51afef;">}</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Airbus5717</p>
+<p class="date">Created: 2021-06-15 Tue 23:36</p>
+</div>
 </body>
-
 </html>

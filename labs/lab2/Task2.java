@@ -1,4 +1,3 @@
-package com.airbus5717.lab2;
 
 import java.util.Scanner;
 
@@ -10,7 +9,6 @@ public class Task2 {
         input.close();
         System.out.println(convertMillis(millis));
     }
-
     public static String convertMillis(long millis) {
         long sec = millis / 1000;
         long seconds = sec % 60;
