@@ -6,7 +6,3 @@ emacs:
 
 vim:
 	vim ics108.org
-
-push:
-	-git push .
-	-git commit -m "auto committed ."
