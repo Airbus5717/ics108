@@ -1,30 +1,37 @@
 #+TITLE: ICS108 NOTES
-#+DESCRIPTION: Notes on Java OOP Ics108 course
+#+DESCRIPTION: Notes for Java OOP Ics108 course
+
+#+BEGIN_COMMENT
+#+HTML_HEAD: <link href="extra.css" rel="stylesheet" type="text/css" />
+#+END_COMMENT
+
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+LaTeX_HEADER: \usepackage{minted}
 
 
-#+BEGIN_QUOTE
+#+begin_quote
 THIS IS NOT AN ALTERNATIVE TO THE BOOK
-#+END_QUOTE
+#+end_quote
 
 -----
 * Chapter 1: Introduction to Java
 ** Simple Java Program
-
+ 
 #+NAME: Java simple Program
-#+BEGIN_SRC java
+#+begin_src java
 class App {
     public static void main(String[] args) {
         System.out.println("Welcome to Java!");
     }
 }
-#+END_SRC
+#+end_src
 
-#+BEGIN_QUOTE
+#+RESULTS: Java simple Program
+
+#+begin_quote
 Java source files are compiled by Java compiler to bytecode (.class files) then
 ran with Java Virtual Machine (JVM)
-#+END_QUOTE
+#+end_quote
 
 + Class name = App
 + Main method = public static void main (arguments)
@@ -40,12 +47,12 @@ ran with Java Virtual Machine (JVM)
     - etc.
 + Comments
   - single line and multiline comments
-    #+BEGIN_SRC java
+    #+begin_src java
     // single line comment
     /* multi line
      comment */
 
-    #+END_SRC
+    #+end_src
 + Blocks: a group of components of a program
 -----
 ** Programming Style and documentation
@@ -64,7 +71,7 @@ ran with Java Virtual Machine (JVM)
 * Chapter 2: Elementry Programming
 ** Program example:
 #+NAME: Compute Circle Area
-#+BEGIN_SRC java
+#+begin_src java
 public class App {
     public static void main(String[] args) {
         double radius;
@@ -81,13 +88,13 @@ public class App {
         System.out.println("The Area: " + area + " for radius: " + radius);
     }
 }
-#+END_SRC
+#+end_src
 -----
 ** Reading Input
 Reading Input can be done by creating a Scanner Object
 which can be imported from `java.util.Scanner;`
 #+NAME: Input Scanner example
-#+BEGIN_SRC java
+#+begin_src java
 
 // import module.class
 import java.util.Scanner;
@@ -115,7 +122,7 @@ class App {
         System.out.println("the double value is " + d);
     }
 }
-#+END_SRC
+#+end_src
 -----
 ** Imports
 + Implicit import =import java.util.*;=
@@ -126,15 +133,15 @@ No Performance difference
 ** Identifiers
 + sequence of chars are from letters, digits, underscores(_) and dollar signs($).
 + An identifier must start with a letter, an underscore or a dollar sign,
-  #+BEGIN_CENTER
+  #+begin_center
   IT CANNOT START WITH A DIGIT.
-  #+END_CENTER
+  #+end_center
 + An identifier cannot be a reserved word or default types such as (true, false etc.).
 + An identifier can be of any length.
 -----
 ** Variables
 *** declare variables
-  #+BEGIN_SRC java
+  #+begin_src java
   int x = 1; // variable example
 
   // other variables
@@ -142,7 +149,7 @@ No Performance difference
   char b = 's';
   String u = "Bruh";
 
-  #+END_SRC
+  #+end_src
   
   'int' is a type,
 
@@ -156,11 +163,11 @@ No Performance difference
 -----
 *** Constant variables
 
-  #+BEGIN_SRC java
+  #+begin_src java
   final int SIZE = 3;
   // final keyword is written before datatype
   // to indicate that the variable is immutable
-  #+END_SRC
+  #+end_src
 
 -----
 ** Naming Conventions
@@ -168,27 +175,27 @@ choose meaningful names
 *** Variable and method names
 use lowercase and capitalize each word after the first word
 
-#+BEGIN_SRC java
+#+begin_src java
 int computeArea(int area, int radius) {
     int computedResult = area * radius; // example
     return computedResult;
 }
-#+END_SRC
+#+end_src
 -----
 *** Class names
 Capitalize first letter of each word in the name
 for example
-#+BEGIN_SRC java
+#+begin_src java
 class ComputeArea {  }
-#+END_SRC
+#+end_src
 -----
 *** Constant names
 Capitalize all letters
 
 for example
-#+BEGIN_SRC java
+#+begin_src java
 final int MAX_VALUE = 100;
-#+END_SRC
+#+end_src
 
 -----
 ** Operators
@@ -199,7 +206,7 @@ final int MAX_VALUE = 100;
     + (%) remainder i.e. 5 % 2 == 1
 -----
 *** useful operations
-#+BEGIN_SRC java
+#+begin_src java
 i = i + 1; 
 i += 1;
 i++;
@@ -216,7 +223,7 @@ i--;
 // other operators's support
 i += 1; i -= 1; i *= 1; i /= 1; i %= 1; 
 
-#+END_SRC
+#+end_src
 -----
 ** Data types
 *** Integers
@@ -224,51 +231,51 @@ are numbers without decimal values and range between
 -2^31 to (2^31) - 1
 
 example:
-#+BEGIN_SRC java
+#+begin_src java
 final int MAX_INT =  2147483647;
 final int MIN_INT = -2147483648;
 
 // example
 int x = 100;
-#+END_SRC
+#+end_src
 *** Floats and Double
 are numbers with decimal points
 by default Java will make any decimal point double unless added an F after it i.e.
 letter D can be used for classifing as double.
 
-#+BEGIN_SRC java
+#+begin_src java
 float x = 10.0f; // f is written to indicate that the variable is float
 double y = 10.0;
 // also correct
 double y2 = 10.0d;
-#+END_SRC
+#+end_src
 
-#+BEGIN_QUOTE
+#+begin_quote
 NOTE: floating points are not accurate always during calculations and it is recommeneded to use double for more accuracy
-#+END_QUOTE
+#+end_quote
 
 -----
 *** Scientific Notation
 Floating point literals can be specified in scientific notations using (e, E).
 
-#+BEGIN_QUOTE
+#+begin_quote
 : NOTE: use double for more accuracy
-#+END_QUOTE
+#+end_quote
 
 for example
-#+BEGIN_SRC java
+#+begin_src java
 double sciX = 10.2e20;
-#+END_SRC
+#+end_src
 
 -----
 *** Chars and Strings
 are used to store text, char are for one character and strings are used for multiple characters
 
-#+BEGIN_SRC java
+#+begin_src java
 char b = 'a';
 String str = "bruh why String is capital";
 // NOTE: String data type first letter is capital
-#+END_SRC
+#+end_src
 
 #+RESULTS:
 
@@ -281,10 +288,10 @@ String str = "bruh why String is capital";
 
 -----
 *** Display Current Time in GMT
-#+BEGIN_SRC java
+#+begin_src java
 long time = System.currentTimeMillis();
 // == current GMT time in milliseconds
-#+END_SRC
+#+end_src
 
 -----
 *** Conversion rules
@@ -296,21 +303,21 @@ long time = System.currentTimeMillis();
 -----
 *** Type casting
 + implicit casting i.e.
-  #+BEGIN_SRC java
+  #+begin_src java
   double d = 3; // (type widening)
-  #+END_SRC
+  #+end_src
 + Explicit casting i.e.
-  #+BEGIN_SRC java
+  #+begin_src java
   int i = (int) 3.0; // (type narrowing)
   int j = (int) 3.9; // (fraction part is truncated)
   // i = 3; j = 3;
-  #+END_SRC
+  #+end_src
 
 another example
-#+BEGIN_SRC java
+#+begin_src java
 int sum = 0;
 sum += 4.5; // now sum is 4
-#+END_SRC
+#+end_src
 
 -----
 ** Common Errors and pitfalls
@@ -335,19 +342,19 @@ sum += 4.5; // now sum is 4
 ** More Data types
 *** boolean type
 bool values are true or false
-#+BEGIN_SRC java
+#+begin_src java
 boolean type = true;
 type = false; // changed to false
-#+END_SRC
+#+end_src
 
 *** boolean (comparasion operators)
 =>=, =<=, =<==, =>==, etc.
 i.e.
-#+BEGIN_SRC java
+#+begin_src java
 boolean x = 3 > 2; // true
 boolean y = 4 < 3; // false
 
-#+END_SRC
+#+end_src
 -----
 ** If else statements
 *** if
@@ -355,7 +362,7 @@ checks for true boolean then excutes code in the block
 *** else
 if the 'if' condition is false then else block executes
 
-#+BEGIN_SRC java
+#+begin_src java
 
 int x = 1;
 
@@ -380,7 +387,7 @@ if (x > 0) {
 // the code will check at each statement
 // also adding a semicolon at if or else is an error
 // and it is a logic error
-#+END_SRC
+#+end_src
 
 -----
 ** Logical operators
@@ -394,7 +401,7 @@ if (x > 0) {
 |--------------+--------------+---------------------|
 
  examples:
-#+BEGIN_SRC java
+#+begin_src java
 int x = 1;
 if (x != 1) {
     // wont execute
@@ -427,23 +434,23 @@ if ( a || b ) {
     // will execute (true)
 }
 
-#+END_SRC
+#+end_src
 
 -----
 Leap year example
 
-#+BEGIN_SRC java
+#+begin_src java
 int year = 2021; // use input or get the year number
 
 if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
     System.out.println("Year is leap");
 }
-#+END_SRC
+#+end_src
 -----
 ** Switch statement
 alternative to if statements equating with specific value.
 
-#+BEGIN_SRC java
+#+begin_src java
 
 int x = 1;
 
@@ -459,18 +466,18 @@ switch (x) {
         break;
 }
 
-#+END_SRC
+#+end_src
 -----
 ** Conditional operators: Ternary
-(boolean) ? (if-true) : (else);
-#+BEGIN_SRC java
+(boolean) ? (if boolean is true) : (if boolean is false);
+#+begin_src java
 boolean x = true;
 
 int b = x ? 1 : 0; // now b is 1 cuz x is true
 
 int c = !x ? 1 : 0; // c is 0
 
-#+END_SRC
+#+end_src
 -----
 
 ** Operator order (precedence)
@@ -490,9 +497,9 @@ int c = !x ? 1 : 0; // c is 0
 
 ** Debugging
 
-#+BEGIN_VERSE
+#+begin_center
 =NOTE: use a debugger when facing problems=
-#+END_VERSE
+#+end_center
 
 -----
 
@@ -539,9 +546,9 @@ return double always
 
 + =round(double x)=
   returns (long)Math.floor(x + 0.5);
-#+BEGIN_CENTER
+#+begin_center
 NOTE: check examples in slides for Chapter4 page:(8)
-#+END_CENTER
+#+end_center
 -----
 **** Exponent Methods
 ***** TODO Methods
@@ -564,7 +571,7 @@ NOTE: check examples in slides for Chapter4 page:(8)
 + ="= or =\"= Double Quote
 -----
 *** Casting between char and ints
-#+BEGIN_SRC java
+#+begin_src java
 int i = 'a'; // same as int i = (int)'a';
 
 char a = 97; // same as char c = (char)97;
@@ -577,7 +584,7 @@ else if (ch >= 'a' && ch <= 'z')
     // lowercase
 else if (ch >= '0' && ch <= '9')
     // number character
-#+END_SRC
+#+end_src
 -----
 *** Character Methods
 + =isLetter()=
@@ -591,75 +598,75 @@ else if (ch >= '0' && ch <= '9')
 -----
 ** Strings
 *** String Length
-#+BEGIN_SRC java
+#+begin_src java
 String message = "welcome to java";
 int length = message.length(); // String length
-#+END_SRC
+#+end_src
 Strings are arrays of characters that start at 0
 -----
 *** specific char from string
-#+BEGIN_SRC java
+#+begin_src java
 message.charAt(0); // is 'W'
-#+END_SRC
+#+end_src
 -----
 *** Converting strings
-#+BEGIN_SRC java
+#+begin_src java
 "Welcome".toLowerCase(); // returns "welcome"
 "Welcome".toUpperCase(); // returns "WELCOME"
 "Welcome  ".trim(); // returns "Welcome"
-#+END_SRC
+#+end_src
 -----
 *** String concatenation
-#+BEGIN_SRC java
+#+begin_src java
 String s3 = s1.concat(s2);
 // or
 String s4 = s1 + s2;
 // s3 and s4 are string values are equal
-#+END_SRC
+boolean bruh = s3.equals(s4); // returns true
+#+end_src
 -----
 *** String Methods list
-| Method                | Description                                                                                                                   | return type  |
-|-----------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------|
-| =charAt()=             | Returns the character at the specified index (position)                                                                       | char         |
-| =codePointAt()=        | Returns the Unicode of the character at the specified index                                                                   | int          |
-| =codePointBefore()=    | Returns the Unicode of the character before the specified index                                                               | int          |
-| =codePointCount()=     | Returns the Unicode in the specified text range of this String                                                                | int          |
-| =compareTo()=          | Compares two strings lexicographically                                                                                        | int          |
+| Method                  | Description                                                                                                                   | return type  |
+|-------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------|
+| =charAt()=              | Returns the character at the specified index (position)                                                                       | char         |
+| =codePointAt()=         | Returns the Unicode of the character at the specified index                                                                   | int          |
+| =codePointBefore()=     | Returns the Unicode of the character before the specified index                                                               | int          |
+| =codePointCount()=      | Returns the Unicode in the specified text range of this String                                                                | int          |
+| =compareTo()=           | Compares two strings lexicographically                                                                                        | int          |
 | =compareToIgnoreCase()= | Compares two strings lexicographically, ignoring case differences                                                             | int          |
-| =concat()=             | Appends a string to the end of another string                                                                                 | String       |
-| =contains()=           | Checks whether a string contains a sequence of characters                                                                     | boolean      |
-| =contentEquals()=      | Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer          | boolean      |
-| =copyValueOf()=        | Returns a String that represents the characters of the character array                                                        | String       |
-| =endsWith()=           | Checks whether a string ends with the specified character(s)                                                                  | boolean      |
-| =equals()=             | Compares two strings. Returns true if the strings are equal, and false if not                                                 | boolean      |
-| =equalsIgnoreCase()=   | Compares two strings, ignoring case considerations                                                                            | boolean      |
-| =format()=             | Returns a formatted string using the specified locale, format string, and arguments                                           | String       |
-| =getBytes()=           | Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array                | byte[]       |
-| =getChars()=           | Copies characters from a string to an array of chars                                                                          | void         |
-| =hashCode()=           | Returns the hash code of a string                                                                                             | int          |
-| =indexOf()=            | Returns the position of the first found occurrence of specified characters in a string                                        | int          |
-| =intern()=             | Returns the canonical representation for the string object                                                                    | String       |
-| =isEmpty()=            | Checks whether a string is empty or not                                                                                       | boolean      |
-| =lastIndexOf()=        | Returns the position of the last found occurrence of specified characters in a string                                         | int          |
-| =length()=             | Returns the length of a specified string                                                                                      | int          |
-| =matches()=            | Searches a string for a match against a regular expression, and returns the matches                                           | boolean      |
-| =offsetByCodePoints()= | Returns the index within this String that is offset from the given index by codePointOffset code points                       | int          |
-| =regionMatches()=      | Tests if two string regions are equal                                                                                         | boolean      |
-| =replace()=            | Searches a string for a specified value, and returns a new string where the specified values are replaced                     | String       |
-| =replaceFirst()=       | Replaces the first occurrence of a substring that matches the given regular expression with the given replacement             | String       |
-| =replaceAll()=         | Replaces each substring of this string that matches the given regular expression with the given replacement                   | String       |
-| =split()=              | Splits a string into an array of substrings                                                                                   | String[]     |
-| =startsWith()=         | Checks whether a string starts with specified characters                                                                      | boolean      |
-| =subSequence()=        | Returns a new character sequence that is a subsequence of this sequence                                                       | CharSequence |
-| =substring()=          | Extracts the characters from a string, beginning at a specified start position, and through the specified number of character | String       |
-| =toCharArray()=        | Converts this string to a new character array                                                                                 | char[]       |
-| =toLowerCase()=        | Converts a string to lower case letters                                                                                       | String       |
-| =toString()=           | Returns the value of a String object                                                                                          | String       |
-| =toUpperCase()=        | Converts a string to upper case letters                                                                                       | String       |
-| =trim()=               | Removes whitespace from both ends of a string                                                                                 | String       |
-| =valueOf()=            | Returns the string representation of the specified value                                                                      | String       |
-|-----------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------|
------
+| =concat()=              | Appends a string to the end of another string                                                                                 | String       |
+| =contains()=            | Checks whether a string contains a sequence of characters                                                                     | boolean      |
+| =contentEquals()=       | Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer          | boolean      |
+| =copyValueOf()=         | Returns a String that represents the characters of the character array                                                        | String       |
+| =endsWith()=            | Checks whether a string ends with the specified character(s)                                                                  | boolean      |
+| =equals()=              | Compares two strings. Returns true if the strings are equal, and false if not                                                 | boolean      |
+| =equalsIgnoreCase()=    | Compares two strings, ignoring case considerations                                                                            | boolean      |
+| =format()=              | Returns a formatted string using the specified locale, format string, and arguments                                           | String       |
+| =getBytes()=            | Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array                | byte[]       |
+| =getChars()=            | Copies characters from a string to an array of chars                                                                          | void         |
+| =hashCode()=            | Returns the hash code of a string                                                                                             | int          |
+| =indexOf()=             | Returns the position of the first found occurrence of specified characters in a string                                        | int          |
+| =intern()=              | Returns the canonical representation for the string object                                                                    | String       |
+| =isEmpty()=             | Checks whether a string is empty or not                                                                                       | boolean      |
+| =lastIndexOf()=         | Returns the position of the last found occurrence of specified characters in a string                                         | int          |
+| =length()=              | Returns the length of a specified string                                                                                      | int          |
+| =matches()=             | Searches a string for a match against a regular expression, and returns the matches                                           | boolean      |
+| =offsetByCodePoints()=  | Returns the index within this String that is offset from the given index by codePointOffset code points                       | int          |
+| =regionMatches()=       | Tests if two string regions are equal                                                                                         | boolean      |
+| =replace()=             | Searches a string for a specified value, and returns a new string where the specified values are replaced                     | String       |
+| =replaceFirst()=        | Replaces the first occurrence of a substring that matches the given regular expression with the given replacement             | String       |
+| =replaceAll()=          | Replaces each substring of this string that matches the given regular expression with the given replacement                   | String       |
+| =split()=               | Splits a string into an array of substrings                                                                                   | String[]     |
+| =startsWith()=          | Checks whether a string starts with specified characters                                                                      | boolean      |
+| =subSequence()=         | Returns a new character sequence that is a subsequence of this sequence                                                       | CharSequence |
+| =substring()=           | Extracts the characters from a string, beginning at a specified start position, and through the specified number of character | String       |
+| =toCharArray()=         | Converts this string to a new character array                                                                                 | char[]       |
+| =toLowerCase()=         | Converts a string to lower case letters                                                                                       | String       |
+| =toString()=            | Returns the value of a String object                                                                                          | String       |
+| =toUpperCase()=         | Converts a string to upper case letters                                                                                       | String       |
+| =trim()=                | Removes whitespace from both ends of a string                                                                                 | String       |
+| =valueOf()=             | Returns the string representation of the specified value                                                                      | String       |
+|-------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------|
 *** Obtaining substrings
 + =substring(int from, int to); // to not included=
 + =indexOf(char ch); gets index of char in string=
@@ -678,17 +685,17 @@ use the printf statement
 + =%e= for std scientific notation
 + =%s= for string 
 
-#+BEGIN_SRC java
+#+begin_src java
 // System.out.printf(format, items);
 String greet = "World!";
 
 System.out.printf("Hello, %s", greet);
 
-#+END_SRC
+#+end_src
 -----
 * Chapter 5: Loops
     + While loop
-      #+BEGIN_SRC java
+      #+begin_src java
       // count digits
       int number = 1000;
       int numdup = 1000;
@@ -698,30 +705,31 @@ System.out.printf("Hello, %s", greet);
             count++;
       }
       System.out.println(count);
-      #+END_SRC
+      #+end_src
     + do while: runs the code in the loop before checking for condition.
-      #+BEGIN_SRC java
+      #+begin_src java
       int i = 0;
       do
       {
         System.out.println(i);
         i++
       } while (i < 10); // <- semicolon is here only 
-      #+END_SRC
+      #+end_src
     + for loop
-      #+BEGIN_SRC java
+      #+begin_src java
       //   init ;  condition; update
       for (int i = 0; i < 10; i++) {
         System.out.println("i is " + i);
       }
-      #+END_SRC
-      #+BEGIN_SRC java
+      #+end_src
+      #+begin_src java
 
       for(char ch: "bruh".toCharArray()) {
         System.out.println(ch);
       }
-      #+END_SRC
+      #+end_src
 
+-----
 * Chapter 6: Methods (functions)
 contains of
 + type of method (=public static void=)
@@ -730,23 +738,222 @@ if the method returns a specific type then =void= should be replaced with the ty
 + Method parameters (between parentheses)
 + Method collection of statements (code in {})
 example:
-#+BEGIN_SRC java
+#+begin_src java
 public static int addOne(int number) {
     return number + 1;
 }
-#+END_SRC
+#+end_src
 + parameters are variables in the method
 + variables initialized in the methods are destroyed after the method is executed
+-----
 * Chapter 7: Arrays
 use arrays to store multiple values to a single variable.
 declare array with type int
 + =datatype[] arrayName = new datatype[arraySize];=
-#+BEGIN_SRC java
-// 
+#+begin_src java
 int[] myArray = new int[10]; // initialize an array
 myArray[0] = 0;
 myArray[1] = 1;
 // etc.
 // or another way
 int[] myArray2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-#+END_SRC
+#+end_src
+-----
+* Chapter 8: Multidimensional Arrays
+example
+#+begin_src java
+int[][] multiArray = new int[10][10];
+for (int i = 0; i < multiArray.length; i++) {
+    for (int j = 0; j < multiArray[i]; j++) {
+        multiArray[i][j] = 1; // makes every element = 1;
+    }
+}
+// printing an multi dimensional array
+for (int i = 0; i < multiArray.length; i++) {
+    for (int j = 0; j < multiArray[i]; j++) {
+        System.out.print(multiArray[i][j]);
+    }
+    System.out.println("");
+}
+#+end_src
+
+-----
+* Chapter 9: Objects and Classes
+** Basic info
+they help in large-scale software and graphical user interfaces software systems
+
+#+begin_src java
+// minimal example
+class Circle {
+    int radius; // NOTE it is recommended to make it private
+}
+// running app
+class App {
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        circle.radius = 1;
+        System.out.println(circle.radius);
+    }
+}
+#+end_src
+-----
+** Constructors
+
++ better way of initializing variables in classes
++ Must have the same name as classes
++ Do not return values not even void
++ Constructor are invoked with new operator
++ Are used for initializing objects
++ =new= operator is used for initializing
+
+#+begin_src java
+class Circle {
+    int radius;
+
+    // a default Constructor
+    // if no values are passed
+    public Circle() {
+        this.radius = 1;
+    }
+
+    // constructor used when one int is passed
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+}
+
+class App {
+    public static void main(String[] args) {
+        // initialize a new class
+        // `new` keyword is used
+        Circle circle = new Circle(2);
+        // ^ Class name
+        //       ^^ Class ref var name
+        //               ^^ new class of type circle
+        // and with `2` as argument
+        System.out.println(circle.radius);
+    }
+}
+#+end_src
+-----
+** Reference data fields
+variables in class have default values if not initialized
++ String will have =null=
++ int will be =0=
++ boolean will be =false=
++ char will have ='\u0000'=
+#+begin_center
+Java assigns no default value to local variables inside a method
+#+end_center
+-----
+** Garbage collection
+assign the class to null to tell the Java virtual machine to free the object from memory
+
+-----
+** Instance variables and methods
++ instance variable belong to a specific instance
++ instance methods are invoked by an instance of the class
+
+-----
+** Static variables, constants, and methods
+use =static= modifier to convert the var, const and method to static 
++ Static variables are shared by all the instances of the class.
++ Static methods are not tied to a specific object. 
++ Static constants are final variables shared by all the instances of the class.
+
+
+** Visiblity Modifiers and Accessor/Mutator Methods
+by default the class, variable or method can be accessed by any class in the same package
+
+*** public keyword
++ the class, data or method is accessable to any class or package 
+*** private keyword
++ the data or method is only accessable by declaring a variable
++ use get and set Methods to access private data
+  -----
+***  Examples
+C1.java
+#+name: C1.java
+#+begin_src java
+package p1;
+
+public class C1 {
+    public int x;
+    int y;
+    private int z; // NOTE: only usable within the class
+    // NOTE: private data fields
+    // are used to protect data
+    // and make code easier to maintain
+
+    public void m1() {
+    }
+
+    void m2() {
+    }
+
+    private void m3(){
+    }
+}
+#+end_src
+C2.java
+#+name: C2.java
+#+begin_src java
+package p1;
+
+public class C2 {
+    void aMethod() {
+        C1 o = new C1();
+        // can access o.x and o.y
+        // cannot access o.z
+        // can invoke o.m1(); and o.m2();
+        // cannot invoke o.m3();
+    }
+}
+#+end_src
+C3.java
+#+name: C3.java
+#+begin_src java
+package p2; // notice it is a different package
+
+public class C3 {
+    void aMethod() {
+        C1 o = new C1();
+        // can access o.x only;
+        // cannot access o.y and o.z;
+
+        // can invoke o.m1();
+        // cannot invoke o.m2() and o.m3()
+    }
+}
+#+end_src
+-----
+examples for classes
+
+C1.java
+#+name: C1.java
+#+begin_src java
+package p1;
+
+class C1 {
+    // whatever
+}
+#+end_src
+C2.java
+#+name: C2.java
+#+begin_src java
+package p1;
+
+public class C2 {
+    // can access C1
+}
+#+end_src
+C3.java
+#+name: C3.java
+#+begin_src java
+package p2; // notice the pkg name
+
+public class C3 {
+    // cannot access C1
+    // can access C2
+}
+#+end_src
