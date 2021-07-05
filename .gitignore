@@ -2,3 +2,4 @@ _minted-ics108
 .auctex-auto
 *.tex
 test/
+*.class
