@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-07-02 Fri 16:42 -->
+<!-- 2021-07-03 Sat 18:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ICS108 NOTES</title>
@@ -194,12 +194,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<link href="extra.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -230,123 +225,127 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd4f772e">1. Chapter 1: Introduction to Java</a>
+<li><a href="#org93b4093">1. Chapter 1: Introduction to Java</a>
 <ul>
-<li><a href="#org6ed1b53">1.1. Simple Java Program</a></li>
-<li><a href="#org69fe120">1.2. Programming Style and documentation</a></li>
-<li><a href="#orgff39adb">1.3. Programming Errors</a></li>
+<li><a href="#org27a1538">1.1. Simple Java Program</a></li>
+<li><a href="#org7b2276a">1.2. Programming Style and documentation</a></li>
+<li><a href="#org602f428">1.3. Programming Errors</a></li>
 </ul>
 </li>
-<li><a href="#org722f276">2. Chapter 2: Elementry Programming</a>
+<li><a href="#orga37f009">2. Chapter 2: Elementry Programming</a>
 <ul>
-<li><a href="#org103f39f">2.1. Program example:</a></li>
-<li><a href="#org64c9184">2.2. Reading Input</a></li>
-<li><a href="#orgf09fc28">2.3. Imports</a></li>
-<li><a href="#org874ae30">2.4. Identifiers</a></li>
-<li><a href="#org345a395">2.5. Variables</a>
+<li><a href="#orgb8464af">2.1. Program example:</a></li>
+<li><a href="#orgf821ef4">2.2. Reading Input</a></li>
+<li><a href="#org8e4f8a2">2.3. Imports</a></li>
+<li><a href="#org99ba442">2.4. Identifiers</a></li>
+<li><a href="#orgfedaa9a">2.5. Variables</a>
 <ul>
-<li><a href="#org39a3b75">2.5.1. declare variables</a></li>
-<li><a href="#orge8591ba">2.5.2. Constant variables</a></li>
+<li><a href="#org33b9663">2.5.1. declare variables</a></li>
+<li><a href="#org2a482cc">2.5.2. Constant variables</a></li>
 </ul>
 </li>
-<li><a href="#orgeebb7b5">2.6. Naming Conventions</a>
+<li><a href="#org0dd798f">2.6. Naming Conventions</a>
 <ul>
-<li><a href="#org6bb3789">2.6.1. Variable and method names</a></li>
-<li><a href="#org9914158">2.6.2. Class names</a></li>
-<li><a href="#org946201a">2.6.3. Constant names</a></li>
+<li><a href="#org6499de6">2.6.1. Variable and method names</a></li>
+<li><a href="#orgea89ff0">2.6.2. Class names</a></li>
+<li><a href="#org22a3c47">2.6.3. Constant names</a></li>
 </ul>
 </li>
-<li><a href="#orgd4c465b">2.7. Operators</a>
+<li><a href="#org18234e2">2.7. Operators</a>
 <ul>
-<li><a href="#orgd5f0419">2.7.1. useful operations</a></li>
+<li><a href="#orgbfdb0c1">2.7.1. useful operations</a></li>
 </ul>
 </li>
-<li><a href="#orgdad1cf4">2.8. Data types</a>
+<li><a href="#org3aa9e22">2.8. Data types</a>
 <ul>
-<li><a href="#org8d70ed8">2.8.1. Integers</a></li>
-<li><a href="#org93236a6">2.8.2. Floats and Double</a></li>
-<li><a href="#org57bd8d8">2.8.3. Scientific Notation</a></li>
-<li><a href="#orgdc97bd9">2.8.4. Chars and Strings</a></li>
-<li><a href="#org5d6bafe">2.8.5. other types</a></li>
-<li><a href="#org9767ecc">2.8.6. Display Current Time in GMT</a></li>
-<li><a href="#orga0ae0a7">2.8.7. Conversion rules</a></li>
-<li><a href="#orgb565196">2.8.8. Type casting</a></li>
+<li><a href="#orgdac1ed8">2.8.1. Integers</a></li>
+<li><a href="#org5dfcda2">2.8.2. Floats and Double</a></li>
+<li><a href="#org974df09">2.8.3. Scientific Notation</a></li>
+<li><a href="#orgb98bf4b">2.8.4. Chars and Strings</a></li>
+<li><a href="#orgb1e9287">2.8.5. other types</a></li>
+<li><a href="#orgadc3627">2.8.6. Display Current Time in GMT</a></li>
+<li><a href="#org256ab79">2.8.7. Conversion rules</a></li>
+<li><a href="#org5c32fe1">2.8.8. Type casting</a></li>
 </ul>
 </li>
-<li><a href="#org4b92efc">2.9. Common Errors and pitfalls</a></li>
+<li><a href="#org9c1592b">2.9. Common Errors and pitfalls</a></li>
 </ul>
 </li>
-<li><a href="#org1abe58a">3. Chapter 3: Selections</a>
+<li><a href="#org98cd49b">3. Chapter 3: Selections</a>
 <ul>
-<li><a href="#org4e747cb">3.1. More Data types</a>
+<li><a href="#orgdf5f9f3">3.1. More Data types</a>
 <ul>
-<li><a href="#orgc532164">3.1.1. boolean type</a></li>
-<li><a href="#org0ad04f9">3.1.2. boolean (comparasion operators)</a></li>
+<li><a href="#org59c5dd1">3.1.1. boolean type</a></li>
+<li><a href="#org961f4a8">3.1.2. boolean (comparasion operators)</a></li>
 </ul>
 </li>
-<li><a href="#orgf8d2e4f">3.2. If else statements</a>
+<li><a href="#orgd8b2aee">3.2. If else statements</a>
 <ul>
-<li><a href="#orgf0c5e5f">3.2.1. if</a></li>
-<li><a href="#orgbecb44f">3.2.2. else</a></li>
+<li><a href="#org7e07fa7">3.2.1. if</a></li>
+<li><a href="#org956ce76">3.2.2. else</a></li>
 </ul>
 </li>
-<li><a href="#org91680d6">3.3. Logical operators</a></li>
-<li><a href="#org75794b5">3.4. Switch statement</a></li>
-<li><a href="#org837d1fd">3.5. Conditional operators: Ternary</a></li>
-<li><a href="#org8929076">3.6. Operator order (precedence)</a></li>
-<li><a href="#org5e152d2">3.7. Debugging</a></li>
+<li><a href="#org643c1a2">3.3. Logical operators</a></li>
+<li><a href="#org6bd2f91">3.4. Switch statement</a></li>
+<li><a href="#org3c4048a">3.5. Conditional operators: Ternary</a></li>
+<li><a href="#org6a35820">3.6. Operator order (precedence)</a></li>
+<li><a href="#org50d24f5">3.7. Debugging</a></li>
 </ul>
 </li>
-<li><a href="#orgd51b8b6">4. Chapter 4: Math functions, Chars and Strings</a>
+<li><a href="#orga4d24c0">4. Chapter 4: Math functions, Chars and Strings</a>
 <ul>
-<li><a href="#org822bfd3">4.1. Math Class</a>
+<li><a href="#org875d8ae">4.1. Math Class</a>
 <ul>
-<li><a href="#org42f566d">4.1.1. Constants</a></li>
-<li><a href="#org269738b">4.1.2. Methods</a></li>
+<li><a href="#orga8f57ec">4.1.1. Constants</a></li>
+<li><a href="#orge6679b1">4.1.2. Methods</a></li>
 </ul>
 </li>
-<li><a href="#org3aa7bda">4.2. Characters</a>
+<li><a href="#orgf32e7fe">4.2. Characters</a>
 <ul>
-<li><a href="#org8491568">4.2.1. Special Chars</a></li>
-<li><a href="#orgafc20ac">4.2.2. Casting between char and ints</a></li>
-<li><a href="#org63c5e11">4.2.3. Character Methods</a></li>
+<li><a href="#orga9c963d">4.2.1. Special Chars</a></li>
+<li><a href="#org0aa7a53">4.2.2. Casting between char and ints</a></li>
+<li><a href="#org5832c9a">4.2.3. Character Methods</a></li>
 </ul>
 </li>
-<li><a href="#orgf3dd534">4.3. Strings</a>
+<li><a href="#org89ce6f8">4.3. Strings</a>
 <ul>
-<li><a href="#org231498f">4.3.1. String Length</a></li>
-<li><a href="#org406cbc2">4.3.2. specific char from string</a></li>
-<li><a href="#org589c841">4.3.3. Converting strings</a></li>
-<li><a href="#orgcf8c3c0">4.3.4. String concatenation</a></li>
-<li><a href="#org1d37f7f">4.3.5. String Methods list</a></li>
-<li><a href="#org001d087">4.3.6. Obtaining substrings</a></li>
-<li><a href="#org9c3fb48">4.3.7. Converting between Strings and Numbers</a></li>
+<li><a href="#org23d61ff">4.3.1. String Length</a></li>
+<li><a href="#org450844a">4.3.2. specific char from string</a></li>
+<li><a href="#org6f779c5">4.3.3. Converting strings</a></li>
+<li><a href="#org2f8ec88">4.3.4. String concatenation</a></li>
+<li><a href="#org5a4e93a">4.3.5. String Methods list</a></li>
+<li><a href="#orgda9b70b">4.3.6. Obtaining substrings</a></li>
+<li><a href="#org1f35c58">4.3.7. Converting between Strings and Numbers</a></li>
 </ul>
 </li>
-<li><a href="#org4889213">4.4. Formatting output</a></li>
+<li><a href="#orgcd75637">4.4. Formatting output</a></li>
 </ul>
 </li>
-<li><a href="#org2425162">5. Chapter 5: Loops</a></li>
-<li><a href="#org875a141">6. Chapter 6: Methods (functions)</a></li>
-<li><a href="#org18b842e">7. Chapter 7: Arrays</a></li>
-<li><a href="#orgbc6a9b8">8. Chapter 8: Multidimensional Arrays</a></li>
-<li><a href="#org8044329">9. Chapter 9: Objects and Classes</a>
+<li><a href="#org5bba604">5. Chapter 5: Loops</a></li>
+<li><a href="#org8c16b9e">6. Chapter 6: Methods (functions)</a></li>
+<li><a href="#orgc2b1c49">7. Chapter 7: Arrays</a></li>
+<li><a href="#org425d5d2">8. Chapter 8: Multidimensional Arrays</a></li>
+<li><a href="#orge89df6b">9. Chapter 9: Objects and Classes</a>
 <ul>
-<li><a href="#orga2a74bf">9.1. Basic info</a></li>
-<li><a href="#org3d3d9f2">9.2. Constructors</a></li>
-<li><a href="#org680c4f7">9.3. Reference data fields</a></li>
-<li><a href="#orgea9ad49">9.4. Garbage collection</a></li>
-<li><a href="#org9166fb2">9.5. Instance variables and methods</a></li>
-<li><a href="#org89a0f64">9.6. Static variables, constants, and methods</a></li>
-<li><a href="#orgf50c27d">9.7. Visiblity Modifiers and Accessor/Mutator Methods</a>
+<li><a href="#org95150b6">9.1. Basic info</a></li>
+<li><a href="#orgb6fda8a">9.2. Constructors</a></li>
+<li><a href="#org56348f9">9.3. Reference data fields</a></li>
+<li><a href="#org86713d0">9.4. Garbage collection</a></li>
+<li><a href="#org84196bb">9.5. Instance variables and methods</a></li>
+<li><a href="#orgcda2215">9.6. Static variables, constants, and methods</a></li>
+<li><a href="#org5e5496c">9.7. Visiblity Modifiers and Accessor/Mutator Methods</a>
 <ul>
-<li><a href="#org894f486">9.7.1. public keyword</a></li>
-<li><a href="#org9d8805c">9.7.2. private keyword</a></li>
-<li><a href="#org54a5997">9.7.3. Examples</a></li>
+<li><a href="#org9d12475">9.7.1. public keyword</a></li>
+<li><a href="#org1209034">9.7.2. private keyword</a></li>
+<li><a href="#org25825d0">9.7.3. Examples</a></li>
 </ul>
 </li>
+<li><a href="#orgf076b11">9.8. Immutable objects and classes</a></li>
+<li><a href="#org682adb3">9.9. this keyword</a></li>
 </ul>
 </li>
+<li><a href="#org3e4238e">10. <span class="todo TODO">TODO</span> Chapter 10: objects (review the book)</a></li>
+<li><a href="#org76c1868">11. <span class="todo TODO">TODO</span> Chapter 11: inheritance and polymorphism</a></li>
 </ul>
 </div>
 </div>
@@ -357,15 +356,15 @@ THIS IS NOT AN ALTERNATIVE TO THE BOOK
 </blockquote>
 
 <hr />
-<div id="outline-container-orgd4f772e" class="outline-2">
-<h2 id="orgd4f772e"><span class="section-number-2">1</span> Chapter 1: Introduction to Java</h2>
+<div id="outline-container-org93b4093" class="outline-2">
+<h2 id="org93b4093"><span class="section-number-2">1</span> Chapter 1: Introduction to Java</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org6ed1b53" class="outline-3">
-<h3 id="org6ed1b53"><span class="section-number-3">1.1</span> Simple Java Program</h3>
+<div id="outline-container-org27a1538" class="outline-3">
+<h3 id="org27a1538"><span class="section-number-3">1.1</span> Simple Java Program</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
-<pre class="src src-java" id="org1640559"><span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">App</span> <span style="color: #A167E6;">{</span>
+<pre class="src src-java" id="orgcb6a03d"><span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">App</span> <span style="color: #A167E6;">{</span>
     <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">static</span> <span style="color: #5DD8FF;">void</span> <span style="color: #41A1C0;">main</span><span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">String</span><span style="color: #FD8F3F;">[]</span> <span style="color: #41A1C0;">args</span><span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
         System.out.println<span style="color: #FD8F3F;">(</span><span style="color: #FC6A5D;">"Welcome to Java!"</span><span style="color: #FD8F3F;">)</span>;
     <span style="color: #5DD8FF;">}</span>
@@ -419,8 +418,8 @@ single line and multiline comments
 <hr />
 </div>
 </div>
-<div id="outline-container-org69fe120" class="outline-3">
-<h3 id="org69fe120"><span class="section-number-3">1.2</span> Programming Style and documentation</h3>
+<div id="outline-container-org7b2276a" class="outline-3">
+<h3 id="org7b2276a"><span class="section-number-3">1.2</span> Programming Style and documentation</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Appropriate Comments</li>
@@ -430,8 +429,8 @@ single line and multiline comments
 </ul>
 </div>
 </div>
-<div id="outline-container-orgff39adb" class="outline-3">
-<h3 id="orgff39adb"><span class="section-number-3">1.3</span> Programming Errors</h3>
+<div id="outline-container-org602f428" class="outline-3">
+<h3 id="org602f428"><span class="section-number-3">1.3</span> Programming Errors</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
 <li>Syntax Errors
@@ -451,15 +450,15 @@ single line and multiline comments
 </div>
 </div>
 </div>
-<div id="outline-container-org722f276" class="outline-2">
-<h2 id="org722f276"><span class="section-number-2">2</span> Chapter 2: Elementry Programming</h2>
+<div id="outline-container-orga37f009" class="outline-2">
+<h2 id="orga37f009"><span class="section-number-2">2</span> Chapter 2: Elementry Programming</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org103f39f" class="outline-3">
-<h3 id="org103f39f"><span class="section-number-3">2.1</span> Program example:</h3>
+<div id="outline-container-orgb8464af" class="outline-3">
+<h3 id="orgb8464af"><span class="section-number-3">2.1</span> Program example:</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
-<pre class="src src-java" id="org6610cb6"><span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">App</span> <span style="color: #A167E6;">{</span>
+<pre class="src src-java" id="orgcad769b"><span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">App</span> <span style="color: #A167E6;">{</span>
     <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">static</span> <span style="color: #5DD8FF;">void</span> <span style="color: #41A1C0;">main</span><span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">String</span><span style="color: #FD8F3F;">[]</span> <span style="color: #41A1C0;">args</span><span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
         <span style="color: #5DD8FF;">double</span> <span style="color: #41A1C0;">radius</span>;
         <span style="color: #5DD8FF;">double</span> <span style="color: #41A1C0;">area</span>;
@@ -480,15 +479,15 @@ single line and multiline comments
 <hr />
 </div>
 </div>
-<div id="outline-container-org64c9184" class="outline-3">
-<h3 id="org64c9184"><span class="section-number-3">2.2</span> Reading Input</h3>
+<div id="outline-container-orgf821ef4" class="outline-3">
+<h3 id="orgf821ef4"><span class="section-number-3">2.2</span> Reading Input</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Reading Input can be done by creating a Scanner Object
 which can be imported from `java.util.Scanner;`
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="org027326c">
+<pre class="src src-java" id="orgc4418c0">
 <span style="color: #6C7986;">// </span><span style="color: #6C7986;">import module.class</span>
 <span style="color: #FC5FA3; font-weight: bold;">import</span> <span style="color: #A167E6;">java</span>.<span style="color: #A167E6;">util</span>.<span style="color: #5DD8FF;">Scanner</span>;
 
@@ -520,8 +519,8 @@ which can be imported from `java.util.Scanner;`
 <hr />
 </div>
 </div>
-<div id="outline-container-orgf09fc28" class="outline-3">
-<h3 id="orgf09fc28"><span class="section-number-3">2.3</span> Imports</h3>
+<div id="outline-container-org8e4f8a2" class="outline-3">
+<h3 id="org8e4f8a2"><span class="section-number-3">2.3</span> Imports</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Implicit import <code>import java.util.*;</code></li>
@@ -534,8 +533,8 @@ No Performance difference
 </div>
 </div>
 
-<div id="outline-container-org874ae30" class="outline-3">
-<h3 id="org874ae30"><span class="section-number-3">2.4</span> Identifiers</h3>
+<div id="outline-container-org99ba442" class="outline-3">
+<h3 id="org99ba442"><span class="section-number-3">2.4</span> Identifiers</h3>
 <div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
 <li>sequence of chars are from letters, digits, underscores(_) and dollar signs($).</li>
@@ -553,12 +552,12 @@ IT CANNOT START WITH A DIGIT.
 <hr />
 </div>
 </div>
-<div id="outline-container-org345a395" class="outline-3">
-<h3 id="org345a395"><span class="section-number-3">2.5</span> Variables</h3>
+<div id="outline-container-orgfedaa9a" class="outline-3">
+<h3 id="orgfedaa9a"><span class="section-number-3">2.5</span> Variables</h3>
 <div class="outline-text-3" id="text-2-5">
 </div>
-<div id="outline-container-org39a3b75" class="outline-4">
-<h4 id="org39a3b75"><span class="section-number-4">2.5.1</span> declare variables</h4>
+<div id="outline-container-org33b9663" class="outline-4">
+<h4 id="org33b9663"><span class="section-number-4">2.5.1</span> declare variables</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <div class="org-src-container">
 <pre class="src src-java">  <span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">x</span> = <span style="color: #D0BF68; font-weight: bold;">1</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">variable example</span>
@@ -593,8 +592,8 @@ IT CANNOT START WITH A DIGIT.
 <hr />
 </div>
 </div>
-<div id="outline-container-orge8591ba" class="outline-4">
-<h4 id="orge8591ba"><span class="section-number-4">2.5.2</span> Constant variables</h4>
+<div id="outline-container-org2a482cc" class="outline-4">
+<h4 id="org2a482cc"><span class="section-number-4">2.5.2</span> Constant variables</h4>
 <div class="outline-text-4" id="text-2-5-2">
 <div class="org-src-container">
 <pre class="src src-java">  <span style="color: #FC5FA3; font-weight: bold;">final</span> <span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">SIZE</span> = <span style="color: #D0BF68; font-weight: bold;">3</span>;
@@ -607,15 +606,15 @@ IT CANNOT START WITH A DIGIT.
 </div>
 </div>
 </div>
-<div id="outline-container-orgeebb7b5" class="outline-3">
-<h3 id="orgeebb7b5"><span class="section-number-3">2.6</span> Naming Conventions</h3>
+<div id="outline-container-org0dd798f" class="outline-3">
+<h3 id="org0dd798f"><span class="section-number-3">2.6</span> Naming Conventions</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 choose meaningful names
 </p>
 </div>
-<div id="outline-container-org6bb3789" class="outline-4">
-<h4 id="org6bb3789"><span class="section-number-4">2.6.1</span> Variable and method names</h4>
+<div id="outline-container-org6499de6" class="outline-4">
+<h4 id="org6499de6"><span class="section-number-4">2.6.1</span> Variable and method names</h4>
 <div class="outline-text-4" id="text-2-6-1">
 <p>
 use lowercase and capitalize each word after the first word
@@ -631,8 +630,8 @@ use lowercase and capitalize each word after the first word
 <hr />
 </div>
 </div>
-<div id="outline-container-org9914158" class="outline-4">
-<h4 id="org9914158"><span class="section-number-4">2.6.2</span> Class names</h4>
+<div id="outline-container-orgea89ff0" class="outline-4">
+<h4 id="orgea89ff0"><span class="section-number-4">2.6.2</span> Class names</h4>
 <div class="outline-text-4" id="text-2-6-2">
 <p>
 Capitalize first letter of each word in the name
@@ -645,8 +644,8 @@ for example
 <hr />
 </div>
 </div>
-<div id="outline-container-org946201a" class="outline-4">
-<h4 id="org946201a"><span class="section-number-4">2.6.3</span> Constant names</h4>
+<div id="outline-container-org22a3c47" class="outline-4">
+<h4 id="org22a3c47"><span class="section-number-4">2.6.3</span> Constant names</h4>
 <div class="outline-text-4" id="text-2-6-3">
 <p>
 Capitalize all letters
@@ -664,8 +663,8 @@ for example
 </div>
 </div>
 </div>
-<div id="outline-container-orgd4c465b" class="outline-3">
-<h3 id="orgd4c465b"><span class="section-number-3">2.7</span> Operators</h3>
+<div id="outline-container-org18234e2" class="outline-3">
+<h3 id="org18234e2"><span class="section-number-3">2.7</span> Operators</h3>
 <div class="outline-text-3" id="text-2-7">
 <ul class="org-ul">
 <li>(+) add</li>
@@ -676,8 +675,8 @@ for example
 </ul>
 <hr />
 </div>
-<div id="outline-container-orgd5f0419" class="outline-4">
-<h4 id="orgd5f0419"><span class="section-number-4">2.7.1</span> useful operations</h4>
+<div id="outline-container-orgbfdb0c1" class="outline-4">
+<h4 id="orgbfdb0c1"><span class="section-number-4">2.7.1</span> useful operations</h4>
 <div class="outline-text-4" id="text-2-7-1">
 <div class="org-src-container">
 <pre class="src src-java">i = i + <span style="color: #D0BF68; font-weight: bold;">1</span>; 
@@ -702,12 +701,12 @@ i += <span style="color: #D0BF68; font-weight: bold;">1</span>; i -= <span style
 </div>
 </div>
 </div>
-<div id="outline-container-orgdad1cf4" class="outline-3">
-<h3 id="orgdad1cf4"><span class="section-number-3">2.8</span> Data types</h3>
+<div id="outline-container-org3aa9e22" class="outline-3">
+<h3 id="org3aa9e22"><span class="section-number-3">2.8</span> Data types</h3>
 <div class="outline-text-3" id="text-2-8">
 </div>
-<div id="outline-container-org8d70ed8" class="outline-4">
-<h4 id="org8d70ed8"><span class="section-number-4">2.8.1</span> Integers</h4>
+<div id="outline-container-orgdac1ed8" class="outline-4">
+<h4 id="orgdac1ed8"><span class="section-number-4">2.8.1</span> Integers</h4>
 <div class="outline-text-4" id="text-2-8-1">
 <p>
 are numbers without decimal values and range between
@@ -727,8 +726,8 @@ example:
 </div>
 </div>
 </div>
-<div id="outline-container-org93236a6" class="outline-4">
-<h4 id="org93236a6"><span class="section-number-4">2.8.2</span> Floats and Double</h4>
+<div id="outline-container-org5dfcda2" class="outline-4">
+<h4 id="org5dfcda2"><span class="section-number-4">2.8.2</span> Floats and Double</h4>
 <div class="outline-text-4" id="text-2-8-2">
 <p>
 are numbers with decimal points
@@ -753,8 +752,8 @@ NOTE: floating points are not accurate always during calculations and it is reco
 <hr />
 </div>
 </div>
-<div id="outline-container-org57bd8d8" class="outline-4">
-<h4 id="org57bd8d8"><span class="section-number-4">2.8.3</span> Scientific Notation</h4>
+<div id="outline-container-org974df09" class="outline-4">
+<h4 id="org974df09"><span class="section-number-4">2.8.3</span> Scientific Notation</h4>
 <div class="outline-text-4" id="text-2-8-3">
 <p>
 Floating point literals can be specified in scientific notations using (e, E).
@@ -777,8 +776,8 @@ for example
 <hr />
 </div>
 </div>
-<div id="outline-container-orgdc97bd9" class="outline-4">
-<h4 id="orgdc97bd9"><span class="section-number-4">2.8.4</span> Chars and Strings</h4>
+<div id="outline-container-orgb98bf4b" class="outline-4">
+<h4 id="orgb98bf4b"><span class="section-number-4">2.8.4</span> Chars and Strings</h4>
 <div class="outline-text-4" id="text-2-8-4">
 <p>
 are used to store text, char are for one character and strings are used for multiple characters
@@ -794,8 +793,8 @@ are used to store text, char are for one character and strings are used for mult
 <hr />
 </div>
 </div>
-<div id="outline-container-org5d6bafe" class="outline-4">
-<h4 id="org5d6bafe"><span class="section-number-4">2.8.5</span> other types</h4>
+<div id="outline-container-orgb1e9287" class="outline-4">
+<h4 id="orgb1e9287"><span class="section-number-4">2.8.5</span> other types</h4>
 <div class="outline-text-4" id="text-2-8-5">
 <ul class="org-ul">
 <li>byte: similar to int but smaller range (-128 to 127)</li>
@@ -806,8 +805,8 @@ are used to store text, char are for one character and strings are used for mult
 <hr />
 </div>
 </div>
-<div id="outline-container-org9767ecc" class="outline-4">
-<h4 id="org9767ecc"><span class="section-number-4">2.8.6</span> Display Current Time in GMT</h4>
+<div id="outline-container-orgadc3627" class="outline-4">
+<h4 id="orgadc3627"><span class="section-number-4">2.8.6</span> Display Current Time in GMT</h4>
 <div class="outline-text-4" id="text-2-8-6">
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #5DD8FF;">long</span> <span style="color: #41A1C0;">time</span> = System.currentTimeMillis<span style="color: #A167E6;">()</span>;
@@ -818,8 +817,8 @@ are used to store text, char are for one character and strings are used for mult
 <hr />
 </div>
 </div>
-<div id="outline-container-orga0ae0a7" class="outline-4">
-<h4 id="orga0ae0a7"><span class="section-number-4">2.8.7</span> Conversion rules</h4>
+<div id="outline-container-org256ab79" class="outline-4">
+<h4 id="org256ab79"><span class="section-number-4">2.8.7</span> Conversion rules</h4>
 <div class="outline-text-4" id="text-2-8-7">
 <ol class="org-ol">
 <li>if one of the operands is double then final value is Double</li>
@@ -831,8 +830,8 @@ are used to store text, char are for one character and strings are used for mult
 <hr />
 </div>
 </div>
-<div id="outline-container-orgb565196" class="outline-4">
-<h4 id="orgb565196"><span class="section-number-4">2.8.8</span> Type casting</h4>
+<div id="outline-container-org5c32fe1" class="outline-4">
+<h4 id="org5c32fe1"><span class="section-number-4">2.8.8</span> Type casting</h4>
 <div class="outline-text-4" id="text-2-8-8">
 <ul class="org-ul">
 <li><p>
@@ -866,12 +865,12 @@ sum += <span style="color: #D0BF68; font-weight: bold;">4.5</span>; <span style=
 </div>
 </div>
 </div>
-<div id="outline-container-org4b92efc" class="outline-3">
-<h3 id="org4b92efc"><span class="section-number-3">2.9</span> Common Errors and pitfalls</h3>
+<div id="outline-container-org9c1592b" class="outline-3">
+<h3 id="org9c1592b"><span class="section-number-3">2.9</span> Common Errors and pitfalls</h3>
 <div class="outline-text-3" id="text-2-9">
 </div>
 <ol class="org-ol">
-<li><a id="orgd8bbfa7"></a>Common Errors<br />
+<li><a id="org06d4bf8"></a>Common Errors<br />
 <div class="outline-text-5" id="text-2-9-0-1">
 <ol class="org-ol">
 <li>Undeclared Variables and unused variables
@@ -896,16 +895,16 @@ for example: getting a string instead of an int.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org1abe58a" class="outline-2">
-<h2 id="org1abe58a"><span class="section-number-2">3</span> Chapter 3: Selections</h2>
+<div id="outline-container-org98cd49b" class="outline-2">
+<h2 id="org98cd49b"><span class="section-number-2">3</span> Chapter 3: Selections</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org4e747cb" class="outline-3">
-<h3 id="org4e747cb"><span class="section-number-3">3.1</span> More Data types</h3>
+<div id="outline-container-orgdf5f9f3" class="outline-3">
+<h3 id="orgdf5f9f3"><span class="section-number-3">3.1</span> More Data types</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-orgc532164" class="outline-4">
-<h4 id="orgc532164"><span class="section-number-4">3.1.1</span> boolean type</h4>
+<div id="outline-container-org59c5dd1" class="outline-4">
+<h4 id="org59c5dd1"><span class="section-number-4">3.1.1</span> boolean type</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 bool values are true or false
@@ -918,8 +917,8 @@ type = <span style="color: #A167E6;">false</span>; <span style="color: #6C7986;"
 </div>
 </div>
 
-<div id="outline-container-org0ad04f9" class="outline-4">
-<h4 id="org0ad04f9"><span class="section-number-4">3.1.2</span> boolean (comparasion operators)</h4>
+<div id="outline-container-org961f4a8" class="outline-4">
+<h4 id="org961f4a8"><span class="section-number-4">3.1.2</span> boolean (comparasion operators)</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <p>
 <code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, etc.
@@ -935,20 +934,20 @@ i.e.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf8d2e4f" class="outline-3">
-<h3 id="orgf8d2e4f"><span class="section-number-3">3.2</span> If else statements</h3>
+<div id="outline-container-orgd8b2aee" class="outline-3">
+<h3 id="orgd8b2aee"><span class="section-number-3">3.2</span> If else statements</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-orgf0c5e5f" class="outline-4">
-<h4 id="orgf0c5e5f"><span class="section-number-4">3.2.1</span> if</h4>
+<div id="outline-container-org7e07fa7" class="outline-4">
+<h4 id="org7e07fa7"><span class="section-number-4">3.2.1</span> if</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 checks for true boolean then excutes code in the block
 </p>
 </div>
 </div>
-<div id="outline-container-orgbecb44f" class="outline-4">
-<h4 id="orgbecb44f"><span class="section-number-4">3.2.2</span> else</h4>
+<div id="outline-container-org956ce76" class="outline-4">
+<h4 id="org956ce76"><span class="section-number-4">3.2.2</span> else</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 if the &rsquo;if&rsquo; condition is false then else block executes
@@ -986,8 +985,8 @@ if the &rsquo;if&rsquo; condition is false then else block executes
 </div>
 </div>
 </div>
-<div id="outline-container-org91680d6" class="outline-3">
-<h3 id="org91680d6"><span class="section-number-3">3.3</span> Logical operators</h3>
+<div id="outline-container-org643c1a2" class="outline-3">
+<h3 id="org643c1a2"><span class="section-number-3">3.3</span> Logical operators</h3>
 <div class="outline-text-3" id="text-3-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -1088,8 +1087,8 @@ Leap year example
 <hr />
 </div>
 </div>
-<div id="outline-container-org75794b5" class="outline-3">
-<h3 id="org75794b5"><span class="section-number-3">3.4</span> Switch statement</h3>
+<div id="outline-container-org6bd2f91" class="outline-3">
+<h3 id="org6bd2f91"><span class="section-number-3">3.4</span> Switch statement</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 alternative to if statements equating with specific value.
@@ -1116,8 +1115,8 @@ alternative to if statements equating with specific value.
 <hr />
 </div>
 </div>
-<div id="outline-container-org837d1fd" class="outline-3">
-<h3 id="org837d1fd"><span class="section-number-3">3.5</span> Conditional operators: Ternary</h3>
+<div id="outline-container-org3c4048a" class="outline-3">
+<h3 id="org3c4048a"><span class="section-number-3">3.5</span> Conditional operators: Ternary</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 (boolean) ? (if boolean is true) : (if boolean is false);
@@ -1135,8 +1134,8 @@ alternative to if statements equating with specific value.
 </div>
 </div>
 
-<div id="outline-container-org8929076" class="outline-3">
-<h3 id="org8929076"><span class="section-number-3">3.6</span> Operator order (precedence)</h3>
+<div id="outline-container-org6a35820" class="outline-3">
+<h3 id="org6a35820"><span class="section-number-3">3.6</span> Operator order (precedence)</h3>
 <div class="outline-text-3" id="text-3-6">
 <ol class="org-ol">
 <li><code>var++</code>, <code>var--</code></li>
@@ -1156,8 +1155,8 @@ alternative to if statements equating with specific value.
 </div>
 </div>
 
-<div id="outline-container-org5e152d2" class="outline-3">
-<h3 id="org5e152d2"><span class="section-number-3">3.7</span> Debugging</h3>
+<div id="outline-container-org50d24f5" class="outline-3">
+<h3 id="org50d24f5"><span class="section-number-3">3.7</span> Debugging</h3>
 <div class="outline-text-3" id="text-3-7">
 <div class="org-center">
 <p>
@@ -1170,16 +1169,16 @@ alternative to if statements equating with specific value.
 </div>
 </div>
 
-<div id="outline-container-orgd51b8b6" class="outline-2">
-<h2 id="orgd51b8b6"><span class="section-number-2">4</span> Chapter 4: Math functions, Chars and Strings</h2>
+<div id="outline-container-orga4d24c0" class="outline-2">
+<h2 id="orga4d24c0"><span class="section-number-2">4</span> Chapter 4: Math functions, Chars and Strings</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org822bfd3" class="outline-3">
-<h3 id="org822bfd3"><span class="section-number-3">4.1</span> Math Class</h3>
+<div id="outline-container-org875d8ae" class="outline-3">
+<h3 id="org875d8ae"><span class="section-number-3">4.1</span> Math Class</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org42f566d" class="outline-4">
-<h4 id="org42f566d"><span class="section-number-4">4.1.1</span> Constants</h4>
+<div id="outline-container-orga8f57ec" class="outline-4">
+<h4 id="orga8f57ec"><span class="section-number-4">4.1.1</span> Constants</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li><code>PI</code></li>
@@ -1190,12 +1189,12 @@ alternative to if statements equating with specific value.
 </div>
 </div>
 
-<div id="outline-container-org269738b" class="outline-4">
-<h4 id="org269738b"><span class="section-number-4">4.1.2</span> Methods</h4>
+<div id="outline-container-orge6679b1" class="outline-4">
+<h4 id="orge6679b1"><span class="section-number-4">4.1.2</span> Methods</h4>
 <div class="outline-text-4" id="text-4-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="orgfd69d51"></a>Trigonometric Methods<br />
+<li><a id="org400d4b7"></a>Trigonometric Methods<br />
 <div class="outline-text-5" id="text-4-1-2-1">
 <p>
 return double always
@@ -1221,7 +1220,7 @@ return double always
 <hr />
 </div>
 </li>
-<li><a id="org604b39d"></a>Rounding Methods<br />
+<li><a id="org7feb06f"></a>Rounding Methods<br />
 <div class="outline-text-5" id="text-4-1-2-2">
 <ul class="org-ul">
 <li><code>ceil(double x)</code>
@@ -1247,16 +1246,16 @@ NOTE: check examples in slides for Chapter4 page:(8)
 <hr />
 </div>
 </li>
-<li><a id="orgf2a3c1a"></a>Exponent Methods<br />
+<li><a id="org8b74d2c"></a>Exponent Methods<br />
 <ol class="org-ol">
-<li><a id="orge97f082"></a><span class="todo TODO">TODO</span> Methods<br />
+<li><a id="org9278d43"></a><span class="todo TODO">TODO</span> Methods<br />
 <div class="outline-text-6" id="text-4-1-2-3-1">
 <hr />
 </div>
 </li>
 </ol>
 </li>
-<li><a id="org133db2c"></a>min, max, abs, and Random Methods<br />
+<li><a id="org0b2180b"></a>min, max, abs, and Random Methods<br />
 <div class="outline-text-5" id="text-4-1-2-4">
 <ul class="org-ul">
 <li><code>max(a, b)</code> and <code>min(a, b)</code>
@@ -1270,12 +1269,12 @@ return max or min of the 2 arguments</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org3aa7bda" class="outline-3">
-<h3 id="org3aa7bda"><span class="section-number-3">4.2</span> Characters</h3>
+<div id="outline-container-orgf32e7fe" class="outline-3">
+<h3 id="orgf32e7fe"><span class="section-number-3">4.2</span> Characters</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-org8491568" class="outline-4">
-<h4 id="org8491568"><span class="section-number-4">4.2.1</span> Special Chars</h4>
+<div id="outline-container-orga9c963d" class="outline-4">
+<h4 id="orga9c963d"><span class="section-number-4">4.2.1</span> Special Chars</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li><code>\b</code> Backspace</li>
@@ -1289,8 +1288,8 @@ return max or min of the 2 arguments</li>
 <hr />
 </div>
 </div>
-<div id="outline-container-orgafc20ac" class="outline-4">
-<h4 id="orgafc20ac"><span class="section-number-4">4.2.2</span> Casting between char and ints</h4>
+<div id="outline-container-org0aa7a53" class="outline-4">
+<h4 id="org0aa7a53"><span class="section-number-4">4.2.2</span> Casting between char and ints</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">i</span> = <span style="color: #FC6A5D;">'a'</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">same as int i = (int)'a';</span>
@@ -1310,8 +1309,8 @@ return max or min of the 2 arguments</li>
 <hr />
 </div>
 </div>
-<div id="outline-container-org63c5e11" class="outline-4">
-<h4 id="org63c5e11"><span class="section-number-4">4.2.3</span> Character Methods</h4>
+<div id="outline-container-org5832c9a" class="outline-4">
+<h4 id="org5832c9a"><span class="section-number-4">4.2.3</span> Character Methods</h4>
 <div class="outline-text-4" id="text-4-2-3">
 <ul class="org-ul">
 <li><code>isLetter()</code></li>
@@ -1327,12 +1326,12 @@ return max or min of the 2 arguments</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf3dd534" class="outline-3">
-<h3 id="orgf3dd534"><span class="section-number-3">4.3</span> Strings</h3>
+<div id="outline-container-org89ce6f8" class="outline-3">
+<h3 id="org89ce6f8"><span class="section-number-3">4.3</span> Strings</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org231498f" class="outline-4">
-<h4 id="org231498f"><span class="section-number-4">4.3.1</span> String Length</h4>
+<div id="outline-container-org23d61ff" class="outline-4">
+<h4 id="org23d61ff"><span class="section-number-4">4.3.1</span> String Length</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #5DD8FF;">String</span> <span style="color: #41A1C0;">message</span> = <span style="color: #FC6A5D;">"welcome to java"</span>;
@@ -1345,8 +1344,8 @@ Strings are arrays of characters that start at 0
 <hr />
 </div>
 </div>
-<div id="outline-container-org406cbc2" class="outline-4">
-<h4 id="org406cbc2"><span class="section-number-4">4.3.2</span> specific char from string</h4>
+<div id="outline-container-org450844a" class="outline-4">
+<h4 id="org450844a"><span class="section-number-4">4.3.2</span> specific char from string</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <div class="org-src-container">
 <pre class="src src-java">message.charAt<span style="color: #A167E6;">(</span><span style="color: #D0BF68; font-weight: bold;">0</span><span style="color: #A167E6;">)</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">is 'W'</span>
@@ -1355,8 +1354,8 @@ Strings are arrays of characters that start at 0
 <hr />
 </div>
 </div>
-<div id="outline-container-org589c841" class="outline-4">
-<h4 id="org589c841"><span class="section-number-4">4.3.3</span> Converting strings</h4>
+<div id="outline-container-org6f779c5" class="outline-4">
+<h4 id="org6f779c5"><span class="section-number-4">4.3.3</span> Converting strings</h4>
 <div class="outline-text-4" id="text-4-3-3">
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #FC6A5D;">"Welcome"</span>.toLowerCase<span style="color: #A167E6;">()</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">returns "welcome"</span>
@@ -1367,8 +1366,8 @@ Strings are arrays of characters that start at 0
 <hr />
 </div>
 </div>
-<div id="outline-container-orgcf8c3c0" class="outline-4">
-<h4 id="orgcf8c3c0"><span class="section-number-4">4.3.4</span> String concatenation</h4>
+<div id="outline-container-org2f8ec88" class="outline-4">
+<h4 id="org2f8ec88"><span class="section-number-4">4.3.4</span> String concatenation</h4>
 <div class="outline-text-4" id="text-4-3-4">
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #5DD8FF;">String</span> <span style="color: #41A1C0;">s3</span> = s1.concat<span style="color: #A167E6;">(</span>s2<span style="color: #A167E6;">)</span>;
@@ -1381,8 +1380,8 @@ Strings are arrays of characters that start at 0
 <hr />
 </div>
 </div>
-<div id="outline-container-org1d37f7f" class="outline-4">
-<h4 id="org1d37f7f"><span class="section-number-4">4.3.5</span> String Methods list</h4>
+<div id="outline-container-org5a4e93a" class="outline-4">
+<h4 id="org5a4e93a"><span class="section-number-4">4.3.5</span> String Methods list</h4>
 <div class="outline-text-4" id="text-4-3-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -1633,8 +1632,8 @@ Strings are arrays of characters that start at 0
 </table>
 </div>
 </div>
-<div id="outline-container-org001d087" class="outline-4">
-<h4 id="org001d087"><span class="section-number-4">4.3.6</span> Obtaining substrings</h4>
+<div id="outline-container-orgda9b70b" class="outline-4">
+<h4 id="orgda9b70b"><span class="section-number-4">4.3.6</span> Obtaining substrings</h4>
 <div class="outline-text-4" id="text-4-3-6">
 <ul class="org-ul">
 <li><code>substring(int from, int to); // to not included</code></li>
@@ -1644,8 +1643,8 @@ Strings are arrays of characters that start at 0
 <hr />
 </div>
 </div>
-<div id="outline-container-org9c3fb48" class="outline-4">
-<h4 id="org9c3fb48"><span class="section-number-4">4.3.7</span> Converting between Strings and Numbers</h4>
+<div id="outline-container-org1f35c58" class="outline-4">
+<h4 id="org1f35c58"><span class="section-number-4">4.3.7</span> Converting between Strings and Numbers</h4>
 <div class="outline-text-4" id="text-4-3-7">
 <ul class="org-ul">
 <li><code>Integer.parseInt(String s); converts string to int</code></li>
@@ -1655,8 +1654,8 @@ Strings are arrays of characters that start at 0
 </div>
 </div>
 </div>
-<div id="outline-container-org4889213" class="outline-3">
-<h3 id="org4889213"><span class="section-number-3">4.4</span> Formatting output</h3>
+<div id="outline-container-orgcd75637" class="outline-3">
+<h3 id="orgcd75637"><span class="section-number-3">4.4</span> Formatting output</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 use the printf statement
@@ -1682,8 +1681,8 @@ System.out.printf<span style="color: #A167E6;">(</span><span style="color: #FC6A
 </div>
 </div>
 </div>
-<div id="outline-container-org2425162" class="outline-2">
-<h2 id="org2425162"><span class="section-number-2">5</span> Chapter 5: Loops</h2>
+<div id="outline-container-org5bba604" class="outline-2">
+<h2 id="org5bba604"><span class="section-number-2">5</span> Chapter 5: Loops</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><p>
@@ -1735,8 +1734,8 @@ for loop
 <hr />
 </div>
 </div>
-<div id="outline-container-org875a141" class="outline-2">
-<h2 id="org875a141"><span class="section-number-2">6</span> Chapter 6: Methods (functions)</h2>
+<div id="outline-container-org8c16b9e" class="outline-2">
+<h2 id="org8c16b9e"><span class="section-number-2">6</span> Chapter 6: Methods (functions)</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 contains of
@@ -1768,8 +1767,8 @@ example:
 <hr />
 </div>
 </div>
-<div id="outline-container-org18b842e" class="outline-2">
-<h2 id="org18b842e"><span class="section-number-2">7</span> Chapter 7: Arrays</h2>
+<div id="outline-container-orgc2b1c49" class="outline-2">
+<h2 id="orgc2b1c49"><span class="section-number-2">7</span> Chapter 7: Arrays</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 use arrays to store multiple values to a single variable.
@@ -1790,8 +1789,8 @@ myArray<span style="color: #A167E6;">[</span><span style="color: #D0BF68; font-w
 <hr />
 </div>
 </div>
-<div id="outline-container-orgbc6a9b8" class="outline-2">
-<h2 id="orgbc6a9b8"><span class="section-number-2">8</span> Chapter 8: Multidimensional Arrays</h2>
+<div id="outline-container-org425d5d2" class="outline-2">
+<h2 id="org425d5d2"><span class="section-number-2">8</span> Chapter 8: Multidimensional Arrays</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 example
@@ -1799,13 +1798,13 @@ example
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #5DD8FF;">int</span><span style="color: #A167E6;">[][]</span> <span style="color: #41A1C0;">multiArray</span> = <span style="color: #FC5FA3; font-weight: bold;">new</span> <span style="color: #5DD8FF;">int</span><span style="color: #A167E6;">[</span><span style="color: #D0BF68; font-weight: bold;">10</span><span style="color: #A167E6;">][</span><span style="color: #D0BF68; font-weight: bold;">10</span><span style="color: #A167E6;">]</span>;
 <span style="color: #FC5FA3; font-weight: bold;">for</span> <span style="color: #A167E6;">(</span><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">i</span> = <span style="color: #D0BF68; font-weight: bold;">0</span>; i &lt; multiArray.<span style="color: #5DD8FF;">length</span>; i++<span style="color: #A167E6;">)</span> <span style="color: #A167E6;">{</span>
-    <span style="color: #FC5FA3; font-weight: bold;">for</span> <span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">j</span> = <span style="color: #D0BF68; font-weight: bold;">0</span>; j &lt; <span style="color: #5DD8FF;">multiArray</span><span style="color: #FD8F3F;">[</span>i<span style="color: #FD8F3F;">]</span>; j++<span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
+    <span style="color: #FC5FA3; font-weight: bold;">for</span> <span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">j</span> = <span style="color: #D0BF68; font-weight: bold;">0</span>; j &lt; <span style="color: #5DD8FF;">multiArray</span><span style="color: #FD8F3F;">[</span>i<span style="color: #FD8F3F;">]</span>.length; j++<span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
         multiArray<span style="color: #FD8F3F;">[</span>i<span style="color: #FD8F3F;">][</span>j<span style="color: #FD8F3F;">]</span> = <span style="color: #D0BF68; font-weight: bold;">1</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">makes every element = 1;</span>
     <span style="color: #5DD8FF;">}</span>
 <span style="color: #A167E6;">}</span>
 <span style="color: #6C7986;">// </span><span style="color: #6C7986;">printing an multi dimensional array</span>
 <span style="color: #FC5FA3; font-weight: bold;">for</span> <span style="color: #A167E6;">(</span><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">i</span> = <span style="color: #D0BF68; font-weight: bold;">0</span>; i &lt; multiArray.<span style="color: #5DD8FF;">length</span>; i++<span style="color: #A167E6;">)</span> <span style="color: #A167E6;">{</span>
-    <span style="color: #FC5FA3; font-weight: bold;">for</span> <span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">j</span> = <span style="color: #D0BF68; font-weight: bold;">0</span>; j &lt; <span style="color: #5DD8FF;">multiArray</span><span style="color: #FD8F3F;">[</span>i<span style="color: #FD8F3F;">]</span>; j++<span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
+    <span style="color: #FC5FA3; font-weight: bold;">for</span> <span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">j</span> = <span style="color: #D0BF68; font-weight: bold;">0</span>; j &lt; <span style="color: #5DD8FF;">multiArray</span><span style="color: #FD8F3F;">[</span>i<span style="color: #FD8F3F;">]</span>.length; j++<span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
         System.out.print<span style="color: #FD8F3F;">(</span>multiArray<span style="color: #67B7A4;">[</span>i<span style="color: #67B7A4;">][</span>j<span style="color: #67B7A4;">]</span><span style="color: #FD8F3F;">)</span>;
     <span style="color: #5DD8FF;">}</span>
     System.out.println<span style="color: #5DD8FF;">(</span><span style="color: #FC6A5D;">""</span><span style="color: #5DD8FF;">)</span>;
@@ -1816,12 +1815,12 @@ example
 <hr />
 </div>
 </div>
-<div id="outline-container-org8044329" class="outline-2">
-<h2 id="org8044329"><span class="section-number-2">9</span> Chapter 9: Objects and Classes</h2>
+<div id="outline-container-orge89df6b" class="outline-2">
+<h2 id="orge89df6b"><span class="section-number-2">9</span> Chapter 9: Objects and Classes</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-orga2a74bf" class="outline-3">
-<h3 id="orga2a74bf"><span class="section-number-3">9.1</span> Basic info</h3>
+<div id="outline-container-org95150b6" class="outline-3">
+<h3 id="org95150b6"><span class="section-number-3">9.1</span> Basic info</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 they help in large-scale software and graphical user interfaces software systems
@@ -1845,8 +1844,8 @@ they help in large-scale software and graphical user interfaces software systems
 <hr />
 </div>
 </div>
-<div id="outline-container-org3d3d9f2" class="outline-3">
-<h3 id="org3d3d9f2"><span class="section-number-3">9.2</span> Constructors</h3>
+<div id="outline-container-orgb6fda8a" class="outline-3">
+<h3 id="orgb6fda8a"><span class="section-number-3">9.2</span> Constructors</h3>
 <div class="outline-text-3" id="text-9-2">
 <ul class="org-ul">
 <li>better way of initializing variables in classes</li>
@@ -1890,8 +1889,8 @@ they help in large-scale software and graphical user interfaces software systems
 <hr />
 </div>
 </div>
-<div id="outline-container-org680c4f7" class="outline-3">
-<h3 id="org680c4f7"><span class="section-number-3">9.3</span> Reference data fields</h3>
+<div id="outline-container-org56348f9" class="outline-3">
+<h3 id="org56348f9"><span class="section-number-3">9.3</span> Reference data fields</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
 variables in class have default values if not initialized
@@ -1910,8 +1909,8 @@ Java assigns no default value to local variables inside a method
 <hr />
 </div>
 </div>
-<div id="outline-container-orgea9ad49" class="outline-3">
-<h3 id="orgea9ad49"><span class="section-number-3">9.4</span> Garbage collection</h3>
+<div id="outline-container-org86713d0" class="outline-3">
+<h3 id="org86713d0"><span class="section-number-3">9.4</span> Garbage collection</h3>
 <div class="outline-text-3" id="text-9-4">
 <p>
 assign the class to null to tell the Java virtual machine to free the object from memory
@@ -1920,8 +1919,8 @@ assign the class to null to tell the Java virtual machine to free the object fro
 <hr />
 </div>
 </div>
-<div id="outline-container-org9166fb2" class="outline-3">
-<h3 id="org9166fb2"><span class="section-number-3">9.5</span> Instance variables and methods</h3>
+<div id="outline-container-org84196bb" class="outline-3">
+<h3 id="org84196bb"><span class="section-number-3">9.5</span> Instance variables and methods</h3>
 <div class="outline-text-3" id="text-9-5">
 <ul class="org-ul">
 <li>instance variable belong to a specific instance</li>
@@ -1931,8 +1930,8 @@ assign the class to null to tell the Java virtual machine to free the object fro
 <hr />
 </div>
 </div>
-<div id="outline-container-org89a0f64" class="outline-3">
-<h3 id="org89a0f64"><span class="section-number-3">9.6</span> Static variables, constants, and methods</h3>
+<div id="outline-container-orgcda2215" class="outline-3">
+<h3 id="orgcda2215"><span class="section-number-3">9.6</span> Static variables, constants, and methods</h3>
 <div class="outline-text-3" id="text-9-6">
 <p>
 use <code>static</code> modifier to convert the var, const and method to static 
@@ -1942,46 +1941,46 @@ use <code>static</code> modifier to convert the var, const and method to static
 <li>Static methods are not tied to a specific object.</li>
 <li>Static constants are final variables shared by all the instances of the class.</li>
 </ul>
+
+<hr />
 </div>
 </div>
-
-
-<div id="outline-container-orgf50c27d" class="outline-3">
-<h3 id="orgf50c27d"><span class="section-number-3">9.7</span> Visiblity Modifiers and Accessor/Mutator Methods</h3>
+<div id="outline-container-org5e5496c" class="outline-3">
+<h3 id="org5e5496c"><span class="section-number-3">9.7</span> Visiblity Modifiers and Accessor/Mutator Methods</h3>
 <div class="outline-text-3" id="text-9-7">
 <p>
 by default the class, variable or method can be accessed by any class in the same package
 </p>
-</div>
 
-<div id="outline-container-org894f486" class="outline-4">
-<h4 id="org894f486"><span class="section-number-4">9.7.1</span> public keyword</h4>
+<hr />
+</div>
+<div id="outline-container-org9d12475" class="outline-4">
+<h4 id="org9d12475"><span class="section-number-4">9.7.1</span> public keyword</h4>
 <div class="outline-text-4" id="text-9-7-1">
 <ul class="org-ul">
 <li>the class, data or method is accessable to any class or package</li>
 </ul>
+<hr />
 </div>
 </div>
-<div id="outline-container-org9d8805c" class="outline-4">
-<h4 id="org9d8805c"><span class="section-number-4">9.7.2</span> private keyword</h4>
+<div id="outline-container-org1209034" class="outline-4">
+<h4 id="org1209034"><span class="section-number-4">9.7.2</span> private keyword</h4>
 <div class="outline-text-4" id="text-9-7-2">
 <ul class="org-ul">
 <li>the data or method is only accessable by declaring a variable</li>
-<li><p>
-use get and set Methods to access private data
-</p>
-<hr /></li>
+<li>use get and set Methods to access private data</li>
 </ul>
+<hr />
 </div>
 </div>
-<div id="outline-container-org54a5997" class="outline-4">
-<h4 id="org54a5997"><span class="section-number-4">9.7.3</span> Examples</h4>
+<div id="outline-container-org25825d0" class="outline-4">
+<h4 id="org25825d0"><span class="section-number-4">9.7.3</span> Examples</h4>
 <div class="outline-text-4" id="text-9-7-3">
 <p>
 C1.java
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="org2284753"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
+<pre class="src src-java" id="orgec73147"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
 
 <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">C1</span> <span style="color: #A167E6;">{</span>
     <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #5DD8FF;">int</span> <span style="color: #41A1C0;">x</span>;
@@ -2006,7 +2005,7 @@ C1.java
 C2.java
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="org6582e0d"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
+<pre class="src src-java" id="org6819393"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
 
 <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">C2</span> <span style="color: #A167E6;">{</span>
     <span style="color: #5DD8FF;">void</span> <span style="color: #41A1C0;">aMethod</span><span style="color: #5DD8FF;">()</span> <span style="color: #5DD8FF;">{</span>
@@ -2023,7 +2022,7 @@ C2.java
 C3.java
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="org746f131"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p2</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">notice it is a different package</span>
+<pre class="src src-java" id="org08a1326"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p2</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">notice it is a different package</span>
 
 <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">C3</span> <span style="color: #A167E6;">{</span>
     <span style="color: #5DD8FF;">void</span> <span style="color: #41A1C0;">aMethod</span><span style="color: #5DD8FF;">()</span> <span style="color: #5DD8FF;">{</span>
@@ -2046,7 +2045,7 @@ examples for classes
 C1.java
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="orgb51fff5"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
+<pre class="src src-java" id="org04c958d"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
 
 <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">C1</span> <span style="color: #A167E6;">{</span>
     <span style="color: #6C7986;">// </span><span style="color: #6C7986;">whatever</span>
@@ -2057,7 +2056,7 @@ C1.java
 C2.java
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="org07e80ab"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
+<pre class="src src-java" id="orgb243e8d"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p1</span>;
 
 <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">C2</span> <span style="color: #A167E6;">{</span>
     <span style="color: #6C7986;">// </span><span style="color: #6C7986;">can access C1</span>
@@ -2068,7 +2067,7 @@ C2.java
 C3.java
 </p>
 <div class="org-src-container">
-<pre class="src src-java" id="orga3b4434"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p2</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">notice the pkg name</span>
+<pre class="src src-java" id="org7dedfd3"><span style="color: #FC5FA3; font-weight: bold;">package</span> <span style="color: #A167E6;">p2</span>; <span style="color: #6C7986;">// </span><span style="color: #6C7986;">notice the pkg name</span>
 
 <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">C3</span> <span style="color: #A167E6;">{</span>
     <span style="color: #6C7986;">// </span><span style="color: #6C7986;">cannot access C1</span>
@@ -2076,14 +2075,77 @@ C3.java
 <span style="color: #A167E6;">}</span>
 </pre>
 </div>
+<hr />
 </div>
 </div>
+</div>
+<div id="outline-container-orgf076b11" class="outline-3">
+<h3 id="orgf076b11"><span class="section-number-3">9.8</span> Immutable objects and classes</h3>
+<div class="outline-text-3" id="text-9-8">
+<p>
+to create an immutable class, the data fields must be <code>private</code> and provide no mutator and no accessor methods such as getters or setters
+</p>
+<hr />
+</div>
+</div>
+<div id="outline-container-org682adb3" class="outline-3">
+<h3 id="org682adb3"><span class="section-number-3">9.9</span> this keyword</h3>
+<div class="outline-text-3" id="text-9-9">
+<p>
+<code>this</code> is used to refer to class&rsquo;s hidden data fields
+</p>
+
+<p>
+example
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #FC5FA3; font-weight: bold;">class</span> <span style="color: #5DD8FF;">Bruh</span> <span style="color: #A167E6;">{</span>
+    <span style="color: #FC5FA3; font-weight: bold;">private</span> <span style="color: #5DD8FF;">String</span> <span style="color: #41A1C0;">value</span>;
+
+    <span style="color: #FC5FA3; font-weight: bold;">public</span> <span style="color: #41A1C0;">Bruh</span><span style="color: #5DD8FF;">(</span><span style="color: #5DD8FF;">String</span> <span style="color: #41A1C0;">value</span><span style="color: #5DD8FF;">)</span> <span style="color: #5DD8FF;">{</span>
+        <span style="color: #FC5FA3; font-weight: bold;">this</span>.value = value;
+        <span style="color: #6C7986;">// </span><span style="color: #6C7986;">this.value is the String variable in the object</span>
+        <span style="color: #6C7986;">// </span><span style="color: #6C7986;">value from obj = value passed from argument</span>
+    <span style="color: #5DD8FF;">}</span>
+<span style="color: #A167E6;">}</span>
+</pre>
+</div>
+<hr />
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3e4238e" class="outline-2">
+<h2 id="org3e4238e"><span class="section-number-2">10</span> <span class="todo TODO">TODO</span> Chapter 10: objects (review the book)</h2>
+<div class="outline-text-2" id="text-10">
+<blockquote>
+<p>
+review the book
+</p>
+</blockquote>
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org76c1868" class="outline-2">
+<h2 id="org76c1868"><span class="section-number-2">11</span> <span class="todo TODO">TODO</span> Chapter 11: inheritance and polymorphism</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li><p>
+<code>super</code> keyword is used
+</p>
+<blockquote>
+<p>
+check the book
+</p>
+</blockquote></li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Airbus5717</p>
-<p class="date">Created: 2021-07-02 Fri 16:42</p>
+<p class="date">Created: 2021-07-03 Sat 18:00</p>
 </div>
 </body>
 </html>

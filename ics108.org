@@ -1,11 +1,10 @@
 #+TITLE: ICS108 NOTES
 #+DESCRIPTION: Notes for Java OOP Ics108 course
-
-#+BEGIN_COMMENT
-#+HTML_HEAD: <link href="extra.css" rel="stylesheet" type="text/css" />
-#+END_COMMENT
-
+#+AUTHOR: Airbus5717
+#+begin_comment
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+end_comment
+#+HTML_HEAD: <link href="extra.css" rel="stylesheet" type="text/css" />
 #+LaTeX_HEADER: \usepackage{minted}
 
 
@@ -764,13 +763,13 @@ example
 #+begin_src java
 int[][] multiArray = new int[10][10];
 for (int i = 0; i < multiArray.length; i++) {
-    for (int j = 0; j < multiArray[i]; j++) {
+    for (int j = 0; j < multiArray[i].length; j++) {
         multiArray[i][j] = 1; // makes every element = 1;
     }
 }
 // printing an multi dimensional array
 for (int i = 0; i < multiArray.length; i++) {
-    for (int j = 0; j < multiArray[i]; j++) {
+    for (int j = 0; j < multiArray[i].length; j++) {
         System.out.print(multiArray[i][j]);
     }
     System.out.println("");
@@ -861,16 +860,18 @@ use =static= modifier to convert the var, const and method to static
 + Static methods are not tied to a specific object. 
 + Static constants are final variables shared by all the instances of the class.
 
-
+-----
 ** Visiblity Modifiers and Accessor/Mutator Methods
 by default the class, variable or method can be accessed by any class in the same package
 
+-----
 *** public keyword
 + the class, data or method is accessable to any class or package 
+-----
 *** private keyword
 + the data or method is only accessable by declaring a variable
 + use get and set Methods to access private data
-  -----
+-----
 ***  Examples
 C1.java
 #+name: C1.java
@@ -957,3 +958,35 @@ public class C3 {
     // can access C2
 }
 #+end_src
+-----
+** Immutable objects and classes
+to create an immutable class, the data fields must be =private= and provide no mutator and no accessor methods such as getters or setters
+-----
+** this keyword
+=this= is used to refer to class's hidden data fields
+
+example
+#+begin_src java
+class Bruh {
+    private String value;
+
+    public Bruh(String value) {
+        this.value = value;
+        // this.value is the String variable in the object
+        // value from obj = value passed from argument
+    }
+}
+#+end_src
+-----
+
+* TODO Chapter 10: objects (review the book)
+#+begin_quote
+review the book
+#+end_quote
+-----
+
+* TODO Chapter 11: inheritance and polymorphism
++ =super= keyword is used
+  #+begin_quote
+  check the book
+  #+end_quote
