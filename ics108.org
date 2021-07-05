@@ -980,13 +980,14 @@ class Bruh {
 -----
 
 * TODO Chapter 10: objects (review the book)
+too much material
 #+begin_quote
 review the book
 #+end_quote
 -----
 
 * TODO Chapter 11: inheritance and polymorphism
-+ =super= keyword is used
-  #+begin_quote
-  check the book
-  #+end_quote
+too much material
+#+begin_quote
+check the book
+#+end_quote
