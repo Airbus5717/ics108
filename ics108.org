@@ -1,10 +1,7 @@
 #+TITLE: ICS108 NOTES
 #+DESCRIPTION: Notes for Java OOP Ics108 course
 #+AUTHOR: Airbus5717
-#+begin_comment
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
-#+end_comment
-#+HTML_HEAD: <link href="extra.css" rel="stylesheet" type="text/css" />
 #+LaTeX_HEADER: \usepackage{minted}
 
 
@@ -979,7 +976,7 @@ class Bruh {
 #+end_src
 -----
 
-* TODO Chapter 10: objects (review the book)
+* TODO Chapter 10: objects
 too much material
 #+begin_quote
 review the book

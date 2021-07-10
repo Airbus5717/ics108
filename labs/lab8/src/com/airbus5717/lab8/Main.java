@@ -18,7 +18,7 @@ public class Main {
         }
 
         Collections.sort(arrayList);
-
+            
         // another possible solution
         // list.sort(Comparator.comparing(Student::getGpa));
 
