@@ -1,0 +1,3 @@
+Item (name: Milk, id: 11, price: 4.65)
+Item (name: Juice, id: 12, price: 3.65)
+Item (name: Water, id: 13, price: 1.15)
