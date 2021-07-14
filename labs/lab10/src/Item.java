@@ -31,7 +31,7 @@ public class Item implements Serializable {
     }
 
     public void updatePrice(double percent) {
-        this.price = price + (percent / 100.0);
+        this.price += (percent / 100.0);
     }
 
     public int getId() {
