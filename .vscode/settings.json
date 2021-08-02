@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "test/src",
-        "labs/lab8/src/com/airbus5717/lab8",
+        "labs/lab8",
         "labs/lab6",
         "labs/lab5",
         "labs/lab4",

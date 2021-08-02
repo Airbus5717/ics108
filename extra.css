@@ -21,10 +21,6 @@ img {
      width: 750px;
      border-radius: 10px;
 }
-/*
-pre {
-     font-family: 'Inconsolata', monospace;
-}*/
 
 ::selection {
      color: white;
