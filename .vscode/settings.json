@@ -1,14 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "test/src",
-        "labs/lab8",
-        "labs/lab6",
-        "labs/lab5",
-        "labs/lab4",
-        "labs/lab3",
-        "labs/lab2",
-        "labs/lab1",
-        "labs/lab9/src",
-        "labs/lab12"
+        "labs/lab12/src"
     ]
 }
