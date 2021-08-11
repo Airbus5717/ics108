@@ -1,0 +1,8 @@
+Button:hover {
+    -fx-border-color: red;
+    -fx-color-adjust: 10%;
+}
+
+TextField:hover {
+    -fx-border-color: red;
+}

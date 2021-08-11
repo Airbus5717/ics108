@@ -1,0 +1,331 @@
+#+TITLE: Fraction Calculator report
+#+AUTHOR: =********= =********=, =********= =********=
+#+latex: \setcounter{secnumdepth}{0}
+#+latex_class: report
+
+* Project report
+** Introduction
+We have written a fraction based calculator using JavaFX library and it is capable of calculating basic operations on fractions and integers.
+*** Used Java Libraries
++ JavaFX library
+
+** Project
+the JavaFX project which is a fraction caculator can be used to simple integer math operations or using fractions as seen below
+*** preview images
+
+#+ATTR_LATEX: :float center :width 0.38\textwidth
+User interface
+[[./imgs/UI.png]]
+Add Fractions
+[[./imgs/AddFractions.png]]
+Reducing Fractions
+[[./imgs/ReduceFraction.png]]
+Adding Integers
+[[./imgs/AddInts.png]]
+-----
+*** Work distrubution
+- =****=: App and Controller
+- =****=: Fraction and ParseInput
+
+*** Code Structure
+the Code base contains 4 classes
++ App    : Which contains the main function
++ ParseInput : which contains Input parser
++ Controller : which contains code interfacing with the UI
++ Fraction  : which contains the calculations in the program
+-----
+**** App class
+1. sets the main stage and scene and loads a fxml file =App.fxml= and css file =style.css=
+2. resizeable is set to false
+3. only one scene and stage is used in the program
+**** ParseInput class
+1. receives String input from each TextField in the program
+   and parses to 2 numbers
+2. It supports special handling if the String input is an integer
+3. Error handling is catched and thrown till reaches Controller class
+**** Controller class
+1. Method used for each button and calls other classes in each method
+2. Error handling in the whole program is in the controller class
+3. Objects for mutable UI elements are defined in the class
+**** Fraction class
+1. contains 2 private variables for numerator and denominator
+2. Constructor with String parameter calls ParseInput class and also it contains 2 long parameter constructor
+3. the class contains method for each operation and one for getting greatest common denominator
+-----
+
+* App.java
+#+NAME: App.java
+#+begin_src java
+import java.io.IOException;import java.io.IOException;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class App extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.setTitle("Fraction Calculator");
+        Parent root = FXMLLoader.load(getClass()
+                    .getResource("App.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(
+            getClass().getResource("style.css")
+            .toExternalForm());
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+}
+
+#+end_src
+
+* ParseInput.java
+#+NAME: ParseInput.java
+#+begin_src java
+import java.util.InputMismatchException;
+import java.util.regex.Pattern;
+
+public class ParseInput {
+    private long top;
+    private long down;
+
+    public ParseInput(String input) throws InputMismatchException, NumberFormatException, ArithmeticException {
+        String[] arr = input.split("/");
+        // used regex to get if the string is only numbers
+        if (Pattern.matches("[0-9]+[\\.]?[0-9]*", input)) {
+            top = Long.parseLong(input);
+            down = 1;
+        } else if (arr.length != 2) {
+            throw new InputMismatchException("Wrong Input. Input must be a fraction");
+        } else {
+            top = Long.parseLong(arr[0]);
+            down = Long.parseLong(arr[1]);
+        }
+        if (down == 0) {
+            throw new ArithmeticException("Divide by Zero error");
+        }
+    }
+
+    public long getTop() {
+        return top;
+    }
+
+    public long getDown() {
+        return down;
+    }
+}
+
+#+end_src
+
+* Fraction.java
+#+NAME: Fraction.java
+#+begin_src java
+import java.util.InputMismatchException;
+
+public class Fraction {
+    private long numerator;
+    private long denominator;
+
+    public Fraction(String input) throws InputMismatchException, NumberFormatException, ArithmeticException {
+        ParseInput parsedInput = new ParseInput(input);
+        long parsedDenominator = parsedInput.getDown();
+        long parsedNumerator = parsedInput.getTop();
+        long gcd = greatCommonDenominator(parsedNumerator, parsedDenominator);
+        this.numerator = (parsedDenominator > 0 ? 1 : -1) * parsedNumerator / gcd;
+        this.denominator = Math.abs(parsedDenominator) / gcd;
+    }
+
+    public Fraction(long numerator, long denominator) {
+        long gcd = greatCommonDenominator(numerator, denominator);
+        this.numerator = (denominator > 0 ? 1 : -1) * numerator / gcd;
+        this.denominator = Math.abs(denominator) / gcd;
+    }
+
+    private static long greatCommonDenominator(long n, long d) {
+        long num1 = Math.abs(n);
+        long num2 = Math.abs(d);
+        int gcd = 1;
+
+        for (int i = 1; i <= num1 && i <= num2; i++) {
+            if (num1 % i == 0 && num2 % i == 0)
+                gcd = i;
+        }
+        return gcd;
+    }
+
+    public long getNumerator() {
+        return numerator;
+    }
+
+    public long getDenominator() {
+        return denominator;
+    }
+
+    public Fraction addFraction(Fraction other) {
+        long n = numerator * other.getDenominator() + denominator * other.getNumerator();
+        long d = denominator * other.getDenominator();
+        return new Fraction(n, d);
+    }
+
+    public Fraction subtractFraction(Fraction other) {
+        long n = numerator * other.getDenominator() - denominator * other.getNumerator();
+        long d = denominator * other.getDenominator();
+        return new Fraction(n, d);
+    }
+
+    public Fraction multiplyFraction(Fraction other) {
+        long n = numerator * other.getNumerator();
+        long d = denominator * other.getDenominator();
+        return new Fraction(n, d);
+    }
+
+    public Fraction divideFraction(Fraction other) throws ArithmeticException {
+        long n = numerator * other.getDenominator();
+        long d = denominator * other.numerator;
+        if (d == 0) {
+            throw new ArithmeticException("Divide by Zero error");
+        }
+        return new Fraction(n, d);
+    }
+
+    public void reduceFraction() {
+        long gcd = greatCommonDenominator(numerator, denominator);
+        this.numerator = (denominator > 0 ? 1 : -1) * numerator / gcd;
+        this.denominator = Math.abs(denominator) / gcd;
+    }
+
+    @Override // Override toString()
+    public String toString() {
+        if (denominator == 1)
+            return numerator + "";
+        else if (numerator == 0)
+            return "0";
+        else
+            return numerator + "/" + denominator;
+    }
+}
+
+#+end_src
+
+* Controller.java
+#+NAME: Controller.java
+#+begin_src java
+import java.util.InputMismatchException;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+
+public class Controller {
+
+    @FXML
+    private Button resetBtn;
+    @FXML
+    private Button addBtn;
+    @FXML
+    private Button subBtn;
+    @FXML
+    private Button multBtn;
+    @FXML
+    private Button divBtn;
+    @FXML
+    private Button reduceBtn;
+    @FXML
+    private TextField num1TextField;
+    @FXML
+    private TextField num2TextField;
+    @FXML
+    private TextField resultTextField;
+    @FXML
+    private Alert alert;
+
+    public void showAlert(String log) {
+        alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(log);
+        alert.setContentText("Click on ok to reset fields");
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            resetFields();
+        }
+    }
+
+    public void resetFields() {
+        num1TextField.clear();
+        num2TextField.clear();
+        resultTextField.clear();
+    }
+
+    public void add() {
+        try {
+            Fraction num1 = new Fraction(num1TextField.getText());
+            Fraction num2 = new Fraction(num2TextField.getText());
+            resultTextField.setText(num1
+                    .addFraction(num2).toString());
+        } catch (InputMismatchException | NumberFormatException | ArithmeticException e) {
+            showAlert(e.getMessage());
+        }
+    }
+
+    public void subtract() {
+        try {
+            Fraction num1 = new Fraction(num1TextField.getText());
+            Fraction num2 = new Fraction(num2TextField.getText());
+            resultTextField.setText(num1
+                    .subtractFraction(num2).toString());
+        } catch (InputMismatchException | NumberFormatException | ArithmeticException e) {
+            showAlert(e.getMessage());
+        }
+    }
+
+    public void multiply() {
+        try {
+            Fraction num1 = new Fraction(num1TextField.getText());
+            Fraction num2 = new Fraction(num2TextField.getText());
+            resultTextField.setText(num1
+                    .multiplyFraction(num2).toString());
+        } catch (InputMismatchException | NumberFormatException | ArithmeticException e) {
+            showAlert(e.getMessage());
+        }
+    }
+
+    public void divide() {
+        try {
+            Fraction num1 = new Fraction(num1TextField.getText());
+            Fraction num2 = new Fraction(num2TextField.getText());
+            resultTextField.setText(num1
+                    .divideFraction(num2).toString());
+        } catch (InputMismatchException | NumberFormatException | ArithmeticException e) {
+            showAlert(e.getMessage());
+        }
+    }
+
+    public void reduce() {
+        try {
+            if (num2TextField.getText().isBlank() && !num1TextField.getText().isBlank()) {
+                Fraction num1 = new Fraction(num1TextField.getText());
+                resultTextField.setText(num1.toString());
+            } else if (num1TextField.getText().isEmpty() && !num2TextField.getText().isEmpty()) {
+                Fraction num2 = new Fraction(num2TextField.getText());
+                num2.reduceFraction();
+                resultTextField.setText(num2.toString());
+            } else {
+                throw new InputMismatchException("Please Enter one fraction");
+            }
+        } catch (InputMismatchException | NumberFormatException | ArithmeticException e) {
+            showAlert(e.getMessage());
+        }
+    }
+}
+
+#+end_src
